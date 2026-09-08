@@ -3,6 +3,62 @@
     {"name": "iptv-org Turkey", "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"},
     {"name": "iptv-org Turkish language", "url": "https://iptv-org.github.io/iptv/languages/tur.m3u"},
     {"name": "Free-TV Turkey", "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_turkey.m3u8"},
-    {"name": "IPTV-TR", "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u"}
-  ]
+    {"name": "IPTV-TR", "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u"},
+    {
+      "name": "IPTV Nexus Turkish",
+      "url": "https://dearbulut.github.io/iptv/playlists/language/tur.m3u",
+      "notes": "Additional stream choices; sync scheduled every six hours. Checked 2026-09-08."
+    },
+    {
+      "name": "Sözcü TV — pinkisso",
+      "type": "stream",
+      "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/sozcutelevizyonu.m3u8",
+      "channel_name": "Sözcü TV",
+      "tvg_id": "SozcuTV.tr",
+      "group": "News",
+      "website": "https://www.szctv.com.tr/canli-yayin-izle",
+      "notes": "Community-maintained HLS pointer for Sözcü's public YouTube live broadcast; hourly refresh scheduled. Validated 2026-09-08."
+    },
+    {
+      "name": "CNN Türk — pinkisso",
+      "type": "stream",
+      "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/cnnturk.m3u8",
+      "channel_name": "CNN Türk",
+      "tvg_id": "CNNTurk.tr",
+      "group": "News",
+      "website": "https://www.cnnturk.com/video/turkiye/cnn-turk-canli-yayin-izle",
+      "notes": "Community-maintained HLS pointer for CNN Türk's public YouTube live broadcast; hourly refresh scheduled. Validated 2026-09-08."
+    },
+    {
+      "name": "World IPTV Checker — Turkey",
+      "url": "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
+      "include_groups": ["Turkey"],
+      "notes": "Large multi-source catalog checked every six hours; only its Turkey group is imported. Checked 2026-09-08."
+    },
+    {
+      "name": "discevisita Turkish national and Cyprus channels",
+      "url": "https://raw.githubusercontent.com/discevisita/iptv/main/tr.m3u",
+      "include_groups": ["Ulusal", "Kıbrıs"],
+      "id_aliases": {
+        "bir tv": "BirTV.tr",
+        "trt.2.hd.tr": "TRT2.tr",
+        "cnn.türk.hd.tr": "CNNTurk.tr",
+        "sozcu.tr": "SozcuTV.tr",
+        "cnbc-e.tr": "CNBCe.tr",
+        "meltem tv.tr": "MeltemTV.tr",
+        "mk tv": "MaviKaradenizTV.tr",
+        "ilke tv.tr": "IlkeTV.tr",
+        "ulusal kanal.tr": "UlusalKanal.tr",
+        "bengütürk.tr": "BenguturkTV.tr",
+        "mc.tr": "MCTV.de",
+        "tgrt haber hd.tr": "TGRTHaber.tr",
+        "aki̇t tv hd.tr": "AkitTV.tr",
+        "kanal24.tr": "24TV.tr",
+        "brt 1 hd.tr": "BRT1.cy",
+        "adatv.tr": "AdaTV.cy"
+      },
+      "notes": "Playlist updated 2026-09-06. Only national/Cyprus groups imported; malformed entries are reported and skipped."
+    }
+  ],
+  "required_channels": ["SozcuTV.tr", "CNNTurk.tr"]
 }

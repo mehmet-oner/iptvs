@@ -6,11 +6,40 @@ import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from unittest.mock import patch
 
-from build_playlist import channel_id, group_channels, parse_playlist
+from build_playlist import channel_id, group_channels, parse_playlist, load_source
 
 
 class PlaylistTests(unittest.TestCase):
+    def test_source_filters_and_explicit_id_aliases(self):
+        body = b'''#EXTM3U
+#EXTINF:-1 tvg-id="sozcu.tr" group-title="Ulusal",Sozcu TV
+https://example.org/sozcu.m3u8
+#EXTINF:-1 tvg-id="Other.us" group-title="Foreign",Other
+https://example.org/other.m3u8
+'''
+        source = {'name': 'test', 'url': 'https://example.org/list.m3u',
+                  'include_groups': ['Ulusal'], 'id_aliases': {'sozcu.tr': 'SozcuTV.tr'}}
+        with patch('build_playlist.fetch', return_value=(body, source['url'], 'text/plain')):
+            entries, warnings, excluded = load_source(source, 1)
+        self.assertEqual(excluded, 1)
+        self.assertFalse(warnings)
+        self.assertEqual(channel_id(entries[0]), 'sozcutv.tr')
+        self.assertIn('tvg-id="SozcuTV.tr"', entries[0].info)
+
+    def test_direct_stream_source_keeps_stable_url(self):
+        source = {'name': 'test', 'type': 'stream', 'url': 'https://example.org/stream.m3u8',
+                  'channel_name': 'Sözcü TV', 'tvg_id': 'SozcuTV.tr'}
+        with patch('build_playlist.fetch') as fetch:
+            entries, warnings, excluded = load_source(source, 1)
+            fetch.assert_not_called()
+        self.assertEqual(entries[0].url, source['url'])
+        self.assertEqual(entries[0].name, 'Sözcü TV')
+        self.assertFalse(entries[0].geo)
+        self.assertFalse(warnings)
+        self.assertEqual(excluded, 0)
+
     def test_quoted_comma_headers_and_regional_ids(self):
         text = '''#EXTM3U
 #EXTINF:-1 tvg-id="BBC.uk@Turkiye" http-user-agent="Test, Agent",BBC (1080p)
@@ -112,6 +141,13 @@ https://example.org/3
                 self.assertEqual(list(directory.glob('*.m3u8')), [output])
                 # A later source failure must never erase a usable prior playlist.
                 previous = output.read_text()
+                config = json.loads(sources.read_text())
+                config['required_channels'] = ['Missing.tr']
+                sources.write_text(json.dumps(config))
+                result = subprocess.run(command, capture_output=True, text=True, timeout=20)
+                self.assertEqual(result.returncode, 1)
+                self.assertEqual(output.read_text(), previous)
+                self.assertEqual(json.loads(report.read_text())['missing_required_channels'], ['Missing.tr'])
                 sources.write_text(json.dumps({'sources': [{'name': 'Broken', 'url': f'http://127.0.0.1:{server.server_port}/missing'}]}))
                 result = subprocess.run(command, capture_output=True, text=True, timeout=20)
                 self.assertEqual(result.returncode, 1)

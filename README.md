@@ -23,10 +23,16 @@ URL above for IPTV Smarters; it has been confirmed to import on Google TV.
 ## Sources and selection
 
 Edit `sources.json` to add/remove source URLs. Sources are ordered by preference.
-Set `"enabled": false` on a source to disable it. The four initial sources are
-iptv-org Turkey, iptv-org Turkish language, Free-TV Turkey, and ilyswch IPTV-TR.
-The Turkish-language source includes some channels based outside Turkey; the
-Turkey source can include channels in other languages.
+Set `"enabled": false` on a source to disable it. Sources may be full playlists
+or `"type": "stream"` entries for a maintained per-channel HLS pointer. A source
+can use `include_groups` to import only relevant sections and `id_aliases` to map
+nonstandard IDs to canonical IDs before deduplication.
+
+The current sources combine country/language playlists, independently checked
+catalogs, a curated Turkish national/Cyprus list, and hourly refreshed live
+pointers for Sözcü TV and CNN Türk. Broad worldwide lists are filtered to their
+Turkey group. Archived lists, dead endpoints, and lists containing obvious paid
+channel restreams were excluded during the September 2026 source review.
 
 Channels are grouped using `tvg-id`, with quality suffixes such as `@SD` and
 `@HD` removed. Regional editions such as `@Turkiye` remain distinct. Entries
@@ -35,6 +41,10 @@ The first reachable candidate in source order is selected. Geo-marked candidates
 are used if no reachable candidate exists. Identical stream requests are checked
 once and duplicate selected stream requests are removed. Different IDs/names
 for the same real channel may still require upstream metadata corrections.
+
+`required_channels` is a publication guard. A run that cannot retain Sözcü TV
+or CNN Türk exits with status 1 and leaves the last working playlist unchanged.
+This guard can be extended with other canonical `tvg-id` values.
 
 ## Validation
 
@@ -62,7 +72,7 @@ unchanged. The JSON report is still updated, with per-channel reasons.
 ## Options and tests
 
 ```sh
-python3 build_playlist.py --timeout 12 --retries 1 --workers 16
+python3 build_playlist.py --timeout 12 --retries 2 --workers 16
 python3 build_playlist.py --sources sources.json --output playlist.m3u8 --report validation-report.json
 python3 -m unittest -v
 ```

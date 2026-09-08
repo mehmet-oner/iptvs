@@ -204,6 +204,34 @@ def probe_key(entry):
     return url, tuple(sorted((k.lower(), v) for k, v in headers.items())), entry.geo
 
 
+def load_source(source, timeout):
+    """Load a channel list or describe a single stable HLS entry point."""
+    name, url = source['name'], source['url']
+    if source.get('type', 'playlist') == 'stream':
+        attrs = {'tvg-id': source['tvg_id'], 'group-title': source.get('group', 'TV')}
+        channel_name = source.get('channel_name', name)
+        metadata = ' '.join(f'{k}="{v}"' for k, v in attrs.items())
+        info = f'#EXTINF:-1 {metadata},{channel_name}'
+        return [Entry(info, channel_name, attrs, [], url, name,
+                      source.get('geo_restricted', False))], [], 0
+    body, resolved, _ = fetch(url, {'User-Agent': 'Mozilla/5.0'}, timeout, 10000001)
+    if len(body) > 10000000:
+        raise ValueError('Source exceeds 10 MB limit')
+    entries, warnings = parse_playlist(body.decode('utf-8-sig'), name, resolved,
+                                       source.get('geo_restricted', False))
+    if not entries:
+        raise ValueError('Source contains no channels')
+    allowed = source.get('include_groups')
+    filtered = [e for e in entries if allowed is None or e.attrs.get('group-title', '') in allowed]
+    aliases = {k.casefold(): v for k, v in source.get('id_aliases', {}).items()}
+    for entry in filtered:
+        replacement = aliases.get(channel_id(entry))
+        if replacement:
+            entry.attrs['tvg-id'] = replacement
+            entry.info = re.sub(r'tvg-id="[^"]*"', lambda _: f'tvg-id="{replacement}"', entry.info, count=1)
+    return filtered, warnings, len(entries) - len(filtered)
+
+
 def atomic_write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + '.tmp')
@@ -217,8 +245,8 @@ def main():
     parser.add_argument('--output', type=Path, default=BASE / 'playlist.m3u8')
     parser.add_argument('--report', type=Path, default=BASE / 'validation-report.json')
     parser.add_argument('--workers', type=int, default=16)
-    parser.add_argument('--timeout', type=float, default=8, help='Seconds per network operation')
-    parser.add_argument('--retries', type=int, default=1)
+    parser.add_argument('--timeout', type=float, default=12, help='Seconds per network operation')
+    parser.add_argument('--retries', type=int, default=2)
     args = parser.parse_args()
     if args.workers < 1 or args.timeout <= 0 or args.retries < 0:
         parser.error('workers/timeout must be positive; retries must be nonnegative')
@@ -230,14 +258,10 @@ def main():
         name, url = source['name'], source['url']
         print(f'Fetching {name}...', flush=True)
         try:
-            body, resolved, _ = fetch(url, {'User-Agent': 'Mozilla/5.0'}, args.timeout, 10000001)
-            if len(body) > 10000000:
-                raise ValueError('Source exceeds 10 MB limit')
-            parsed, warnings = parse_playlist(body.decode('utf-8-sig'), name, resolved, source.get('geo_restricted', False))
-            if not parsed:
-                raise ValueError('Source contains no channels')
+            parsed, warnings, filtered_out = load_source(source, args.timeout)
             entries.extend(parsed)
-            source_reports.append({'name': name, 'url': url, 'status': 'loaded', 'entries': len(parsed), 'warnings': warnings})
+            source_reports.append({'name': name, 'url': url, 'status': 'loaded', 'entries': len(parsed),
+                                   'filtered_out': filtered_out, 'warnings': warnings})
         except (OSError, ValueError) as exc:
             source_reports.append({'name': name, 'url': url, 'status': 'failed', 'reason': str(exc)})
             print(f'  Failed: {exc}', file=sys.stderr)
@@ -269,18 +293,24 @@ def main():
                 state = results[probe_key(chosen)]['status']
         channel_reports.append({'channel': key, 'name': candidates[0].name, 'status': state,
                                 'selected_url': chosen.url if chosen else None,
+                                'selected_source': chosen.source if chosen else None,
                                 'candidates': [{'source': e.source, 'url': e.url, **results[probe_key(e)]} for e in candidates]})
     geo_count = sum(e.geo for e in selected)
+    selected_ids = {channel_id(e) for e in selected}
+    missing_required = [ident for ident in config.get('required_channels', [])
+                        if ident.casefold() not in selected_ids]
     summary = {'source_entries': len(entries), 'channel_groups': len(groups), 'distinct_checks': len(unique),
                'output_channels': len(selected), 'reachable': len(selected) - geo_count,
                'geo_retained': geo_count, 'dropped_groups': sum(c['status'] == 'dropped' for c in channel_reports),
                'duplicate_stream_groups': sum(c['status'] == 'duplicate_stream' for c in channel_reports),
                'failed_sources': sum(s['status'] == 'failed' for s in source_reports)}
     report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'summary': summary,
-              'sources': source_reports, 'channels': channel_reports}
+              'sources': source_reports, 'channels': channel_reports,
+              'missing_required_channels': missing_required}
     atomic_write(args.report, json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    if not selected:
-        print('No usable entries. Existing output was left unchanged; see report.', file=sys.stderr)
+    if not selected or missing_required:
+        reason = 'Missing required channels: ' + ', '.join(missing_required) if missing_required else 'No usable entries.'
+        print(reason + ' Existing output was left unchanged; see report.', file=sys.stderr)
         return 1
     output = ['#EXTM3U']
     for entry in selected:
