@@ -7,28 +7,10 @@ import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from build_playlist import channel_id, group_channels, parse_playlist, render_smarters, request_target
+from build_playlist import channel_id, group_channels, parse_playlist
 
 
 class PlaylistTests(unittest.TestCase):
-    def test_smarters_uniform_metadata_preserves_geo_and_request_headers(self):
-        original = '''#EXTM3U
-#EXTINF:-1 tvg-id="Example.tr" http-user-agent="Test, Agent",Example [Geo-blocked]
-#EXTVLCOPT:http-user-agent=Test, Agent
-#EXTVLCOPT:http-referrer=https://example.org/
-https://example.org/live.m3u8
-'''
-        entries, _ = parse_playlist(original, 'test', 'https://example.org/')
-        rendered = render_smarters(entries)
-        converted, warnings = parse_playlist(rendered, 'test', 'https://example.org/')
-        self.assertFalse(warnings)
-        self.assertEqual(len(rendered.splitlines()), 3)
-        self.assertNotIn('#EXTVLCOPT:', rendered)
-        self.assertNotIn('http-user-agent=', rendered)
-        self.assertEqual(converted[0].attrs['tvg-name'], entries[0].name)
-        self.assertTrue(converted[0].geo)
-        self.assertEqual(request_target(converted[0]), request_target(entries[0]))
-
     def test_quoted_comma_headers_and_regional_ids(self):
         text = '''#EXTM3U
 #EXTINF:-1 tvg-id="BBC.uk@Turkiye" http-user-agent="Test, Agent",BBC (1080p)
@@ -127,10 +109,7 @@ https://example.org/3
                 self.assertIn('/nested/segment.ts', requests)
                 self.assertEqual(output.read_text().count('#EXTINF:'), 2)
                 self.assertFalse(output.with_suffix('.m3u').exists())
-                smarters = directory / 'playlist-smarters.m3u8'
-                converted, warnings = parse_playlist(smarters.read_text(), 'output', 'https://example.org/')
-                self.assertFalse(warnings)
-                self.assertEqual(len(converted), 2)
+                self.assertEqual(list(directory.glob('*.m3u8')), [output])
                 # A later source failure must never erase a usable prior playlist.
                 previous = output.read_text()
                 sources.write_text(json.dumps({'sources': [{'name': 'Broken', 'url': f'http://127.0.0.1:{server.server_port}/missing'}]}))
