@@ -211,17 +211,56 @@ def atomic_write(path, text):
     temporary.replace(path)
 
 
+def render_smarters(entries):
+    """Use uniform EXTINF metadata and exactly two lines per channel.
+
+    Preserve explicit playback headers as URL options instead of VLC directives
+    or nonstandard EXTINF attributes. This is a compatibility alternative, not
+    a guarantee of support in every Smarters build.
+    """
+    def quoted(value):
+        return str(value).replace('"', "'").replace('\r', ' ').replace('\n', ' ')
+
+    lines = ['#EXTM3U']
+    for number, entry in enumerate(entries, 1):
+        attrs = {'tvg-name': entry.attrs.get('tvg-name') or entry.name,
+                 'tvg-logo': entry.attrs.get('tvg-logo', ''),
+                 'tvg-id': entry.attrs.get('tvg-id', ''),
+                 'tvg-chno': str(number)}
+        if entry.attrs.get('tvg-country'):
+            attrs['tvg-country'] = entry.attrs['tvg-country']
+        attrs['group-title'] = entry.attrs.get('group-title') or 'TV'
+        metadata = ' '.join(f'{key}="{quoted(value)}"' for key, value in attrs.items())
+        lines.append(f'#EXTINF:-1 {metadata},{entry.name}')
+        if entry.options or '|' in entry.url or any(k.startswith('http-') for k in entry.attrs):
+            url, headers = request_target(entry)
+            lines.append(url + '|' + urllib.parse.urlencode(headers, quote_via=urllib.parse.quote))
+        else:
+            lines.append(entry.url)
+    return '\n'.join(lines) + '\n'
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sources', type=Path, default=BASE / 'sources.json')
     parser.add_argument('--output', type=Path, default=BASE / 'playlist.m3u8')
     parser.add_argument('--report', type=Path, default=BASE / 'validation-report.json')
+    parser.add_argument('--smarters-from', type=Path,
+                        help='Only reformat an existing playlist for Smarters; no fetching or validation')
     parser.add_argument('--workers', type=int, default=16)
     parser.add_argument('--timeout', type=float, default=8, help='Seconds per network operation')
     parser.add_argument('--retries', type=int, default=1)
     args = parser.parse_args()
     if args.workers < 1 or args.timeout <= 0 or args.retries < 0:
         parser.error('workers/timeout must be positive; retries must be nonnegative')
+    if args.smarters_from:
+        entries, warnings = parse_playlist(args.smarters_from.read_text(encoding='utf-8-sig'),
+                                          'existing playlist', args.smarters_from.resolve().as_uri())
+        if not entries or warnings:
+            parser.error(f'Cannot reformat empty or malformed playlist: {warnings}')
+        atomic_write(args.output, render_smarters(entries))
+        print(f'Wrote {len(entries)} channels to {args.output}; no validation performed.')
+        return 0
     config = json.loads(args.sources.read_text(encoding='utf-8'))
     entries, source_reports = [], []
     for source in config['sources']:
@@ -287,10 +326,8 @@ def main():
         output.extend([entry.info, *entry.options, entry.url])
     playlist_text = '\n'.join(output) + '\n'
     atomic_write(args.output, playlist_text)
-    # Offer the conventional channel-list extension for importers that treat
-    # .m3u8 URLs as individual HLS streams. Contents stay identical.
-    if args.output.suffix.lower() == '.m3u8':
-        atomic_write(args.output.with_suffix('.m3u'), playlist_text)
+    smarters_output = args.output.with_name(args.output.stem + '-smarters.m3u8')
+    atomic_write(smarters_output, render_smarters(selected))
     print(json.dumps(summary, indent=2))
     print(f'Wrote {args.output}\nReport: {args.report}', flush=True)
     return 0

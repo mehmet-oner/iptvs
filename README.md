@@ -10,16 +10,22 @@ The script reads `sources.json` and writes `playlist.m3u8` and
 `validation-report.json` next to the script. Run it again whenever you want to
 refresh the playlist. It does not install a scheduled task.
 
-When the output has the `.m3u8` extension, an identical `.m3u` companion is also
-written. For IPTV Smarters, try importing the following through the app's M3U
-playlist option (where available):
+Generated playlists use `.m3u8` only. Import them through the player's M3U
+playlist option. They are channel-list URLs, not Xtream Codes server addresses.
 
-https://raw.githubusercontent.com/mehmet-oner/iptvs/main/playlist.m3u
+The builder also writes `playlist-smarters.m3u8` using consistent `tvg-name`,
+logo, ID, channel number, and group metadata, with exactly two lines per channel.
+Explicit HTTP headers use encoded URL options instead of VLC directives or
+nonstandard EXTINF attributes. Support for these headers depends on the player.
+This compatibility output preserves all selected channels and the geo policy.
 
-This is a channel-list URL, not an Xtream Codes server address. The `.m3u` alias
-offers an alternative extension for troubleshooting import compatibility;
-successful import still depends on the app version and device. Both files
-contain the same channels, including geo-marked channels without validation.
+https://raw.githubusercontent.com/mehmet-oner/iptvs/main/playlist-smarters.m3u8
+
+To create that version from the existing output without revalidating anything:
+
+```sh
+python3 build_playlist.py --smarters-from playlist.m3u8 --output playlist-smarters.m3u8
+```
 
 ## Sources and selection
 
