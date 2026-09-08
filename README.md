@@ -10,6 +10,17 @@ The script reads `sources.json` and writes `playlist.m3u8` and
 `validation-report.json` next to the script. Run it again whenever you want to
 refresh the playlist. It does not install a scheduled task.
 
+When the output has the `.m3u8` extension, an identical `.m3u` companion is also
+written. For IPTV Smarters, try importing the following through the app's M3U
+playlist option (where available):
+
+https://raw.githubusercontent.com/mehmet-oner/iptvs/main/playlist.m3u
+
+This is a channel-list URL, not an Xtream Codes server address. The `.m3u` alias
+offers an alternative extension for troubleshooting import compatibility;
+successful import still depends on the app version and device. Both files
+contain the same channels, including geo-marked channels without validation.
+
 ## Sources and selection
 
 Edit `sources.json` to add/remove source URLs. Sources are ordered by preference.

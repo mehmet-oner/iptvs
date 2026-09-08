@@ -285,7 +285,12 @@ def main():
     output = ['#EXTM3U']
     for entry in selected:
         output.extend([entry.info, *entry.options, entry.url])
-    atomic_write(args.output, '\n'.join(output) + '\n')
+    playlist_text = '\n'.join(output) + '\n'
+    atomic_write(args.output, playlist_text)
+    # Offer the conventional channel-list extension for importers that treat
+    # .m3u8 URLs as individual HLS streams. Contents stay identical.
+    if args.output.suffix.lower() == '.m3u8':
+        atomic_write(args.output.with_suffix('.m3u'), playlist_text)
     print(json.dumps(summary, indent=2))
     print(f'Wrote {args.output}\nReport: {args.report}', flush=True)
     return 0

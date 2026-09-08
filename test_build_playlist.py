@@ -108,6 +108,7 @@ https://example.org/3
                 self.assertNotIn('/geo', requests)
                 self.assertIn('/nested/segment.ts', requests)
                 self.assertEqual(output.read_text().count('#EXTINF:'), 2)
+                self.assertEqual(output.with_suffix('.m3u').read_bytes(), output.read_bytes())
                 # A later source failure must never erase a usable prior playlist.
                 previous = output.read_text()
                 sources.write_text(json.dumps({'sources': [{'name': 'Broken', 'url': f'http://127.0.0.1:{server.server_port}/missing'}]}))
