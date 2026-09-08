@@ -1,0 +1,4044 @@
+{
+  "checked_at": "2026-09-08T17:45:30.136742+00:00",
+  "summary": {
+    "source_entries": 401,
+    "channel_groups": 199,
+    "distinct_checks": 204,
+    "output_channels": 155,
+    "reachable": 145,
+    "geo_retained": 10,
+    "dropped_groups": 40,
+    "duplicate_stream_groups": 4,
+    "failed_sources": 0
+  },
+  "sources": [
+    {
+      "name": "iptv-org Turkey",
+      "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "status": "loaded",
+      "entries": 173,
+      "warnings": []
+    },
+    {
+      "name": "iptv-org Turkish language",
+      "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
+      "status": "loaded",
+      "entries": 173,
+      "warnings": []
+    },
+    {
+      "name": "Free-TV Turkey",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_turkey.m3u8",
+      "status": "loaded",
+      "entries": 16,
+      "warnings": []
+    },
+    {
+      "name": "IPTV-TR",
+      "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u",
+      "status": "loaded",
+      "entries": 39,
+      "warnings": []
+    }
+  ],
+  "channels": [
+    {
+      "channel": "id:4utv.tr",
+      "name": "4U TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://hls.4utv.live/hls/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://hls.4utv.live/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:360.tr",
+      "name": "360 TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:a2tv.tr",
+      "name": "A2TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ahaber.tr",
+      "name": "A Haber (1080p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/ahaber/ahaber.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:aspor.tr",
+      "name": "A Spor (1080p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:aksutv.tr",
+      "name": "Aksu TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_aksutv/aksutv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:alrafidaintv.tr",
+      "name": "Al Rafidain (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://arrafidain.tvplayer.online/arrafidaintv/source/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 502: Bad Gateway"
+        }
+      ]
+    },
+    {
+      "channel": "id:alzahratvturkic.tr",
+      "name": "Al-Zahra TV Turkic (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.al-zahratv.com/live/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.al-zahratv.com/live/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.al-zahratv.com/live/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:alanyapostatv.tr",
+      "name": "Alanya Posta TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:almahriahtv.tr",
+      "name": "Almahriah TV (576p)",
+      "status": "reachable",
+      "selected_url": "https://starmenajo.com/hls/almahriah/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://starmenajo.com/hls/almahriah/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:altastv.tr",
+      "name": "Altas TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:anadolunettv.tr",
+      "name": "Anadolu Net TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:arastv.tr",
+      "name": "ARAS TV (576p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:atv.tr",
+      "name": "ATV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+          "status": "unreachable",
+          "reason": "timeout: The read operation timed out"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+          "status": "unreachable",
+          "reason": "timeout: The read operation timed out"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:atvalanya.tr",
+      "name": "ATV Alanya (1080p)",
+      "status": "reachable",
+      "selected_url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:atvavrupa.tr",
+      "name": "ATV Avrupa (576p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "channel": "id:babytv.uk@turkiye",
+      "name": "BabyTV Turkiye (1080p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://saran-live.ercdn.net/babytv/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://saran-live.ercdn.net/babytv/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcearth.uk@turkiye",
+      "name": "BBC Earth Turkiye",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/bbc/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcfirst.uk@turkiye",
+      "name": "BBC First Turkiye",
+      "status": "reachable",
+      "selected_url": "http://88.212.15.29/live/bbc_first/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://88.212.15.29/live/bbc_first/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:beinboxoffice1.tr",
+      "name": "beIN Box Office 1",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/box1/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/box1/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:beinboxoffice2.tr",
+      "name": "beIN Box Office 2",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/box2/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/box2/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:beinboxoffice3.tr",
+      "name": "beIN Box Office 3",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/box3/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/box3/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:beinmoviesstars.tr",
+      "name": "beIN Movies Stars",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/bsaction1/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/bsaction1/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:beinmoviesturk.tr",
+      "name": "beIN Movies Turk",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/bsturk/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/bsturk/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:benguturktv.tr",
+      "name": "Benguturk TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://185.234.111.229:8000/play/a05u",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://185.234.111.229:8000/play/a05u",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:beyaztv.tr",
+      "name": "Beyaz TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8",
+          "status": "unreachable",
+          "reason": "ConnectionResetError: [Errno 54] Connection reset by peer"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8",
+          "status": "unreachable",
+          "reason": "ConnectionResetError: [Errno 54] Connection reset by peer"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:birtv.tr",
+      "name": "Bir TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bloomberght.tr",
+      "name": "BloombergHT (720p)",
+      "status": "reachable",
+      "selected_url": "https://ciner.daioncdn.net/bloomberght/bloomberght.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://ciner.daioncdn.net/bloomberght/bloomberght.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:brtv.tr",
+      "name": "BRTV (720p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:astv.tr",
+      "name": "Bursa AS TV (900p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bursatv.tr",
+      "name": "Bursa TV (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://win1.yayin.com.tr/bursatv/bursatv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://win1.yayin.com.tr/bursatv/bursatv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:caytv.tr",
+      "name": "Cay TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:cekmekoytv.tr",
+      "name": "Cekmeköy TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cdn-cekmekoybeltv.yayin.com.tr'. (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn-cekmekoybeltv.yayin.com.tr/cekmekoybeltv/cekmekoybeltv_1080p/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cdn-cekmekoybeltv.yayin.com.tr'. (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:ciftcitv.tr",
+      "name": "Çiftçi TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:cnbce.tr",
+      "name": "CNBC-e",
+      "status": "reachable",
+      "selected_url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:denizpostasitv.tr",
+      "name": "Deniz Postası TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_denizpostasi/denizpostasi/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:dha.tr",
+      "name": "DHA (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:disneyjr.tr",
+      "name": "Disney Jr. (1080p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://saran-live.ercdn.net/disneyjunior/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:diyanettv.tr",
+      "name": "Diyanet TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3bf95a47e07.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:diyartv.tr",
+      "name": "Diyar TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_diyartv/diyartv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:dosttv.tr",
+      "name": "Dost TV (576p)",
+      "status": "reachable",
+      "selected_url": "https://dost.stream.emsal.im/tv/live.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://dost.stream.emsal.im/tv/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://dost.stream.emsal.im/tv/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://dost.stream.emsal.im/tv/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:dreamturk.tr",
+      "name": "Dream Türk (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:edessatv.tr",
+      "name": "Edessa TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://canli.edessatv.com/hls/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://canli.edessatv.com/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://canli.edessatv.com/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ekoturk.tr",
+      "name": "Ekoturk (720p)",
+      "status": "reachable",
+      "selected_url": "https://cdn.ekoturk.net/hls/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn.ekoturk.net/hls/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn.ekoturk.net/hls/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:elsharqtv.tr",
+      "name": "Elsharq TV (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://mn-nl.mncdn.com/elsharq_live/live/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ertv.tr",
+      "name": "Er TV (1080p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_ertv_new/ertv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:erzurumwebtv.tr",
+      "name": "Erzurum Web TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://win29.yayin.com.tr/erzurumwebtv/erzurumwebtv/iptvdelisi.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:estv.tr",
+      "name": "ES TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_estv/estv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:etvkayseri.tr",
+      "name": "ETV Kayseri (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_etv/etv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:etvmanisa.tr",
+      "name": "ETV Manisa (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/manisaetv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:eurod.tr",
+      "name": "Euro D (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:fbtv.tr",
+      "name": "FB TV",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:finansturktv.tr",
+      "name": "Finans Turk TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:flashhabertv.tr",
+      "name": "Flash Haber TV",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtyycglqauzjhlive/broadcast_67c053c48829f.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:fortunatv.tr",
+      "name": "Fortuna TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/ftvturk/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:guneydogutv.tr",
+      "name": "Guneydogu TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/gtv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:gzt.tr",
+      "name": "GZT (1080p)",
+      "status": "reachable",
+      "selected_url": "https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://gzttv-live.lg.mncdn.com/gzttv/gzttv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:haber61tv.tr",
+      "name": "Haber61 TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:haberglobal.tr",
+      "name": "Haber Global (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:haberturktv.tr",
+      "name": "Habertürk TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv.ensonhaber.com/haberturk/haberturk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:halktv.tr",
+      "name": "Halk TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://halktv-live.daioncdn.net/halktv/halktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:htsportv.tr",
+      "name": "HTSpor TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+        }
+      ]
+    },
+    {
+      "channel": "id:hunattv.tr",
+      "name": "Hunat TV (480p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://59cba4d34b678.streamlock.net/canlitv/hunattv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for '59cba4d34b678.streamlock.net'. (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://59cba4d34b678.streamlock.net/canlitv/hunattv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for '59cba4d34b678.streamlock.net'. (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:iceltv.tr",
+      "name": "Icel TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ilketv.tr",
+      "name": "Ilke TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal3.tr",
+      "name": "Kanal 3 (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal7.tr",
+      "name": "Kanal 7 (720p)",
+      "status": "reachable",
+      "selected_url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'kanal7.blutv.com'. (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'kanal7.blutv.com'. (_ssl.c:1129)>"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal7avrupa.tr",
+      "name": "Kanal 7 Avrupa (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal12.tr",
+      "name": "Kanal 12 (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal12/kanal12/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal15.tr",
+      "name": "Kanal 15 (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal15/kanal15/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal23.tr",
+      "name": "Kanal 23 (1080p)",
+      "status": "reachable",
+      "selected_url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn-kanal23.yayin.com.tr/kanal23/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal26.tr",
+      "name": "Kanal 26 (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal26/kanal26/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal32.tr",
+      "name": "Kanal 32 (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/kanal32/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal33.tr",
+      "name": "Kanal 33 (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal34.tr",
+      "name": "Kanal 34 (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://vdo.digitalbox.xyz:3266/live/kanal34tvlive.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://vdo.digitalbox.xyz:3266/live/kanal34tvlive.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanal58.tr",
+      "name": "KANAL 58 (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: The read operation timed out"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: The read operation timed out"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanald.tr",
+      "name": "Kanal D (1080p)",
+      "status": "reachable",
+      "selected_url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/kanald/kanald.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanalfirat.tr",
+      "name": "Kanal Firat (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanalfirat/kanalfirat/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanalhayat.tr",
+      "name": "Kanal Hayat (1080p)",
+      "status": "reachable",
+      "selected_url": "https://tbn02a.ltnschedule.com/hls/nx21i.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tbn02a.ltnschedule.com/hls/nx21i.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tbn02a.ltnschedule.com/hls/nx21i.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanalv.tr",
+      "name": "Kanal V (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kanalv/kanalv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kaytv.tr",
+      "name": "Kay TV (576p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kaytv/kaytv/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:kentturk.tr",
+      "name": "Kent Türk TV (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_kentturktv/kentturktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:knmusictv.az",
+      "name": "KN Music TV",
+      "status": "reachable",
+      "selected_url": "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kocaelitv.tr",
+      "name": "Kocaeli TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge.taksimbilisim.com/kocaelitv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:konyaolaytv.tr",
+      "name": "Konya Olay TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_konyaolaytv/konyaolaytv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kralpoptv.tr",
+      "name": "KRAL Pop TV (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 403: Forbidden; HTTP Error 403: Forbidden; HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 403: Forbidden; HTTP Error 403: Forbidden; HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:lalegultv.tr",
+      "name": "Lalegul TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://lbl.netmedya.net/hls/lalegultv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:lifetv.tr",
+      "name": "Life TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:linetv.tr",
+      "name": "Line TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/linetv/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:luystv.tr",
+      "name": "Luys TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:mavikaradeniztv.tr",
+      "name": "MaviKaradeniz (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:medmuzik.tr",
+      "name": "Med Muzik (1080p)",
+      "status": "reachable",
+      "selected_url": "http://54.36.110.140/live3/live3.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://54.36.110.140/live3/live3.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:mekameleentv.tr",
+      "name": "Mekameleen TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:meltemtv.tr",
+      "name": "Meltem TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:mercantv.tr",
+      "name": "Mercan TV (576p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:minikacocuk.tr",
+      "name": "Minika Cocuk (720p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:minikago.tr",
+      "name": "Minika Go (720p)",
+      "status": "reachable",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:moviesmartturk.tr",
+      "name": "MovieSmart Turk (576p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 512: "
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 512: "
+        }
+      ]
+    },
+    {
+      "channel": "id:mturktv.tr",
+      "name": "MTürk TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/muglaturk/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:nationalgeographic.tr",
+      "name": "National Geographic",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/natgeo/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/natgeo/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:nationalgeographicwild.tr",
+      "name": "National Geographic Wild",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/natgeowild/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/natgeowild/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:naturaltv.tr",
+      "name": "Natural TV (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://broadcasttr.com:1935/naturaltv/bant1/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        }
+      ]
+    },
+    {
+      "channel": "id:nowtv.tr",
+      "name": "NOW TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ntv.tr",
+      "name": "NTV",
+      "status": "reachable",
+      "selected_url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:number1ask.tr",
+      "name": "Number 1 Ask (720p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:number1damar.tr",
+      "name": "Number 1 Damar (720p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:number1dance.tr",
+      "name": "Number 1 Dance (720p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:number1tv.tr",
+      "name": "Number 1 TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:olayturktv.tr",
+      "name": "Olay Türk TV Kayseri (720p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:on4tv.tr",
+      "name": "On4 TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/on4/bant1/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:persianaturkiye.fr",
+      "name": "Persiana Turkiye",
+      "status": "reachable",
+      "selected_url": "https://turkhls.persiana.live/hls/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://turkhls.persiana.live/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://turkhls.persiana.live/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerdance.tr",
+      "name": "Power Dance (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerlove.tr",
+      "name": "Power Love (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerturkakustik.tr",
+      "name": "Power Türk Akustik (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerturkslow.tr",
+      "name": "Power Türk Slow (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerturktaptaze.tr",
+      "name": "Power Türk Taptaze (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powertv.tr",
+      "name": "Power TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:powerturktv.tr",
+      "name": "PowerTürk TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:qaftv.tr",
+      "name": "Qaf TV (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Empty response"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtgint.ru",
+      "name": "RTG int.",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://213.91.179.28:8000/play/a0bw",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:ssport.tr",
+      "name": "S Sport (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://corestream.siteyaptim.live/s-sport/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://corestream.siteyaptim.live/s-sport/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ]
+    },
+    {
+      "channel": "id:ssport2.tr",
+      "name": "S Sport 2 (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://corestream.siteyaptim.live/s-sport2/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://corestream.siteyaptim.live/s-sport2/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ]
+    },
+    {
+      "channel": "id:sat7turk.cy",
+      "name": "Sat7 Türk (1080p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bricvesatranctv.tr",
+      "name": "Satranç TV (480p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "http://139.162.182.79/live/test/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://139.162.182.79/live/test/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://139.162.182.79/live/test/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:semerkandtv.tr",
+      "name": "Semerkand TV (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:sercemtv.tr",
+      "name": "Sercem TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:showturk.tr",
+      "name": "Show Turk (1080p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 403: Forbidden; HTTP Error 403: Forbidden; HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 403: Forbidden; HTTP Error 403: Forbidden; HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:startv.tr",
+      "name": "Star TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:sunrtv.tr",
+      "name": "Sun RTV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_sunrtv/sunrtv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tbmmtv.tr",
+      "name": "TBMM TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tele1.tr",
+      "name": "Tele 1 (1080p)",
+      "status": "reachable",
+      "selected_url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tempotv.tr",
+      "name": "Tempo TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tgrtbelgesel.tr",
+      "name": "TGRT Belgesel TV (576p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtsxxkzwwuqtglive/broadcast_5fe462afc6a0e.smil/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:tgrthaber.tr",
+      "name": "TGRT Haber (720p)",
+      "status": "reachable",
+      "selected_url": "https://canli.tgrthaber.com/tgrt.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://canli.tgrthaber.com/tgrt.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://canli.tgrthaber.com/tgrt.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://canli.tgrthaber.com/tgrt.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tivi6.tr",
+      "name": "Tivi 6 (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tjktv.tr",
+      "name": "TJK TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://tjktv-live.tjk.org/tjktv.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tjktv-live.tjk.org/tjktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tjktv-live.tjk.org/tjktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tjktv2.tr",
+      "name": "TJK TV 2 (1080p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 401: Unauthorized"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tjktv-live.tjk.org/tjktv2/tjktv2.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 401: Unauthorized"
+        }
+      ]
+    },
+    {
+      "channel": "id:tontv.tr",
+      "name": "Ton TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trt1.tr",
+      "name": "TRT 1 (1440p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trt2.tr",
+      "name": "TRT 2 (1440p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:trt3.tr",
+      "name": "TRT 3 (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trt3.live.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trt3.live.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtavaz.tr",
+      "name": "TRT Avaz (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtbelgesel.tr",
+      "name": "TRT Belgesel (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtbelgesel-dai.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtcocuk.tr",
+      "name": "TRT Cocuk (1440p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtdiyanetcocuk.tr",
+      "name": "TRT Diyanet Çocuk (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtebailkokul.tr",
+      "name": "TRT EBA Ilkokul (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-e-okul00.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-e-okul00.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-e-okul00.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtebalise.tr",
+      "name": "TRT EBA Lise (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-e-okul02.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:trteba.tr",
+      "name": "TRT EBA Ortaokul (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trthaber.tr",
+      "name": "TRT Haber (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtkurdi.tr",
+      "name": "TRT Kurdî (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtmuzik.tr",
+      "name": "TRT Müzik (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtspor.tr",
+      "name": "TRT Spor (720p)",
+      "status": "geo_skipped",
+      "selected_url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://corestream.siteyaptim.live/trt-spor/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://corestream.siteyaptim.live/trt-spor/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtspor1.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtsporyildiz.tr",
+      "name": "TRT Spor Yildiz (1440p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtturk.tr",
+      "name": "TRT Türk (720p)",
+      "status": "reachable",
+      "selected_url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtturk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:turkhabertv.tr",
+      "name": "TürkHaber (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv1.tr",
+      "name": "TV 1 (720p)",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv4.tr",
+      "name": "TV4 (720p)",
+      "status": "reachable",
+      "selected_url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://turkmedya-live.ercdn.net/tv4/tv4.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv8.tr",
+      "name": "TV 8 (1080p)",
+      "status": "reachable",
+      "selected_url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8/tv8.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:24tv.tr",
+      "name": "TV 24 (720p)",
+      "status": "reachable",
+      "selected_url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv41.tr",
+      "name": "TV 41 (720p) [Not 24/7]",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://stream.taksimbilisim.com:1935/tv41/bant1/TV41.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://stream.taksimbilisim.com:1935/tv41/bant1/TV41.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv42.tr",
+      "name": "TV 42",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://canli.tv42.com.tr/memfs/d936e417-c4bd-4d42-89a2-02f289892d1d.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv52.tr",
+      "name": "TV 52 (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv100.tr",
+      "name": "TV 100",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://7nyaler.streamhostingcdn.top/stream/46/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:tv264.tr",
+      "name": "TV 264 (1080p)",
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tvden.tr",
+      "name": "TV Den (576p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "http://canli.tvden.com.tr/hls/live.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://canli.tvden.com.tr/hls/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://canli.tvden.com.tr/hls/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tvnet.tr",
+      "name": "TVNET (1080p)",
+      "status": "reachable",
+      "selected_url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:ulketv.tr",
+      "name": "Ulke TV",
+      "status": "reachable",
+      "selected_url": "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "http://217.174.229.138:8000/play/a0el",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://217.174.229.138:8000/play/a0el",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:urfanatiktv.tr",
+      "name": "Urfa Natik TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_urfanatiktv/urfanatiktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:van65tv.tr",
+      "name": "Van 65 TV",
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.artidijitalmedya.com/artidijital_van65/van65/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:vavtv.tr",
+      "name": "Vav TV",
+      "status": "reachable",
+      "selected_url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://playlist.fasttvcdn.com/pl/rfrk9821hdy9dayo8wfyha/kltr-sanat-tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:viasathistory.tr",
+      "name": "Viasat History (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://nord.ayakkabiparti.lol/viasathistory/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://nord.ayakkabiparti.lol/viasathistory/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+        }
+      ]
+    },
+    {
+      "channel": "id:yoltv.de",
+      "name": "YOL TV",
+      "status": "reachable",
+      "selected_url": "https://live.yoltv.com/hls/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://live.yoltv.com/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://live.yoltv.com/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:zaroktv.tr",
+      "name": "Zarok TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:adatv.cy",
+      "name": "Ada TV",
+      "status": "reachable",
+      "selected_url": "https://yayin1.canlitv.fun/live/kibrisadatv.stream/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://yayin1.canlitv.fun/live/kibrisadatv.stream/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:westazerbaijantv.ir",
+      "name": "Azerbaijan Gharbi",
+      "status": "reachable",
+      "selected_url": "https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:babyfirst.us@us",
+      "name": "BabyFirst (720p)",
+      "status": "reachable",
+      "selected_url": "https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:finesttv.de",
+      "name": "Finest TV (288p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://media.finest.tv/hls/live.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://media.finest.tv/hls/live.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:imamhusseintv5.iq",
+      "name": "Imam Hussein TV 5 (720p)",
+      "status": "reachable",
+      "selected_url": "http://live.al-zahratv.com/live/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://live.al-zahratv.com/live/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kanalddrama.tr",
+      "name": "Kanal D Drama (1080p)",
+      "status": "reachable",
+      "selected_url": "http://190.93.224.42/KANAL-D-DRAMA/index.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://190.93.224.42/KANAL-D-DRAMA/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:kurdistantv.iq",
+      "name": "Kurdistan TV (720p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:lovenature.ca",
+      "name": "Love Nature (1080p)",
+      "status": "reachable",
+      "selected_url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:manastv.kg",
+      "name": "Manas TV (1080p)",
+      "status": "reachable",
+      "selected_url": "http://212.42.111.152:8080/hls/manas.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://212.42.111.152:8080/hls/manas.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:mctv.de",
+      "name": "MC TV (720p)",
+      "status": "reachable",
+      "selected_url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8&protocol=https&service=wowza&type=live",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8&protocol=https&service=wowza&type=live",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:myzentv.fr",
+      "name": "MyZen TV (1080p)",
+      "status": "reachable",
+      "selected_url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtgtv.ru",
+      "name": "RTG TV (720p)",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://31.148.48.15/RTG_HD/index.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error timed out>"
+        }
+      ]
+    },
+    {
+      "channel": "id:stingraynaturescape.ca",
+      "name": "Stingray Naturescape (1080p)",
+      "status": "reachable",
+      "selected_url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtarabi.tr",
+      "name": "TRT Arabi (1080p) [Not 24/7]",
+      "status": "reachable",
+      "selected_url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:trtspor2",
+      "name": "TRT Spor 2 Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtspor2.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtworld.tr",
+      "name": "TRT World",
+      "status": "reachable",
+      "selected_url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "Free-TV Turkey",
+          "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:a2",
+      "name": "A2",
+      "status": "duplicate_stream",
+      "selected_url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:showtv",
+      "name": "SHOW TV",
+      "status": "reachable",
+      "selected_url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:tv85",
+      "name": "TV 8.5",
+      "status": "reachable",
+      "selected_url": "https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:360",
+      "name": "360",
+      "status": "duplicate_stream",
+      "selected_url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:teve2",
+      "name": "TEVE2",
+      "status": "reachable",
+      "selected_url": "https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:haberturk",
+      "name": "HABERTÜRK",
+      "status": "reachable",
+      "selected_url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/haberturktv/haberturktv.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/haberturktv/haberturktv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:24",
+      "name": "24",
+      "status": "duplicate_stream",
+      "selected_url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:ekoltv",
+      "name": "EKOL TV",
+      "status": "reachable",
+      "selected_url": "https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:htspor",
+      "name": "HT SPOR",
+      "status": "dropped",
+      "selected_url": null,
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+        }
+      ]
+    },
+    {
+      "channel": "name:trtcocukdiyanet",
+      "name": "TRT ÇOCUK DİYANET",
+      "status": "duplicate_stream",
+      "selected_url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+      "candidates": [
+        {
+          "source": "IPTV-TR",
+          "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    }
+  ]
+}
