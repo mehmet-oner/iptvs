@@ -13,13 +13,23 @@ refresh the playlist. It does not install a scheduled task.
 Generated playlists use `.m3u8` only. Import them through the player's M3U
 playlist option. They are channel-list URLs, not Xtream Codes server addresses.
 
+Preferred URL (GitHub Pages):
+
+https://mehmet-oner.github.io/iptvs/playlist.m3u8
+
+GitHub Pages publishes the repository's `main` branch root. The `.nojekyll` file
+keeps publication as static files. Pushed playlist changes are published by
+GitHub Pages; the playlist builder itself is still run manually. Raw GitHub
+URLs return `text/plain`, while Pages serves playlist file types, which provides
+an alternative for players that reject raw-file imports.
+
 The builder also writes `playlist-smarters.m3u8` using consistent `tvg-name`,
 logo, ID, channel number, and group metadata, with exactly two lines per channel.
 Explicit HTTP headers use encoded URL options instead of VLC directives or
 nonstandard EXTINF attributes. Support for these headers depends on the player.
 This compatibility output preserves all selected channels and the geo policy.
 
-https://raw.githubusercontent.com/mehmet-oner/iptvs/main/playlist-smarters.m3u8
+https://mehmet-oner.github.io/iptvs/playlist-smarters.m3u8
 
 To create that version from the existing output without revalidating anything:
 
