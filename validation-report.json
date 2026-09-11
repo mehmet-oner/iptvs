@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-09-08T18:39:57.699740+00:00",
+  "checked_at": "2026-09-11T21:00:03.175175+00:00",
   "summary": {
-    "source_entries": 744,
-    "channel_groups": 212,
-    "distinct_checks": 260,
-    "output_channels": 161,
-    "reachable": 155,
-    "geo_retained": 6,
-    "dropped_groups": 47,
-    "duplicate_stream_groups": 4,
+    "source_entries": 748,
+    "channel_groups": 214,
+    "distinct_checks": 263,
+    "output_channels": 166,
+    "reachable": 159,
+    "geo_retained": 7,
+    "dropped_groups": 43,
+    "duplicate_stream_groups": 5,
     "failed_sources": 0
   },
   "sources": [
@@ -16,7 +16,7 @@
       "name": "iptv-org Turkey",
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
       "status": "loaded",
-      "entries": 173,
+      "entries": 174,
       "filtered_out": 0,
       "warnings": []
     },
@@ -24,7 +24,7 @@
       "name": "iptv-org Turkish language",
       "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
       "status": "loaded",
-      "entries": 173,
+      "entries": 175,
       "filtered_out": 0,
       "warnings": []
     },
@@ -48,7 +48,7 @@
       "name": "IPTV Nexus Turkish",
       "url": "https://dearbulut.github.io/iptv/playlists/language/tur.m3u",
       "status": "loaded",
-      "entries": 173,
+      "entries": 175,
       "filtered_out": 0,
       "warnings": []
     },
@@ -72,8 +72,8 @@
       "name": "World IPTV Checker — Turkey",
       "url": "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
       "status": "loaded",
-      "entries": 124,
-      "filtered_out": 13818,
+      "entries": 123,
+      "filtered_out": 13806,
       "warnings": []
     },
     {
@@ -499,12 +499,6 @@
           "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
-        },
-        {
-          "source": "World IPTV Checker — Turkey",
-          "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -535,7 +529,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
+          "url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         },
@@ -2035,33 +2029,33 @@
     {
       "channel": "id:htsportv.tr",
       "name": "HTSpor TV (1080p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -2452,6 +2446,12 @@
           "url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "World IPTV Checker — Turkey",
+          "url": "https://edge1.socialsmart.tv/kanal33/bant1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -2485,33 +2485,33 @@
     {
       "channel": "id:kanal58.tr",
       "name": "KANAL 58 (720p) [Not 24/7]",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://live.artidijitalmedya.com/artidijital_kanal58/kanal58/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -2893,12 +2893,6 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
-        },
-        {
-          "source": "World IPTV Checker — Turkey",
           "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
@@ -3490,33 +3484,33 @@
     {
       "channel": "id:number1dance.tr",
       "name": "Number 1 Dance (720p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -3951,7 +3945,7 @@
           "source": "IPTV Nexus Turkish",
           "url": "https://bcovlive-a.akamaihd.net/29c60f23ea4840ba8726925a77fcfd0b/eu-central-1/6415845530001/profile_0/chunklist.m3u8",
           "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "reason": "HTTPError: HTTP Error 503: Service Unavailable"
         }
       ]
     },
@@ -3976,7 +3970,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist_dvr.m3u8",
+          "url": "https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         },
@@ -4377,6 +4371,12 @@
           "reason": "HLS manifest and media segment reachable"
         },
         {
+          "source": "World IPTV Checker — Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
           "source": "discevisita Turkish national and Cyprus channels",
           "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
           "status": "reachable",
@@ -4681,45 +4681,45 @@
     {
       "channel": "id:trtcocuk.tr",
       "name": "TRT Cocuk (1440p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "Free-TV Turkey",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV-TR",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -4876,6 +4876,33 @@
           "url": "https://tv-e-okul01.medya.trt.com.tr/master.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:trtgenc.tr",
+      "name": "TRT Genc (1440p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
+      "selected_source": "iptv-org Turkey",
+      "candidates": [
+        {
+          "source": "iptv-org Turkey",
+          "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "iptv-org Turkish language",
+          "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        },
+        {
+          "source": "IPTV Nexus Turkish",
+          "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
         }
       ]
     },
@@ -5296,7 +5323,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://tv.ensonhaber.com/tv24/tv24.m3u8",
+          "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         },
@@ -5455,12 +5482,6 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
-        },
-        {
-          "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
@@ -5872,7 +5893,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD_principal_SRT/playlist.m3u8",
+          "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD.stream/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         }
@@ -5914,30 +5935,30 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://bamus-klowdtv.amagi.tv/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "url": "https://aegis-cloudfront-1.tubi.video/6d6d0f24-8445-4b4c-bdf6-44f9e38beaa4/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
     {
       "channel": "id:manastv.kg",
       "name": "Manas TV (1080p)",
-      "status": "reachable",
-      "selected_url": "http://212.42.111.152:8080/hls/manas.m3u8",
-      "selected_source": "iptv-org Turkish language",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
       "candidates": [
         {
           "source": "iptv-org Turkish language",
           "url": "http://212.42.111.152:8080/hls/manas.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "http://212.42.111.152:8080/hls/manas.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         }
       ]
     },
@@ -6025,7 +6046,28 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
+          "url": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883056",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:timelessdizichannel.pl",
+      "name": "Timeless Dizi Channel (1080p)",
+      "status": "reachable",
+      "selected_url": "http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8",
+      "selected_source": "iptv-org Turkish language",
+      "candidates": [
+        {
+          "source": "iptv-org Turkish language",
+          "url": "http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "IPTV Nexus Turkish",
+          "url": "http://hls127.freeott.top:8080/BG_Dizi_HD/video.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         }
@@ -6220,15 +6262,15 @@
     {
       "channel": "name:htspor",
       "name": "HT SPOR",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "duplicate_stream",
+      "selected_url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+      "selected_source": "IPTV-TR",
       "candidates": [
         {
           "source": "IPTV-TR",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
