@@ -222,7 +222,10 @@ def load_source(source, timeout):
     if not entries:
         raise ValueError('Source contains no channels')
     allowed = source.get('include_groups')
-    filtered = [e for e in entries if allowed is None or e.attrs.get('group-title', '') in allowed]
+    included_ids = {ident.casefold() for ident in source.get('include_ids', [])}
+    filtered = [e for e in entries
+                if (allowed is None or e.attrs.get('group-title', '') in allowed)
+                and (not included_ids or channel_id(e) in included_ids)]
     aliases = {k.casefold(): v for k, v in source.get('id_aliases', {}).items()}
     for entry in filtered:
         replacement = aliases.get(channel_id(entry))

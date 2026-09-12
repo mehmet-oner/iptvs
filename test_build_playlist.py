@@ -20,7 +20,8 @@ https://example.org/sozcu.m3u8
 https://example.org/other.m3u8
 '''
         source = {'name': 'test', 'url': 'https://example.org/list.m3u',
-                  'include_groups': ['Ulusal'], 'id_aliases': {'sozcu.tr': 'SozcuTV.tr'}}
+                  'include_groups': ['Ulusal'], 'include_ids': ['sozcu.tr'],
+                  'id_aliases': {'sozcu.tr': 'SozcuTV.tr'}}
         with patch('build_playlist.fetch', return_value=(body, source['url'], 'text/plain')):
             entries, warnings, excluded = load_source(source, 1)
         self.assertEqual(excluded, 1)

@@ -1,4 +1,4 @@
-# Turkish IPTV playlist builder
+# Free Turkish and international IPTV playlist builder
 
 Run with Python 3.10 or newer. No packages or accounts are required:
 
@@ -26,13 +26,18 @@ Edit `sources.json` to add/remove source URLs. Sources are ordered by preference
 Set `"enabled": false` on a source to disable it. Sources may be full playlists
 or `"type": "stream"` entries for a maintained per-channel HLS pointer. A source
 can use `include_groups` to import only relevant sections and `id_aliases` to map
-nonstandard IDs to canonical IDs before deduplication.
+nonstandard IDs to canonical IDs before deduplication. `include_ids` imports a
+small allowlist of canonical channel IDs from a larger playlist.
 
-The current sources combine country/language playlists, independently checked
-catalogs, a curated Turkish national/Cyprus list, and hourly refreshed live
-pointers for Sözcü TV and CNN Türk. Broad worldwide lists are filtered to their
-Turkey group. Archived lists, dead endpoints, and lists containing obvious paid
-channel restreams were excluded during the September 2026 source review.
+The current sources combine Turkish country/language playlists, independently
+checked catalogs, a curated Turkish national/Cyprus list, hourly refreshed live
+pointers for Sözcü TV and CNN Türk, and Free-TV's curated United States, United
+Kingdom, and Netherlands playlists. Free-TV limits its lists to free mainstream
+channels and favors quality over quantity. Small iptv-org allowlists add popular
+free services missing from those country lists without importing thousands of
+local and niche entries. Broad worldwide lists are filtered to their Turkey
+group. Archived lists, dead endpoints, and lists containing obvious paid channel
+restreams were excluded during the September 2026 source review.
 
 Channels are grouped using `tvg-id`, with quality suffixes such as `@SD` and
 `@HD` removed. Regional editions such as `@Turkiye` remain distinct. Entries

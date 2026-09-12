@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-09-11T21:00:03.175175+00:00",
+  "checked_at": "2026-09-12T16:03:03.469044+00:00",
   "summary": {
-    "source_entries": 748,
-    "channel_groups": 214,
-    "distinct_checks": 263,
-    "output_channels": 166,
-    "reachable": 159,
-    "geo_retained": 7,
-    "dropped_groups": 43,
-    "duplicate_stream_groups": 5,
+    "source_entries": 853,
+    "channel_groups": 315,
+    "distinct_checks": 364,
+    "output_channels": 246,
+    "reachable": 224,
+    "geo_retained": 22,
+    "dropped_groups": 65,
+    "duplicate_stream_groups": 4,
     "failed_sources": 0
   },
   "sources": [
@@ -34,6 +34,54 @@
       "status": "loaded",
       "entries": 16,
       "filtered_out": 0,
+      "warnings": []
+    },
+    {
+      "name": "Free-TV United States",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_usa.m3u8",
+      "status": "loaded",
+      "entries": 28,
+      "filtered_out": 0,
+      "warnings": []
+    },
+    {
+      "name": "Free-TV United Kingdom",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_uk.m3u8",
+      "status": "loaded",
+      "entries": 55,
+      "filtered_out": 0,
+      "warnings": []
+    },
+    {
+      "name": "Free-TV Netherlands",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_netherlands.m3u8",
+      "status": "loaded",
+      "entries": 13,
+      "filtered_out": 0,
+      "warnings": []
+    },
+    {
+      "name": "iptv-org selected United States",
+      "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
+      "status": "loaded",
+      "entries": 3,
+      "filtered_out": 1474,
+      "warnings": []
+    },
+    {
+      "name": "iptv-org selected United Kingdom",
+      "url": "https://iptv-org.github.io/iptv/countries/uk.m3u",
+      "status": "loaded",
+      "entries": 1,
+      "filtered_out": 310,
+      "warnings": []
+    },
+    {
+      "name": "iptv-org selected Netherlands",
+      "url": "https://iptv-org.github.io/iptv/countries/nl.m3u",
+      "status": "loaded",
+      "entries": 2,
+      "filtered_out": 160,
       "warnings": []
     },
     {
@@ -72,8 +120,8 @@
       "name": "World IPTV Checker — Turkey",
       "url": "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
       "status": "loaded",
-      "entries": 123,
-      "filtered_out": 13806,
+      "entries": 126,
+      "filtered_out": 13745,
       "warnings": []
     },
     {
@@ -499,6 +547,12 @@
           "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "World IPTV Checker — Turkey",
+          "url": "http://1.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -529,7 +583,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "http://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_360p.m3u8",
+          "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         },
@@ -2029,33 +2083,33 @@
     {
       "channel": "id:htsportv.tr",
       "name": "HTSpor TV (1080p)",
-      "status": "reachable",
-      "selected_url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-      "selected_source": "iptv-org Turkey",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
         }
       ]
     },
@@ -2896,6 +2950,12 @@
           "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "World IPTV Checker — Turkey",
+          "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -3050,32 +3110,32 @@
       "channel": "id:meltemtv.tr",
       "name": "Meltem TV (1080p)",
       "status": "reachable",
-      "selected_url": "http://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
-      "selected_source": "discevisita Turkish national and Cyprus channels",
+      "selected_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: Response is not HLS or recognizable direct audio/video"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: Response is not HLS or recognizable direct audio/video"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: Response is not HLS or recognizable direct audio/video"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: Response is not HLS or recognizable direct audio/video"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "discevisita Turkish national and Cyprus channels",
@@ -3418,66 +3478,66 @@
     {
       "channel": "id:number1ask.tr",
       "name": "Number 1 Ask (720p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
     {
       "channel": "id:number1damar.tr",
       "name": "Number 1 Damar (720p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -3517,33 +3577,33 @@
     {
       "channel": "id:number1tv.tr",
       "name": "Number 1 TV (720p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -3943,9 +4003,9 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://bcovlive-a.akamaihd.net/29c60f23ea4840ba8726925a77fcfd0b/eu-central-1/6415845530001/profile_0/chunklist.m3u8",
+          "url": "https://corestream.siteyaptim.live/s-sport2/index.m3u8",
           "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 503: Service Unavailable"
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
         }
       ]
     },
@@ -4051,27 +4111,27 @@
     {
       "channel": "id:sercemtv.tr",
       "name": "Sercem TV (1080p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
+      "selected_source": "iptv-org Turkey",
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -4210,33 +4270,33 @@
     {
       "channel": "id:tele1.tr",
       "name": "Tele 1 (1080p)",
-      "status": "reachable",
-      "selected_url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-      "selected_source": "iptv-org Turkey",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         },
         {
           "source": "World IPTV Checker — Turkey",
           "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
         }
       ]
     },
@@ -4882,9 +4942,9 @@
     {
       "channel": "id:trtgenc.tr",
       "name": "TRT Genc (1440p) [Geo-blocked]",
-      "status": "geo_skipped",
+      "status": "reachable",
       "selected_url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
-      "selected_source": "iptv-org Turkey",
+      "selected_source": "IPTV Nexus Turkish",
       "candidates": [
         {
           "source": "iptv-org Turkey",
@@ -4901,8 +4961,8 @@
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tv-trtgenc.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -5323,7 +5383,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8",
+          "url": "https://tv.ensonhaber.com/tv24/tv24.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         },
@@ -5482,6 +5542,12 @@
         },
         {
           "source": "IPTV Nexus Turkish",
+          "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
+          "source": "World IPTV Checker — Turkey",
           "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtdxkkitgbrckilive/broadcast_5ee244263fd6d.smil/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
@@ -5893,7 +5959,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/KanalD.stream/playlist.m3u8",
+          "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
         }
@@ -5944,21 +6010,21 @@
     {
       "channel": "id:manastv.kg",
       "name": "Manas TV (1080p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
+      "status": "reachable",
+      "selected_url": "http://212.42.111.152:8080/hls/manas.m3u8",
+      "selected_source": "iptv-org Turkish language",
       "candidates": [
         {
           "source": "iptv-org Turkish language",
           "url": "http://212.42.111.152:8080/hls/manas.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "http://212.42.111.152:8080/hls/manas.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 404: Not Found"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
@@ -6135,10 +6201,1531 @@
           "reason": "HLS manifest and media segment reachable"
         },
         {
+          "source": "Free-TV United Kingdom",
+          "url": "https://dash2.antik.sk/live/test_trt_world_atktv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        },
+        {
           "source": "IPTV-TR",
           "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
           "status": "reachable",
           "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:buzzr.us",
+      "name": "Buzzr Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "http://23.237.104.106:8080/USA_BUZZR/index.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "http://23.237.104.106:8080/USA_BUZZR/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:retrotveast.us",
+      "name": "Retro TV",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b/retro/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:stadium.us",
+      "name": "Stadium",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://bcovlive-a.akamaihd.net/e64d564b9275484f85981d8c146fb915/us-east-1/5994000126001/profile_1/976f34cf5a614518b7b539cbf9812080/chunklist_ssaiV.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "channel": "id:biztv.us",
+      "name": "Biz TV",
+      "status": "reachable",
+      "selected_url": "https://2-fss-1.streamhoster.com/pl_154/205722-2251224-1/playlist.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://2-fss-1.streamhoster.com/pl_154/205722-2251224-1/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:heartlandeastern.us",
+      "name": "Heartland",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b/heartland/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:revntv.us",
+      "name": "Rev'n",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b/Revn/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:cnn.us",
+      "name": "CNN",
+      "status": "reachable",
+      "selected_url": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:cnbc.us",
+      "name": "CNBC Ⓨ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://www.youtube.com/c/CNBC/live",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:bloombergtelevision.us",
+      "name": "Bloomberg",
+      "status": "reachable",
+      "selected_url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:abcnews.us",
+      "name": "ABC News",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:cbsnews.us",
+      "name": "CBS News",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:nbcnewsnow.us",
+      "name": "NBC News",
+      "status": "reachable",
+      "selected_url": "https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:reuterstv.us",
+      "name": "Reuters TV",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://reuters-reutersnow-1-eu.rakuten.wurl.tv/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ]
+    },
+    {
+      "channel": "id:nasatvpublic.us",
+      "name": "NASA TV Public",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master_2000.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:nasatvmedia.us",
+      "name": "NASA TV Media",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://ntv2.akamaized.net/hls/live/2013923/NASA-NTV2-HLS/master.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcfood.us",
+      "name": "BBC Food",
+      "status": "reachable",
+      "selected_url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5844bf5514d0007945bda/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5844bf5514d0007945bda/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbchome.us",
+      "name": "BBC Home",
+      "status": "reachable",
+      "selected_url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5836fe745b600070fc743/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5836fe745b600070fc743/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:docurama.us",
+      "name": "Docurama",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://cinedigm.vo.llnwd.net/conssui/amagi_hls_data_xumo1234A-docuramaA/CDN/master.m3u8",
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        }
+      ]
+    },
+    {
+      "channel": "id:drybarcomedy.us",
+      "name": "Drybar Comedy",
+      "status": "reachable",
+      "selected_url": "https://drybar-drybarcomedy-1-us.samsung.wurl.tv/playlist.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://drybar-drybarcomedy-1-us.samsung.wurl.tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:boni-records.com.us",
+      "name": "Music Channel",
+      "status": "reachable",
+      "selected_url": "http://media.boni-records.com/index.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "http://media.boni-records.com/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:stryktv.us",
+      "name": "Stryk TV",
+      "status": "reachable",
+      "selected_url": "https://FFFFFFF110156200.tvustream.com/ryfy.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://FFFFFFF110156200.tvustream.com/ryfy.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:foxlivenow.us",
+      "name": "FOX Live Now",
+      "status": "reachable",
+      "selected_url": "https://fox-foxnewsnow-vizio.amagi.tv/playlist.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://fox-foxnewsnow-vizio.amagi.tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:cheddar.us",
+      "name": "Cheddar",
+      "status": "reachable",
+      "selected_url": "https://hls.livecdn.io/cheddar.com/cheddar/playlist.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://hls.livecdn.io/cheddar.com/cheddar/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:courttv.us",
+      "name": "Court TV",
+      "status": "reachable",
+      "selected_url": "https://content.uplynk.com/channel/6c0bd0f94b1d4526a98676e9699a10ef.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://content.uplynk.com/channel/6c0bd0f94b1d4526a98676e9699a10ef.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:weathernation.us",
+      "name": "WeatherNation",
+      "status": "reachable",
+      "selected_url": "https://d2ferbiwcx1539.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8zd06wicndthf-ssai-prd/WNNationalSamsung/WNNationalSamsung.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://d2ferbiwcx1539.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8zd06wicndthf-ssai-prd/WNNationalSamsung/WNNationalSamsung.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:americasvoice.us",
+      "name": "America's Voice",
+      "status": "reachable",
+      "selected_url": "https://d2jiqiw4g5lj5k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/AmericasVoiceChannel-prod/AVSamsung/AVSamsung.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://d2jiqiw4g5lj5k.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/AmericasVoiceChannel-prod/AVSamsung/AVSamsung.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:newsmax.us",
+      "name": "Newsmax TV",
+      "status": "reachable",
+      "selected_url": "https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:americateve.us",
+      "name": "America TeVe",
+      "status": "reachable",
+      "selected_url": "https://live.gideo.video/americateve2/master.m3u8",
+      "selected_source": "Free-TV United States",
+      "candidates": [
+        {
+          "source": "Free-TV United States",
+          "url": "https://live.gideo.video/americateve2/master.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcone.uk",
+      "name": "BBC One Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_yorks/iptv_hd_abr_v1.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_yorks/iptv_hd_abr_v1.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbctwo.uk",
+      "name": "BBC Two Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_hd/iptv_hd_abr_v1.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_hd/iptv_hd_abr_v1.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:itv1.uk",
+      "name": "ITV 1",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://45.14.84.37/itv1/index.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:stv.uk",
+      "name": "STV Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://csm-e-stv-eb.tls1.yospace.com/csm/live/139900483.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://csm-e-stv-eb.tls1.yospace.com/csm/live/139900483.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:s4c.uk",
+      "name": "S4C Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://live-uk.s4c-cdn.co.uk/out/v1/a0134f1fd5a2461b9422b574566d4442/live_uk.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://live-uk.s4c-cdn.co.uk/out/v1/a0134f1fd5a2461b9422b574566d4442/live_uk.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:channel5.uk",
+      "name": "Channel 5 Ⓢ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://193.46.58.239:8080/Channel5/index.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:itv2.uk",
+      "name": "ITV 2",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://45.14.84.37/itv2/index.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcalba.uk",
+      "name": "BBC Alba Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_alba/iptv_hd_abr_v1.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_alba/iptv_hd_abr_v1.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcfour.uk",
+      "name": "BBC Four Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/iptv_hd_abr_v1.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/iptv_hd_abr_v1.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcscotland.uk",
+      "name": "BBC Scotland Ⓢ Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/pc_hd_abr_v2.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/pc_hd_abr_v2.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:itv3.uk",
+      "name": "ITV 3",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://45.14.84.37/itv3/index.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:qvcuk.uk",
+      "name": "QVC UK Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qvc/3/3.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qvc/3/3.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:tjc.uk",
+      "name": "TJC",
+      "status": "reachable",
+      "selected_url": "https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(TJCOTT)/index.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(TJCOTT)/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcthree.uk",
+      "name": "BBC Three Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:itv4.uk",
+      "name": "ITV 4",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://45.14.84.37/itv4/index.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:greatmovies.uk",
+      "name": "Great! Movies Ⓢ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:gemstv.uk",
+      "name": "GemsTV Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://lo3.gemporia.com/abrgemporiaukgfx/smil:livestream.smil/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lo3.gemporia.com/abrgemporiaukgfx/smil:livestream.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:greatromance.uk",
+      "name": "Great! Romance Ⓢ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:blaze.uk",
+      "name": "Blaze Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://live.blaze.tv/live7/blaze/bitrate1.isml/live.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://live.blaze.tv/live7/blaze/bitrate1.isml/live.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:tbnuk.uk",
+      "name": "TBN UK Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://live-tbn-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/tbn-live/manifest.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://live-tbn-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/tbn-live/manifest.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:truecrime.uk",
+      "name": "True Crime Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:jewellerymaker.uk",
+      "name": "Jewellery Maker",
+      "status": "reachable",
+      "selected_url": "https://lo3.gemporia.com/abrjewellerymaker/smil:livestreamFullHD.smil/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lo3.gemporia.com/abrjewellerymaker/smil:livestreamFullHD.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:hobbymaker.uk",
+      "name": "Hobby Maker",
+      "status": "reachable",
+      "selected_url": "https://lo3.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lo3.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:talkingpicturestv.uk",
+      "name": "Talking Pictures TV Ⓢ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://92.114.85.72:8000/play/a0la",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:togethertv.uk",
+      "name": "Together TV Ⓢ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://92.114.85.72:8000/play/a0j8",
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:cbbc.uk",
+      "name": "CBBC Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:cbeebies.uk",
+      "name": "CBeebies Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:pop.uk",
+      "name": "Pop Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcnews.uk",
+      "name": "BBC News",
+      "status": "reachable",
+      "selected_url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcparliament.uk",
+      "name": "BBC Parliament Ⓢ Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_parliament/pc_hd_abr_v2.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_parliament/pc_hd_abr_v2.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:skynews.uk",
+      "name": "Sky News Ⓖ",
+      "status": "geo_skipped",
+      "selected_url": "https://linear021-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynews)/index_mob.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://linear021-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynews)/index_mob.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:gbnews.uk",
+      "name": "GB News",
+      "status": "reachable",
+      "selected_url": "https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/manifest.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/manifest.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:talktv.uk",
+      "name": "TalkTV",
+      "status": "reachable",
+      "selected_url": "https://488f4ce4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfVGFsa19ITFM/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://488f4ce4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfVGFsa19ITFM/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:france24english.fr",
+      "name": "France 24 Ⓨ",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://www.youtube.com/c/france24english/live",
+          "status": "unreachable",
+          "reason": "ValueError: Response is not HLS or recognizable direct audio/video"
+        }
+      ]
+    },
+    {
+      "channel": "id:bloombergtveurope.uk",
+      "name": "Bloomberg TV",
+      "status": "reachable",
+      "selected_url": "https://bloomberg.com/media-manifest/streams/eu.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://bloomberg.com/media-manifest/streams/eu.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:nhkworldjapan.jp",
+      "name": "NHK World Japan",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 404: Not Found; HTTP Error 403: Forbidden; HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "channel": "id:arirangworld.kr",
+      "name": "Arirang World",
+      "status": "reachable",
+      "selected_url": "http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:qvcbeautyuk.uk",
+      "name": "QVC Beauty Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qby/3/3.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qby/3/3.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:qvcextrauk.uk",
+      "name": "QVC Extra Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qex/3/3.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qex/3/3.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:qvcstyleuk.uk",
+      "name": "QVC Style Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qst/3/3.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qst/3/3.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:now70s.uk",
+      "name": "Now 70s",
+      "status": "reachable",
+      "selected_url": "https://lightning-now70s-samsungnz.amagi.tv/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lightning-now70s-samsungnz.amagi.tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:now80s.uk",
+      "name": "Now 80s",
+      "status": "reachable",
+      "selected_url": "https://lightning-now80s-samsunguk.amagi.tv/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lightning-now80s-samsunguk.amagi.tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:nowrock.uk",
+      "name": "Now Rock",
+      "status": "reachable",
+      "selected_url": "https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio1.uk",
+      "name": "BBC Radio 1",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_one&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_one&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio2.uk",
+      "name": "BBC Radio 2",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio3.uk",
+      "name": "BBC Radio 3",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_three&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_three&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio4fm.uk",
+      "name": "BBC Radio 4",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_fourfm&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_fourfm&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio5live.uk",
+      "name": "BBC Radio 5 Live",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_five_live&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_five_live&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio6music.uk",
+      "name": "BBC Radio 6 Music",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_6music&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_6music&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio1xtra.uk",
+      "name": "BBC Radio 1Xtra",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_1xtra&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_1xtra&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio4extra.uk",
+      "name": "BBC Radio 4 Extra",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_four_extra&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_four_extra&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradio5sportsextra.uk",
+      "name": "BBC Radio 5 Sports Extra",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_radio_five_live_sports_extra&bitrate=320000",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradioasiannetwork.uk",
+      "name": "BBC Asian Network",
+      "status": "reachable",
+      "selected_url": "https://lsn.lv/bbcradio.m3u8?station=bbc_asian_network&bitrate=320000",
+      "selected_source": "Free-TV United Kingdom",
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "https://lsn.lv/bbcradio.m3u8?station=bbc_asian_network&bitrate=320000",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:bbcradioworldservice.uk",
+      "name": "BBC World Service",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "candidates": [
+        {
+          "source": "Free-TV United Kingdom",
+          "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_world_service.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 410: Gone"
+        }
+      ]
+    },
+    {
+      "channel": "id:omropfryslantv.nl",
+      "name": "Omrop Fryslân",
+      "status": "reachable",
+      "selected_url": "https://d3pvma9xb2775h.cloudfront.net/live/omropfryslan/f8f68bd5/playlist.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://d3pvma9xb2775h.cloudfront.net/live/omropfryslan/f8f68bd5/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtvnoord.nl",
+      "name": "RTV Noord",
+      "status": "reachable",
+      "selected_url": "https://media.rtvnoord.nl/live/rtvnoord/tv/playlist.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://media.rtvnoord.nl/live/rtvnoord/tv/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtvdrenthe.nl",
+      "name": "RTV Drenthe",
+      "status": "reachable",
+      "selected_url": "https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtvoost.nl",
+      "name": "RTV Oost",
+      "status": "reachable",
+      "selected_url": "https://d34cg2bnc08ruf.cloudfront.net/live/rtvoost/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://d34cg2bnc08ruf.cloudfront.net/live/rtvoost/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:omroepgelderlandtv.nl",
+      "name": "Omroep Gelderland",
+      "status": "reachable",
+      "selected_url": "https://d2od87akyl46nm.cloudfront.net/live/omroepgelderland/tvgelderland-hls/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://d2od87akyl46nm.cloudfront.net/live/omroepgelderland/tvgelderland-hls/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtvutrecht.nl",
+      "name": "RTV Utrecht",
+      "status": "reachable",
+      "selected_url": "http://media.rtvutrecht.nl/live/rtvutrecht/rtvutrecht/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "http://media.rtvutrecht.nl/live/rtvutrecht/rtvutrecht/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:omroepflevolandtv.nl",
+      "name": "Omroep Flevoland Ⓢ",
+      "status": "reachable",
+      "selected_url": "https://d5ms27yy6exnf.cloudfront.net/live/omroepflevoland/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://d5ms27yy6exnf.cloudfront.net/live/omroepflevoland/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "name:nhnieuws",
+      "name": "NH Nieuws",
+      "status": "reachable",
+      "selected_url": "https://rrr.sz.xlcdn.com/?account=nhnieuws&file=live&type=live&service=wowza&protocol=https&output=playlist.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://rrr.sz.xlcdn.com/?account=nhnieuws&file=live&type=live&service=wowza&protocol=https&output=playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:rtvrijnmond.nl",
+      "name": "RTV Rijnmond",
+      "status": "reachable",
+      "selected_url": "https://dcur8bjarl5c2.cloudfront.net/live/rijnmond/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://dcur8bjarl5c2.cloudfront.net/live/rijnmond/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:omroepwesttv.nl",
+      "name": "Omroep West",
+      "status": "reachable",
+      "selected_url": "https://d1axml5ozykh3g.cloudfront.net/live/omroepwest/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "https://d1axml5ozykh3g.cloudfront.net/live/omroepwest/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:omroepzeelandtv.nl",
+      "name": "Omroep Zeeland",
+      "status": "reachable",
+      "selected_url": "http://d3isaxd2t6q8zm.cloudfront.net/live/omroepzeeland/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "http://d3isaxd2t6q8zm.cloudfront.net/live/omroepzeeland/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:omroepbrabanttv.nl",
+      "name": "Omroep Brabant",
+      "status": "reachable",
+      "selected_url": "http://d3slqp9xhts6qb.cloudfront.net/live/omroepbrabant/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "http://d3slqp9xhts6qb.cloudfront.net/live/omroepbrabant/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:l1tv.nl",
+      "name": "L1 Ⓢ",
+      "status": "reachable",
+      "selected_url": "http://d34pj260kw1xmk.cloudfront.net/live/l1/tv/index.m3u8",
+      "selected_source": "Free-TV Netherlands",
+      "candidates": [
+        {
+          "source": "Free-TV Netherlands",
+          "url": "http://d34pj260kw1xmk.cloudfront.net/live/l1/tv/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:cbsnews247.us",
+      "name": "CBS News 24/7 (720p)",
+      "status": "reachable",
+      "selected_url": "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8",
+      "selected_source": "iptv-org selected United States",
+      "candidates": [
+        {
+          "source": "iptv-org selected United States",
+          "url": "https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:foxweather.us",
+      "name": "Fox Weather (720p)",
+      "status": "reachable",
+      "selected_url": "https://247wlive.foxweather.com/stream/index.m3u8",
+      "selected_source": "iptv-org selected United States",
+      "candidates": [
+        {
+          "source": "iptv-org selected United States",
+          "url": "https://247wlive.foxweather.com/stream/index.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:pbskids.us",
+      "name": "PBS Kids (720p)",
+      "status": "reachable",
+      "selected_url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8",
+      "selected_source": "iptv-org selected United States",
+      "candidates": [
+        {
+          "source": "iptv-org selected United States",
+          "url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:skynewsweather.uk",
+      "name": "Sky News Weather (720p)",
+      "status": "reachable",
+      "selected_url": "https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8",
+      "selected_source": "iptv-org selected United Kingdom",
+      "candidates": [
+        {
+          "source": "iptv-org selected United Kingdom",
+          "url": "https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8",
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
+        }
+      ]
+    },
+    {
+      "channel": "id:npo3.nl",
+      "name": "NPO 3 HD (720p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://bpm.tv.delta.nl/hls/combined/3/mobile.m3u8",
+      "selected_source": "iptv-org selected Netherlands",
+      "candidates": [
+        {
+          "source": "iptv-org selected Netherlands",
+          "url": "https://bpm.tv.delta.nl/hls/combined/3/mobile.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
+        }
+      ]
+    },
+    {
+      "channel": "id:sbs6classics.nl",
+      "name": "SBS6 Classics (1080p) [Geo-blocked]",
+      "status": "geo_skipped",
+      "selected_url": "https://sbs6classic.prd1.talpatvcdn.nl/v1/master/8ada1ed2ae3b9c3db6fc5e604cfa78fc7d2d745e/sbs6classic_ssai/fea54560ba684701a2143f33a9cf4489/index.m3u8",
+      "selected_source": "iptv-org selected Netherlands",
+      "candidates": [
+        {
+          "source": "iptv-org selected Netherlands",
+          "url": "https://sbs6classic.prd1.talpatvcdn.nl/v1/master/8ada1ed2ae3b9c3db6fc5e604cfa78fc7d2d745e/sbs6classic_ssai/fea54560ba684701a2143f33a9cf4489/index.m3u8",
+          "status": "geo_skipped",
+          "reason": "Explicit geo restriction; kept without probing"
         }
       ]
     },
@@ -6262,15 +7849,15 @@
     {
       "channel": "name:htspor",
       "name": "HT SPOR",
-      "status": "duplicate_stream",
-      "selected_url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-      "selected_source": "IPTV-TR",
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
       "candidates": [
         {
           "source": "IPTV-TR",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "reachable",
-          "reason": "HLS manifest and media segment reachable"
+          "status": "unreachable",
+          "reason": "ValueError: No accessible rendition: HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized; HTTP Error 401: Unauthorized"
         }
       ]
     },
@@ -6350,8 +7937,8 @@
         {
           "source": "discevisita Turkish national and Cyprus channels",
           "url": "https://yt.tecostream.xyz/live/sozcutelevizyonu?m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 500: Internal Server Error"
+          "status": "reachable",
+          "reason": "HLS manifest and media segment reachable"
         }
       ]
     },
