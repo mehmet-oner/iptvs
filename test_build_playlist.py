@@ -92,6 +92,8 @@ https://example.org/3
 {base}/badmedia.m3u8
 #EXTINF:-1 tvg-id="Four.tr",Four
 {base}/denied
+#EXTINF:-1 tvg-id="Five.tr",Five
+{base}/fake-media.m3u8
 #EXTINF:-1 tvg-id="One.tr@HD",One
 #EXTVLCOPT:http-user-agent=FixtureAgent
 {base}/redirect
@@ -100,6 +102,8 @@ https://example.org/3
                     '/nested/media.m3u8': '#EXTM3U\n#EXT-X-TARGETDURATION:5\n#EXTINF:5,\nsegment.ts\n',
                     '/nested/segment.ts': 'FAKE_MEDIA_BYTES',
                     '/badmedia.m3u8': '#EXTM3U\n#EXTINF:5,\n/missing.ts\n',
+                    '/fake-media.m3u8': '#EXTM3U\n#EXTINF:5,\n/not-really-media.ts\n',
+                    '/not-really-media.ts': '#EXTM3U\n#EXTINF:5,\n/recursive.ts\n',
                 }
                 if self.path == '/redirect':
                     if self.headers.get('User-Agent') != 'FixtureAgent':
@@ -134,7 +138,7 @@ https://example.org/3
                 self.assertEqual(stats['output_channels'], 2)
                 self.assertEqual(stats['reachable'], 1)
                 self.assertEqual(stats['geo_retained'], 1)
-                self.assertEqual(stats['dropped_groups'], 2)
+                self.assertEqual(stats['dropped_groups'], 3)
                 self.assertNotIn('/geo', requests)
                 self.assertIn('/nested/segment.ts', requests)
                 self.assertEqual(output.read_text().count('#EXTINF:'), 2)

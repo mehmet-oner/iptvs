@@ -55,9 +55,10 @@ This guard can be extended with other canonical `tvg-id` values.
 ## Validation
 
 - HTTP(S) HLS streams must return a valid manifest and a readable sample from a
-  recent media segment. Master playlists are followed, including relative URLs
-  and redirects; up to three renditions are tried. The original stream URL is
-  retained in the output, allowing the player to select quality.
+  recent media segment. Playlist, HTML, JSON, and XML responses masquerading as
+  media segments are rejected. Master playlists are followed, including relative
+  URLs and redirects; up to three renditions are tried. The original stream URL
+  is retained in the output, allowing the player to select quality.
 - Direct audio/video endpoints are checked using their response and media MIME
   type. Other protocols and DASH-only endpoints are currently excluded.
 - `[Geo-blocked]`, `[Geo-restricted]`, and `Ⓖ` entries are retained without a

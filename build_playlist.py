@@ -147,6 +147,18 @@ def fetch(url, headers, timeout, limit, byte_range=False):
         return response.read(limit), response.geturl(), response.headers.get('Content-Type', '')
 
 
+def validate_media_sample(sample, content_type):
+    """Reject common non-media responses served from a segment-looking URL."""
+    if not sample:
+        raise ValueError('Media segment is empty')
+    stripped = sample.lstrip().lower()
+    kind = content_type.partition(';')[0].strip().lower()
+    if kind in ('text/html', 'application/json', 'application/xml', 'text/xml'):
+        raise ValueError(f'Media segment returned {kind}')
+    if stripped.startswith((b'#extm3u', b'<!doctype html', b'<html', b'<?xml', b'{"', b'[{')):
+        raise ValueError('Media segment returned a playlist or error document')
+
+
 def check_stream(url, headers, timeout, depth=0, seen=None):
     seen = set() if seen is None else set(seen)
     if depth > 4 or url in seen:
@@ -173,9 +185,8 @@ def check_stream(url, headers, timeout, depth=0, seen=None):
             raise ValueError('Not an HLS media playlist')
         # Check a recent segment, avoiding the oldest segment near live-window expiry.
         segment = urllib.parse.urljoin(resolved, uris[-2] if len(uris) > 1 else uris[-1])
-        sample, _, kind = fetch(segment, headers, timeout, 1024, byte_range=True)
-        if not sample or 'text/html' in kind or sample.lstrip().lower().startswith((b'<!doctype html', b'<html')):
-            raise ValueError('Media segment is empty or an HTML error page')
+        sample, _, kind = fetch(segment, headers, timeout, 4096, byte_range=True)
+        validate_media_sample(sample, kind)
         return 'HLS manifest and media segment reachable'
     if content_type.startswith(('video/', 'audio/')) and 'mpegurl' not in content_type:
         return 'Direct media endpoint reachable'
