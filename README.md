@@ -30,9 +30,10 @@ nonstandard IDs to canonical IDs before deduplication. `include_ids` imports a
 small allowlist of canonical channel IDs from a larger playlist.
 
 The current sources combine Turkish country/language playlists, independently
-checked catalogs, a curated Turkish national/Cyprus list, hourly refreshed live
-pointers for Sözcü TV and CNN Türk, and Free-TV's curated United States, United
-Kingdom, and Netherlands playlists. Free-TV limits its lists to free mainstream
+checked catalogs, a curated Turkish national/Cyprus list, an hourly refreshed
+live pointer for Sözcü TV, CNN Türk's official geo-restricted stream, and
+Free-TV's curated United States, United Kingdom, and Netherlands playlists.
+Free-TV limits its lists to free mainstream
 channels and favors quality over quantity. Small iptv-org allowlists add popular
 free services missing from those country lists without importing thousands of
 local and niche entries. Broad worldwide lists are filtered to their Turkey
