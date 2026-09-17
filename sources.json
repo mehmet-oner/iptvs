@@ -1,78 +1,286 @@
 {
   "sources": [
-    {"name": "iptv-org Turkey", "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"},
-    {"name": "iptv-org Turkish language", "url": "https://iptv-org.github.io/iptv/languages/tur.m3u"},
-    {"name": "Free-TV Turkey", "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_turkey.m3u8"},
+    {
+      "name": "Number1 Dance — broadcaster CDN",
+      "type": "stream",
+      "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
+      "channel_name": "Number1 Dance",
+      "tvg_id": "Number1Dance.tr",
+      "group": "Turkey",
+      "website": "https://www.numberone.com.tr/2017/10/03/number1-dance-ty-canli-yayin-izle/",
+      "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "Kanal D — broadcaster CDN",
+      "type": "stream",
+      "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
+      "channel_name": "Kanal D",
+      "tvg_id": "KanalD.tr",
+      "group": "Turkey",
+      "website": "https://www.kanald.com.tr/canli-yayin",
+      "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "Show TV — broadcaster CDN",
+      "type": "stream",
+      "url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558",
+      "channel_name": "Show TV",
+      "tvg_id": "ShowTV.tr",
+      "group": "Turkey",
+      "website": "https://www.showtv.com.tr/canli-yayin",
+      "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "Star TV — broadcaster CDN",
+      "type": "stream",
+      "url": "https://dogus.daioncdn.net/startv/startv.m3u8?app=startv_web",
+      "channel_name": "Star TV",
+      "tvg_id": "StarTV.tr",
+      "group": "Turkey",
+      "website": "https://www.startv.com.tr/canli-yayin",
+      "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "NTV — broadcaster CDN",
+      "type": "stream",
+      "url": "https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web",
+      "channel_name": "NTV",
+      "tvg_id": "NTV.tr",
+      "group": "Turkey",
+      "website": "https://www.ntv.com.tr/canli-yayin",
+      "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "Halk TV official",
+      "type": "stream",
+      "url": "https://halktv.daioncdn.net/halktv/halktv.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609&ce=3",
+      "channel_name": "Halk TV",
+      "tvg_id": "HalkTV.tr",
+      "group": "News",
+      "website": "https://halktv.com.tr/canli-yayin",
+      "notes": "Read from official live page 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "Habertürk official",
+      "type": "stream",
+      "url": "https://ciner.daioncdn.net/haberturktv/haberturktv.m3u8?app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3",
+      "channel_name": "Habertürk",
+      "tvg_id": "HaberturkTV.tr",
+      "group": "News",
+      "website": "https://www.haberturk.com/canliyayin",
+      "notes": "Read from official live page 2026-09-17; validate video each rebuild."
+    },
+    {
+      "name": "CBS News 24/7 — official live page",
+      "type": "stream",
+      "url": "https://news20e7hhcb.airspace-cdn.cbsivideo.com/index.m3u8",
+      "channel_name": "CBS News 24/7",
+      "tvg_id": "CBSNews247.us",
+      "group": "USA",
+      "website": "https://www.cbsnews.com/live/",
+      "notes": "URL read from official live page video2/previewUrl fields and media checked 2026-09-17; prioritize over community redirectors."
+    },
+    {
+      "name": "Sky News — official international feed",
+      "type": "stream",
+      "url": "https://linear901-oo-hls0-prd-gtm.delivery.skycdp.com/17501/sde-fast-skynews/master.m3u8",
+      "channel_name": "Sky News",
+      "tvg_id": "SkyNews.uk",
+      "group": "UK",
+      "website": "https://news.sky.com/watch-live",
+      "notes": "fallbackStreamUrl published by official watch-live page; manifest and media reachable 2026-09-17. No geo exemption needed for this URL."
+    },
+    {
+      "name": "Bloomberg TV US — official",
+      "type": "stream",
+      "url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
+      "channel_name": "Bloomberg TV US",
+      "tvg_id": "BloombergTV.us@US",
+      "group": "USA",
+      "website": "https://www.bloomberg.com/live/us",
+      "notes": "Broadcaster-owned stable manifest entry point; media checked 2026-09-17."
+    },
+    {
+      "name": "CNN Türk — official live page",
+      "type": "stream",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/cnnturknp/playlist.m3u8",
+      "channel_name": "CNN Türk",
+      "tvg_id": "CNNTurk.tr",
+      "group": "News",
+      "geo_restricted": false,
+      "website": "https://www.cnnturk.com/video/turkiye/cnn-turk-canli-yayin-izle-1527537",
+      "notes": "Official live-page URL returns 403 here; no automatic geo exemption. Try validated alternatives. Reviewed 2026-09-17."
+    },
+    {
+      "name": "CNN Türk — public relay fallback",
+      "type": "stream",
+      "url": "http://46.32.176.50/cnnturk/playlist.m3u8",
+      "channel_name": "CNN Türk",
+      "tvg_id": "CNNTurk.tr",
+      "group": "Turkey",
+      "website": "https://github.com/iptv-org/iptv/issues/41007",
+      "notes": "Publicly listed relay; operator and long-term uptime unverified. Explicit reviewed exception to anonymous-IP catalog filtering. Require actual video decode on every run, never a geo exemption."
+    },
+    {
+      "name": "iptv-org Turkey",
+      "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"
+    },
+    {
+      "name": "iptv-org Turkish language",
+      "url": "https://iptv-org.github.io/iptv/languages/tur.m3u"
+    },
+    {
+      "name": "Free-TV Turkey",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_turkey.m3u8"
+    },
     {
       "name": "Free-TV United States",
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_usa.m3u8",
-      "notes": "Curated free, mainstream US channels; generated from the actively maintained Free-TV catalog. Added 2026-09-12."
+      "exclude_ids": [
+        "CNN.us"
+      ],
+      "exclude_url_patterns": [
+        "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/"
+      ],
+      "id_aliases": {
+        "BloombergTelevision.us": "BloombergTV.us@US",
+        "CBSNews.us": "CBSNews247.us",
+        "ABCNews.us": "ABCNewsLive1.us",
+        "FOXLiveNow.us": "LiveNOWfromFOX.us",
+        "BBCHome.us": "BBCHomeGarden.us",
+        "Newsmax.us": "NewsmaxTV.us"
+      },
+      "notes": "Source generation active 2026-09-17; lists/usa.md last commit 2026-08-24 (logo changes, not proof of stream revalidation). Exclude CNN slate and anonymous IP relays. Existing explicitly geo-marked reputable feeds retained per user policy."
     },
     {
       "name": "Free-TV United Kingdom",
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_uk.m3u8",
-      "notes": "Curated free, mainstream UK channels, including explicitly geo-marked public streams. Added 2026-09-12."
+      "exclude_url_patterns": [
+        "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/"
+      ],
+      "exclude_name_patterns": [
+        "(?i)\\bradio\\b"
+      ],
+      "notes": "Source generation active 2026-09-17; lists/uk.md last commit 2026-08-24 (logos). BBC/STV/S4C/Blaze explicitly geo-labelled by source. Exclude anonymous IP relays and radio. Official Sky source takes precedence."
     },
     {
       "name": "Free-TV Netherlands",
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_netherlands.m3u8",
-      "notes": "Curated free Dutch national and regional channels. Added 2026-09-12."
+      "id_aliases": {
+        "OmropFryslanTV.nl": "OmropFryslan.nl",
+        "OmroepGelderlandTV.nl": "OmroepGelderland.nl",
+        "OmroepFlevolandTV.nl": "OmroepFlevoland.nl",
+        "OmroepWestTV.nl": "OmroepWest.nl",
+        "OmroepZeelandTV.nl": "OmroepZeeland.nl",
+        "OmroepBrabantTV.nl": "OmroepBrabant.nl"
+      },
+      "notes": "Source generation active 2026-09-17; lists/netherlands.md last channel-repair commit 2026-08-18. Align regional IDs with iptv-org to avoid duplicate channels."
     },
     {
       "name": "iptv-org selected United States",
       "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
-      "include_ids": ["CBSNews247.us", "FoxWeather.us", "PBSKids.us"],
-      "notes": "Selected popular free national services missing or unavailable in the smaller Free-TV list. Added 2026-09-12."
+      "include_ids": [
+        "accuweathernow.us",
+        "bloombergoriginals.us@us",
+        "courttv.us",
+        "dateline247.us",
+        "foxweather.us",
+        "hallmarkmoviesmore.us",
+        "livenowfromfox.us",
+        "nbcnewsnow.us",
+        "pbsantiquesroadshow.us",
+        "pbskids.us",
+        "reuterstv.us",
+        "scrippsnews.us",
+        "tastemade.us@us",
+        "usatoday.us",
+        "weathernation.us",
+        "CBSNews247.us"
+      ],
+      "exclude_url_patterns": [
+        "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/"
+      ],
+      "notes": "Country list Last-Modified 2026-09-17 14:29 GMT. Curated public news, entertainment/FAST, music and regional broadcasters. Revalidate video during each build; source geo labels remain unverified exceptions."
     },
     {
       "name": "iptv-org selected United Kingdom",
       "url": "https://iptv-org.github.io/iptv/countries/uk.m3u",
-      "include_ids": ["SkyNewsWeather.uk"],
-      "notes": "Selected free national service missing from the smaller Free-TV list. Added 2026-09-12."
+      "include_ids": [
+        "nowrock.uk",
+        "rakutentvactionmovies.es@uk",
+        "rakutentvcomedymovies.es@uk",
+        "rakutentvdramamovies.es@uk",
+        "rakutentvfamilymovies.es@uk",
+        "skynewsweather.uk",
+        "thegrahamnortonshow.uk",
+        "truecrime.uk",
+        "wonder.uk"
+      ],
+      "exclude_url_patterns": [
+        "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/"
+      ],
+      "notes": "Country list Last-Modified 2026-09-17 14:29 GMT. Curated public news, entertainment/FAST, music and regional broadcasters. Revalidate video during each build; source geo labels remain unverified exceptions."
     },
     {
       "name": "iptv-org selected Netherlands",
       "url": "https://iptv-org.github.io/iptv/countries/nl.m3u",
-      "include_ids": ["NPO3.nl", "SBS6Classics.nl"],
-      "notes": "Selected popular Dutch services missing from the smaller Free-TV list; geo-marked entries are retained without probing. Added 2026-09-12."
+      "include_ids": [
+        "at5.nl",
+        "dancetelevision.nl",
+        "deephousedistrict.nl",
+        "l1tv.nl",
+        "nh.nl",
+        "omroepbrabant.nl",
+        "omroepflevoland.nl",
+        "omroepgelderland.nl",
+        "omroepwest.nl",
+        "omroepzeeland.nl",
+        "omropfryslan.nl",
+        "oogtv.nl",
+        "openrotterdamtv.nl",
+        "rn7.nl",
+        "rtvdrenthe.nl",
+        "rtvnoord.nl",
+        "rtvoost.nl",
+        "rtvrijnmond.nl",
+        "rtvutrecht.nl",
+        "studio040tv.nl",
+        "xite.nl",
+        "xitehits.nl@nl",
+        "NPO3.nl",
+        "SBS6Classics.nl"
+      ],
+      "exclude_url_patterns": [
+        "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/"
+      ],
+      "notes": "Country list Last-Modified 2026-09-17 14:29 GMT. Curated public news, entertainment/FAST, music and regional broadcasters. Revalidate video during each build; source geo labels remain unverified exceptions."
     },
-    {"name": "IPTV-TR", "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u"},
+    {
+      "name": "IPTV-TR",
+      "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u"
+    },
     {
       "name": "IPTV Nexus Turkish",
       "url": "https://dearbulut.github.io/iptv/playlists/language/tur.m3u",
-      "notes": "Additional stream choices; sync scheduled every six hours. Checked 2026-09-08."
+      "notes": "iptv-org-derived alternative catalog, last pushed 2026-09-17. Retained for fallback URLs, not treated as independent confirmation."
     },
     {
       "name": "Sözcü TV — pinkisso",
       "type": "stream",
-      "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/sozcutelevizyonu.m3u8",
+      "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/szcytbe.m3u8",
       "channel_name": "Sözcü TV",
       "tvg_id": "SozcuTV.tr",
       "group": "News",
       "website": "https://www.szctv.com.tr/canli-yayin-izle",
-      "notes": "Community-maintained HLS pointer for Sözcü's public YouTube live broadcast; hourly refresh scheduled. Validated 2026-09-08."
-    },
-    {
-      "name": "CNN Türk — official geo-restricted stream",
-      "type": "stream",
-      "url": "https://live.duhnet.tv/S2/HLS_LIVE/cnnturknp/playlist.m3u8",
-      "channel_name": "CNN Türk [Geo-restricted]",
-      "tvg_id": "CNNTurk.tr",
-      "group": "News",
-      "geo_restricted": true,
-      "website": "https://www.cnnturk.com/video/turkiye/cnn-turk-canli-yayin-izle-1527537",
-      "notes": "Stable HLS URL published by CNN Türk's official live page. Retained without probing because access is region-restricted. Replaced an IP-bound YouTube pointer on 2026-09-14."
-    },
-    {
-      "name": "World IPTV Checker — Turkey",
-      "url": "https://romaxa55.github.io/world_ip_tv/output/index.m3u",
-      "include_groups": ["Turkey"],
-      "notes": "Large multi-source catalog checked every six hours; only its Turkey group is imported. Checked 2026-09-08."
+      "notes": "Community-maintained pointer to the official public YouTube broadcast. szcytbe had current live timestamps on 2026-09-17; sozcutelevizyonu was five hours stale despite decoding. Check timestamps and video each rebuild; availability depends on upstream renewal."
     },
     {
       "name": "discevisita Turkish national and Cyprus channels",
       "url": "https://raw.githubusercontent.com/discevisita/iptv/main/tr.m3u",
-      "include_groups": ["Ulusal", "Kıbrıs"],
+      "include_groups": [
+        "Ulusal",
+        "Kıbrıs"
+      ],
       "id_aliases": {
         "bir tv": "BirTV.tr",
         "trt.2.hd.tr": "TRT2.tr",
@@ -94,5 +302,40 @@
       "notes": "Playlist updated 2026-09-06. Only national/Cyprus groups imported; malformed entries are reported and skipped."
     }
   ],
-  "required_channels": ["SozcuTV.tr", "CNNTurk.tr"]
+  "required_channels": [
+    "SozcuTV.tr",
+    "CNNTurk.tr"
+  ],
+  "playlist_defaults": {
+    "exclude_ids": [
+      "BabyTV.uk",
+      "BabyTV.uk@Turkiye",
+      "BBCFirst.uk@Turkiye",
+      "DisneyJr.tr",
+      "beINBoxOffice1.tr",
+      "beINBoxOffice2.tr",
+      "beINBoxOffice3.tr",
+      "beINMoviesStars.tr",
+      "beINMoviesTurk.tr",
+      "NationalGeographic.tr",
+      "NationalGeographicWild.tr",
+      "SSport.tr",
+      "SSport2.tr",
+      "KanalDDrama.tr"
+    ],
+    "exclude_url_patterns": [
+      "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/",
+      "cnn_slate",
+      "bantel-cdn1\\.iptvperu\\.tv"
+    ],
+    "exclude_name_patterns": [
+      "\\bradio\\b",
+      "^TRT Spor 2(?:\\s|$)"
+    ],
+    "id_aliases": {
+      "Haberturk.tr": "HaberturkTV.tr",
+      "TRTSpor2.tr": "TRTSporYildiz.tr"
+    }
+  },
+  "reviewed_at": "2026-09-17"
 }

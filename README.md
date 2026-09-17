@@ -1,89 +1,132 @@
-# Free Turkish and international IPTV playlist builder
+# Turkish and international TV playlist
 
-Run with Python 3.10 or newer. No packages or accounts are required:
+In IPTV Smarters on Google TV, choose **Add M3U Playlist** and use:
+
+**https://mehmet-oner.github.io/iptvs/playlist.m3u8**
+
+This repository publishes one UTF-8 extended M3U playlist, with Turkish channels
+and selected US, UK and Dutch services. `sources.json` is the editable input;
+`build_playlist.py` creates `playlist.m3u8` and `validation-report.json`.
+
+## Rebuild
+
+Use Python 3.9+ and FFmpeg. On macOS, FFmpeg can be installed with
+`brew install ffmpeg`. Then run:
 
 ```sh
 python3 build_playlist.py
-```
-
-The script reads `sources.json` and writes `playlist.m3u8` and
-`validation-report.json` next to the script. Run it again whenever you want to
-refresh the playlist. It does not install a scheduled task.
-
-The builder generates a single playlist. In IPTV Smarters, choose **Add M3U
-Playlist**, then enter this **M3U URL**:
-
-https://mehmet-oner.github.io/iptvs/playlist.m3u8
-
-GitHub Pages publishes the repository's `main` branch root. The `.nojekyll` file
-keeps publication as static files. Pushed playlist changes are published by
-GitHub Pages; the playlist builder itself is still run manually. Use the Pages
-URL above for IPTV Smarters; it has been confirmed to import on Google TV.
-
-## Sources and selection
-
-Edit `sources.json` to add/remove source URLs. Sources are ordered by preference.
-Set `"enabled": false` on a source to disable it. Sources may be full playlists
-or `"type": "stream"` entries for a maintained per-channel HLS pointer. A source
-can use `include_groups` to import only relevant sections and `id_aliases` to map
-nonstandard IDs to canonical IDs before deduplication. `include_ids` imports a
-small allowlist of canonical channel IDs from a larger playlist.
-
-The current sources combine Turkish country/language playlists, independently
-checked catalogs, a curated Turkish national/Cyprus list, an hourly refreshed
-live pointer for Sözcü TV, CNN Türk's official geo-restricted stream, and
-Free-TV's curated United States, United Kingdom, and Netherlands playlists.
-Free-TV limits its lists to free mainstream
-channels and favors quality over quantity. Small iptv-org allowlists add popular
-free services missing from those country lists without importing thousands of
-local and niche entries. Broad worldwide lists are filtered to their Turkey
-group. Archived lists, dead endpoints, and lists containing obvious paid channel
-restreams were excluded during the September 2026 source review.
-
-Channels are grouped using `tvg-id`, with quality suffixes such as `@SD` and
-`@HD` removed. Regional editions such as `@Turkiye` remain distinct. Entries
-without a meaningful ID are matched using normalized names when unambiguous.
-The first reachable candidate in source order is selected. Geo-marked candidates
-are used if no reachable candidate exists. Identical stream requests are checked
-once and duplicate selected stream requests are removed. Different IDs/names
-for the same real channel may still require upstream metadata corrections.
-
-`required_channels` is a publication guard. A run that cannot retain Sözcü TV
-or CNN Türk exits with status 1 and leaves the last working playlist unchanged.
-This guard can be extended with other canonical `tvg-id` values.
-
-## Validation
-
-- HTTP(S) HLS streams must return a valid manifest and a readable sample from a
-  recent media segment. Playlist, HTML, JSON, and XML responses masquerading as
-  media segments are rejected. Master playlists are followed, including relative
-  URLs and redirects; up to three renditions are tried. The original stream URL
-  is retained in the output, allowing the player to select quality.
-- Direct audio/video endpoints are checked using their response and media MIME
-  type. Other protocols and DASH-only endpoints are currently excluded.
-- `[Geo-blocked]`, `[Geo-restricted]`, and `Ⓖ` entries are retained without a
-  network check. For a source known to consist entirely of restricted streams,
-  set `"geo_restricted": true` on that source in `sources.json`.
-- Unmarked HTTP 403/451 failures are excluded: the script cannot reliably tell
-  geo-restriction from expired tokens, authorization rules, or other failures.
-- User-Agent, Referer, Origin, and Cookie options are respected where supplied.
-  Original channel metadata, player directives, and URL headers are retained.
-- This is a point-in-time reachability check from the machine running the script,
-  not a video-decoding, DRM, rights, or continuous-uptime check. Intermittent
-  channels that are offline during validation are omitted for that run.
-
-Failed sources are recorded while successful sources are processed. If nothing
-can be retained, the script exits with status 1 and leaves any existing playlist
-unchanged. The JSON report is still updated, with per-channel reasons.
-
-## Options and tests
-
-```sh
-python3 build_playlist.py --timeout 12 --retries 2 --workers 16
-python3 build_playlist.py --sources sources.json --output playlist.m3u8 --report validation-report.json
 python3 -m unittest -v
 ```
 
-Timeout is per network operation; nested manifests, retries, and slow streams
-can make a full run take several minutes. Source additions should be public
-playlists you trust; no source scripts are executed.
+A separate FFmpeg binary can be supplied with `--ffmpeg /path/to/ffmpeg`.
+The September 17 rebuild used FFmpeg 7.1 from the task-local
+`imageio-ffmpeg` 0.6.0 package. That binary is not committed to Git.
+
+```sh
+python3 build_playlist.py --workers 8 --timeout 12 --retries 1 --decode-seconds 4
+```
+
+The default **decode** mode requires FFmpeg; it never silently falls back to a
+weaker check. For diagnostic HTTP checks only, use `--validation reachability`.
+That mode reports `reachability_only`, not `video_decoded`, and can include
+responses that have not been proved playable. Do not use it for a verified release.
+
+GitHub Pages publishes the root of `main`. Rebuild and push to refresh the URL.
+There is no automatic local rebuild or scheduled task.
+
+## Source research — September 17, 2026
+
+The selection favors broadcaster entry points, then maintained catalogs and
+validated alternatives. Repository activity and scheduled checks help discover
+fresh URLs; neither proves that every channel works.
+
+| Source | Evidence checked | How it is used |
+| --- | --- | --- |
+| Broadcaster live pages/CDNs | Player URLs from Number1, Kanal D, Show TV, Star, NTV, Halk TV, Habertürk, CBS, Sky and Bloomberg | Preferred direct entry points, tested again on every rebuild |
+| [iptv-org](https://github.com/iptv-org/iptv) | Country playlists dated September 17; [update workflow](https://github.com/iptv-org/iptv/blob/master/.github/workflows/update.yml) schedules daily updates | Broad Turkish discovery; explicit international channel allowlists |
+| [Free-TV](https://github.com/Free-TV/IPTV) | Active September 17; [fast checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_fast.yml) every six hours and [deep checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_deep.yml) every two days | Selected country lists with additional exclusions and our own decoding |
+| [IPTV-TR](https://github.com/ilyswch/IPTV-TR) and [discevisita](https://github.com/discevisita/iptv) | Last repository pushes September 1 and September 6 | Additional Turkish/Cyprus candidates with corrected channel IDs |
+| [IPTV Nexus](https://github.com/dearbulut/iptv) | Updated September 17; derives from iptv-org | Alternative URLs, not independent evidence of reliability |
+| [pinkisso](https://github.com/pinkisso/mored) | Updated September 17 | Maintained pointer for Sözcü's YouTube broadcast; depends on upstream renewal |
+
+Removed the broad World IPTV Checker source because it contributed no selected
+channels in the preceding report. Expanded international allowlists with public
+news, weather, free ad-supported entertainment and Dutch regional/music TV.
+Free-TV's apparent CNN US entry was a `cnn_slate` endpoint and was excluded.
+Radio, obvious subscription-channel entries, and anonymous-IP entries from bulk
+catalogs are filtered.
+
+The research also examined live-TV aggregator pages, including
+[Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
+An embedded YouTube player or a short-lived signed URL is not automatically a
+stable URL that IPTV Smarters can reuse.
+
+### Channels specifically requested
+
+- **Number1 Dance:** the MediaTriple endpoint associated with its
+  [official live page](https://www.numberone.com.tr/2017/10/03/number1-dance-ty-canli-yayin-izle/)
+  is delivering decodable video again. Earlier failed checks do not establish a
+  permanent shutdown.
+- **Sözcü TV:** the public YouTube broadcast is exposed through a stable
+  community-maintained M3U8 pointer. The old `sozcutelevizyonu` pointer decoded
+  successfully but showed a broadcast more than five hours behind. It was
+  replaced with `szcytbe`, which had current program timestamps. The signed URL
+  inside it expires, so availability still depends on upstream renewal. The
+  pointer, not an extracted expiring Googlevideo URL, is published here.
+- **CNN Türk:** the official duhnet URL returns 403 from this network. The former
+  manual geo exemption was removed: 403 alone does not prove a geo restriction.
+  A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) decoded
+  successfully and its picture was checked for CNN Türk identity. It is an
+  explicit exception to bulk anonymous-IP filtering; the operator and long-term
+  uptime are unverified. The issue was rejected by iptv-org because the channel
+  is on its blocklist, so it must not be presented as an approved iptv-org entry.
+
+## Validation and its limits
+
+For every non-geo candidate in the default mode, FFmpeg opens the actual URL
+that would be published and decodes about four seconds of its first video stream
+and its first audio stream when available. A successful process must produce at
+least eight video frames and sufficient decoded duration. This rejects audio-only
+streams, fake media, inaccessible HLS resources and decoder failures. Each process
+has a hard deadline, in addition to network timeouts. HLS initialization sections,
+keys and separate audio are handled by FFmpeg. Only HTTP(S) inputs are accepted.
+
+HLS program timestamps are checked before decoding. The end of the latest
+dated media segment must be within 15 minutes of the current time; durations
+between timestamp tags are included. This caught the stale Sözcü feed. For
+streams without program timestamps, freshness is explicitly `unknown` rather
+than claimed as verified. Geo exceptions still bypass all these checks.
+
+The report records `video_decoded` with frame count, duration, codec and size.
+This tests one rendition at one moment from this machine. It does not certify
+all adaptive renditions, Google TV codec support, continuous uptime, channel
+identity for every entry, or future availability. The output keeps the original
+master URL so clients can choose quality.
+
+As requested, entries **labelled geo-restricted by a source are retained without
+network or decoder checks** when no decoded alternative exists. Their status is
+`geo_skipped`, meaning playback is unverified; upstream labels may themselves be
+wrong. Unlabelled 403/451 failures are not silently reclassified as geo-blocking.
+
+## Selection and configuration
+
+Sources are ordered by preference. The first decoded candidate for a channel is
+selected; a source-labelled geo candidate is a fallback. Identical URL/header
+requests are checked once, and identical selected streams are deduplicated.
+Channel grouping uses `tvg-id` and unambiguous normalized names. Quality suffixes
+are collapsed, while regional editions remain separate. Explicit ID aliases fix
+known metadata differences, including Habertürk, CBS News and Dutch regionals.
+Legacy TRT Spor 2 entries are removed in favor of TRT Spor Yıldız to prevent duplication.
+
+A source can be a playlist or `"type": "stream"`. Playlist sources support
+`include_groups`, canonical `include_ids`, `exclude_ids`, `exclude_url_patterns`,
+`exclude_name_patterns` and `id_aliases`. Aliases are applied before filtering.
+`playlist_defaults` supplies shared filters; source exclusion lists are added to
+those defaults. Direct stream entries are individually reviewed and do not use
+bulk-playlist filters. Use `"enabled": false` to disable any source.
+
+The builder preserves channel metadata and supplied player headers. HTTP source
+fetches support gzip. It reports malformed entries and failed sources. Required
+channel IDs are publication guards: if Sözcü or CNN Türk cannot be retained, or
+if no entries survive, the run fails and leaves the prior playlist unchanged.
+The report is still written with the failure reasons. Files are replaced atomically.
