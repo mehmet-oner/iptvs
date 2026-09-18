@@ -9,8 +9,8 @@
     "source_entries": 713,
     "channel_groups": 299,
     "distinct_checks": 356,
-    "output_channels": 244,
-    "video_decoded": 226,
+    "output_channels": 245,
+    "video_decoded": 227,
     "reachability_only": 0,
     "geo_retained": 18,
     "dropped_groups": 50,
@@ -13666,53 +13666,6 @@
       ]
     },
     {
-      "channel": "id:sozcutv.tr",
-      "name": "Sözcü TV",
-      "status": "video_decoded",
-      "selected_url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/szcytbe.m3u8",
-      "selected_source": "Sözcü TV — pinkisso",
-      "candidates": [
-        {
-          "source": "Sözcü TV — pinkisso",
-          "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/szcytbe.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 120,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-09-17T19:26:21.662000+00:00",
-            "age_seconds": 0.9
-          }
-        },
-        {
-          "source": "discevisita Turkish national and Cyprus channels",
-          "url": "https://yt.tecostream.xyz/live/sozcutelevizyonu?m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 120,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-09-17T19:26:26.662000+00:00",
-            "age_seconds": 1.8
-          }
-        }
-      ]
-    },
-    {
       "channel": "id:ulusalkanal.tr",
       "name": "ULUSAL TV",
       "status": "video_decoded",
@@ -13895,7 +13848,79 @@
           }
         }
       ]
+    },
+    {
+      "channel": "id:sozcutv.tr",
+      "name": "Sözcü TV",
+      "status": "video_decoded",
+      "checked_at": "2026-09-18T06:40:11.088013+00:00",
+      "selected_url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+      "selected_source": "Sözcü TV — official YouTube live",
+      "selected_streams": [
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        },
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        }
+      ],
+      "candidates": [
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 120,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-09-18T06:39:50.303000+00:00",
+            "age_seconds": 4.0,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 3308611,
+              "final_sequence": 3308613
+            }
+          }
+        },
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 120,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-09-18T06:40:00.303000+00:00",
+            "age_seconds": 2.5,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 3308613,
+              "final_sequence": 3308614
+            }
+          }
+        }
+      ]
     }
   ],
-  "missing_required_channels": []
+  "missing_required_channels": [],
+  "last_channel_refresh_at": "2026-09-18T06:40:11.088013+00:00",
+  "refresh_note": "Only Sözcü was checked at last_channel_refresh_at. Other evidence dates remain checked_at or the per-channel checked_at."
 }

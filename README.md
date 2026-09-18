@@ -10,12 +10,13 @@ and selected US, UK and Dutch services. `sources.json` is the editable input;
 
 ## Rebuild
 
-Use Python 3.9+ and FFmpeg. On macOS, FFmpeg can be installed with
-`brew install ffmpeg`. Then run:
+Use Python 3.10+ with the pinned dependencies (YouTube extraction and FFmpeg):
 
 ```sh
-python3 build_playlist.py
-python3 -m unittest -v
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python build_playlist.py
+.venv/bin/python -m unittest -v
 ```
 
 A separate FFmpeg binary can be supplied with `--ffmpeg /path/to/ffmpeg`.
@@ -32,7 +33,25 @@ That mode reports `reachability_only`, not `video_decoded`, and can include
 responses that have not been proved playable. Do not use it for a verified release.
 
 GitHub Pages publishes the root of `main`. Rebuild and push to refresh the URL.
-There is no automatic local rebuild or scheduled task.
+A Codex hourly automation refreshes Sözcü from this local checkout and pushes
+validated changes. This computer and Codex must be available; sleep, network
+failures or YouTube changes can prevent refreshes. A playback session that
+keeps an old signed URL for six hours may need the channel reopened. Signed URLs expire after
+roughly six hours. The refresh is not hosted by GitHub Pages. Other channels
+are refreshed by a full manual rebuild.
+
+To refresh only Sözcü manually:
+
+```sh
+.venv/bin/python refresh_sozcu.py
+```
+
+`streams/sozcu-1080.m3u8` and `streams/sozcu-720.m3u8` are HLS masters with
+separate AAC audio and H.264 video. They are staged on loopback HTTP for actual
+decoding before publication. The two playlist entries are quality alternatives
+from the same official YouTube broadcast, not independent providers. Refresh
+failures leave existing files unchanged. The report preserves the full-build
+evidence date and adds a separate Sözcü refresh date.
 
 ## Source research — September 17, 2026
 
@@ -67,12 +86,13 @@ stable URL that IPTV Smarters can reuse.
   [official live page](https://www.numberone.com.tr/2017/10/03/number1-dance-ty-canli-yayin-izle/)
   is delivering decodable video again. Earlier failed checks do not establish a
   permanent shutdown.
-- **Sözcü TV:** the public YouTube broadcast is exposed through a stable
-  community-maintained M3U8 pointer. The old `sozcutelevizyonu` pointer decoded
-  successfully but showed a broadcast more than five hours behind. It was
-  replaced with `szcytbe`, which had current program timestamps. The signed URL
-  inside it expires, so availability still depends on upstream renewal. The
-  pointer, not an extracted expiring Googlevideo URL, is published here.
+- **Sözcü TV:** on September 18 the community `szcytbe` pointer froze at
+  05:02 UTC. Its segment sequence and media bytes stopped changing. The official
+  [live page](https://www.szctv.com.tr/canli-yayin-izle) embeds a current YouTube
+  broadcast. Each refresh reads that embed again, extracts fresh HLS URLs and
+  creates 1080p and 720p masters including audio. Each published version must pass timestamp,
+  live-progress and video/audio decoding checks before being published. The
+  community pointer remains a tested fallback candidate, not a geo exemption.
 - **CNN Türk:** the official duhnet URL returns 403 from this network. The former
   manual geo exemption was removed: 403 alone does not prove a geo restriction.
   A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) decoded
@@ -93,7 +113,11 @@ keys and separate audio are handled by FFmpeg. Only HTTP(S) inputs are accepted.
 
 HLS program timestamps are checked before decoding. The end of the latest
 dated media segment must be within 15 minutes of the current time; durations
-between timestamp tags are included. This caught the stale Sözcü feed. For
+between timestamp tags are included. This caught the stale Sözcü feed. Sözcü also requires an advancing media
+sequence (or new segment paths if no sequence is supplied) over up to three
+target durations, capped at 60 seconds; ended playlists and query-token-only
+changes fail. This detects frozen HLS windows, but does not prove the content
+itself is never repeated. For
 streams without program timestamps, freshness is explicitly `unknown` rather
 than claimed as verified. Geo exceptions still bypass all these checks.
 
@@ -111,14 +135,19 @@ wrong. Unlabelled 403/451 failures are not silently reclassified as geo-blocking
 ## Selection and configuration
 
 Sources are ordered by preference. The first decoded candidate for a channel is
-selected; a source-labelled geo candidate is a fallback. Identical URL/header
+selected; a source-labelled geo candidate is a fallback.
+`max_streams_per_channel` allows two validated Sözcü alternatives; all other
+channels keep one. `require_live_progress` enables the moving-window check for
+configured channel IDs. Identical URL/header
 requests are checked once, and identical selected streams are deduplicated.
 Channel grouping uses `tvg-id` and unambiguous normalized names. Quality suffixes
 are collapsed, while regional editions remain separate. Explicit ID aliases fix
 known metadata differences, including Habertürk, CBS News and Dutch regionals.
 Legacy TRT Spor 2 entries are removed in favor of TRT Spor Yıldız to prevent duplication.
 
-A source can be a playlist or `"type": "stream"`. Playlist sources support
+A source can be a playlist, `"type": "stream"`, or `"type": "youtube"`.
+YouTube sources read the official live-page embed and generate configured
+`heights` at `publish_base`, using the repository `streams/` directory. Playlist sources support
 `include_groups`, canonical `include_ids`, `exclude_ids`, `exclude_url_patterns`,
 `exclude_name_patterns` and `id_aliases`. Aliases are applied before filtering.
 `playlist_defaults` supplies shared filters; source exclusion lists are added to

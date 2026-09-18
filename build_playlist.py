@@ -14,7 +14,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -33,6 +33,8 @@ class Entry:
     url: str
     source: str
     geo: bool
+    require_live_progress: bool = False
+    validation_url: str = None
 
 
 def split_info(line):
@@ -131,7 +133,7 @@ def request_target(entry):
             headers.update(dict(urllib.parse.parse_qsl(query_part)))
     if sep:
         headers.update(dict(urllib.parse.parse_qsl(query)))
-    return url, headers
+    return entry.validation_url or url, headers
 
 
 def fetch(url, headers, timeout, limit, byte_range=False):
@@ -243,6 +245,49 @@ def inspect_hls_freshness(url, headers, timeout, depth=0):
     return {'status': 'recent', 'latest_segment_end': latest.isoformat(), 'age_seconds': round(age, 1)}
 
 
+def inspect_hls_progress(url, headers, timeout, depth=0):
+    """Observe a moving HLS window; a decodable frozen window is not live."""
+    if depth > 4:
+        raise ValueError('Manifest nesting limit')
+    body, resolved, _ = fetch(url, headers, timeout, 262144)
+    lines = body.decode('utf-8-sig').splitlines()
+    if not body.lstrip(b'\xef\xbb\xbf \r\n\t').startswith(b'#EXTM3U'):
+        raise ValueError('Live progress check requires HLS')
+    if any(line.startswith('#EXT-X-STREAM-INF:') for line in lines):
+        uri = next((line.strip() for line in lines if line.strip() and not line.startswith('#')), None)
+        if not uri:
+            raise ValueError('HLS master has no rendition')
+        return inspect_hls_progress(urllib.parse.urljoin(resolved, uri), headers, timeout, depth + 1)
+
+    def window(payload):
+        text = payload.decode('utf-8-sig')
+        if '#EXT-X-ENDLIST' in text:
+            raise ValueError('Live channel returned an ended HLS playlist')
+        sequence = re.search(r'^#EXT-X-MEDIA-SEQUENCE:(\d+)', text, re.M)
+        uris = [line.strip() for line in text.splitlines() if line.strip() and not line.startswith('#')]
+        if not uris:
+            raise ValueError('Live HLS has no media segments')
+        # Ignore refreshed query tokens: those do not prove new media appeared.
+        return (int(sequence.group(1)) if sequence else None,
+                urllib.parse.urlsplit(uris[-1]).path)
+
+    initial = window(body)
+    target = re.search(r'^#EXT-X-TARGETDURATION:(\d+)', body.decode('utf-8-sig'), re.M)
+    target_seconds = int(target.group(1)) if target else 6
+    if target_seconds > 20:
+        raise ValueError('Cannot verify live progress within the 60-second observation limit')
+    interval = max(3, target_seconds * 1.5)
+    for attempt in range(2):
+        time.sleep(interval)
+        current_body, _, _ = fetch(resolved, {**headers, 'Cache-Control': 'no-cache'}, timeout, 262144)
+        current = window(current_body)
+        sequence_advanced = initial[0] is not None and current[0] is not None and current[0] > initial[0]
+        if sequence_advanced or (current[1] != initial[1] and (initial[0] is None or current[0] is None)):
+            return {'status': 'advancing', 'observation_seconds': interval * (attempt + 1),
+                    'initial_sequence': initial[0], 'final_sequence': current[0]}
+    raise ValueError('Frozen HLS: no new media segments appeared during the live progress check')
+
+
 def decode_stream(url, headers, timeout, ffmpeg, seconds=4):
     """Decode actual frames and optional audio, with a hard process deadline."""
     if urllib.parse.urlsplit(url).scheme not in ('http', 'https'):
@@ -291,7 +336,11 @@ def validate(entry, timeout, retries, ffmpeg=None, decode_seconds=4):
         try:
             if ffmpeg:
                 freshness = inspect_hls_freshness(url, headers, timeout)
+                if entry.require_live_progress:
+                    freshness['progress'] = inspect_hls_progress(url, headers, timeout)
                 media = decode_stream(url, headers, timeout, ffmpeg, decode_seconds)
+                if entry.validation_url and media.get('audio_codec') != 'aac':
+                    raise ValueError('Generated YouTube master must decode AAC audio')
                 return {'status': 'video_decoded', 'reason': 'Decoded video and available audio',
                         'media': media, 'freshness': freshness}
             return {'status': 'reachable', 'reason': check_stream(url, headers, timeout)}
@@ -307,12 +356,15 @@ def validate(entry, timeout, retries, ffmpeg=None, decode_seconds=4):
 
 def probe_key(entry):
     url, headers = request_target(entry)
-    return url, tuple(sorted((k.lower(), v) for k, v in headers.items())), entry.geo
+    return url, tuple(sorted((k.lower(), v) for k, v in headers.items())), entry.geo, entry.require_live_progress
 
 
 def load_source(source, timeout):
     """Load a channel list or describe a single stable HLS entry point."""
     name, url = source['name'], source['url']
+    if source.get('type') == 'youtube':
+        from youtube_live import load_youtube_source
+        return load_youtube_source(source, timeout)
     if source.get('type', 'playlist') == 'stream':
         attrs = {'tvg-id': source['tvg_id'], 'group-title': source.get('group', 'TV')}
         channel_name = source.get('channel_name', name)
@@ -354,6 +406,36 @@ def atomic_write(path, text):
     temporary.replace(path)
 
 
+def select_streams(candidates, results, limit, used_targets):
+    """Keep intentional validated alternatives while deduplicating stream URLs."""
+    usable = [entry for status in ('video_decoded', 'reachable') for entry in candidates
+              if results[probe_key(entry)]['status'] == status]
+    if not usable:
+        usable = [entry for entry in candidates if results[probe_key(entry)]['status'] == 'geo_skipped'][:1]
+    chosen = []
+    for entry in usable:
+        target = probe_key(entry)[:2]
+        if target in used_targets:
+            continue
+        used_targets.add(target)
+        chosen.append(entry)
+        if len(chosen) >= limit:
+            break
+    return chosen, bool(usable)
+
+
+def find_ffmpeg(executable):
+    found = shutil.which(executable)
+    if found or executable != 'ffmpeg':
+        return found
+    try:
+        import imageio_ffmpeg
+        found = imageio_ffmpeg.get_ffmpeg_exe()
+        return found if Path(found).is_file() else None
+    except (ImportError, RuntimeError):
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sources', type=Path, default=BASE / 'sources.json')
@@ -368,7 +450,7 @@ def main():
     args = parser.parse_args()
     if args.workers < 1 or args.timeout <= 0 or args.retries < 0 or args.decode_seconds < 1:
         parser.error('workers/timeout must be positive; retries must be nonnegative')
-    ffmpeg = shutil.which(args.ffmpeg) if args.validation == 'decode' else None
+    ffmpeg = find_ffmpeg(args.ffmpeg) if args.validation == 'decode' else None
     if args.validation == 'decode' and not ffmpeg:
         parser.error('FFmpeg is required for video validation; install it or supply --ffmpeg /path/to/ffmpeg')
     config = json.loads(args.sources.read_text(encoding='utf-8'))
@@ -392,6 +474,9 @@ def main():
         except (OSError, ValueError) as exc:
             source_reports.append({'name': name, 'url': url, 'status': 'failed', 'reason': str(exc)})
             print(f'  Failed: {exc}', file=sys.stderr)
+    live_ids = {ident.casefold() for ident in config.get('require_live_progress', [])}
+    for entry in entries:
+        entry.require_live_progress = channel_id(entry) in live_ids
     groups = group_channels(entries)
     unique = {probe_key(entry): entry for entry in entries}
     print(f'{len(entries)} entries; {len(groups)} channel groups; {len(unique)} distinct stream checks.', flush=True)
@@ -404,24 +489,22 @@ def main():
             if i % 20 == 0 or i == len(futures):
                 print(f'Checked {i}/{len(futures)}', flush=True)
     selected, channel_reports, used_targets = [], [], set()
+    limits = {'id:' + ident.casefold(): int(limit) for ident, limit in config.get('max_streams_per_channel', {}).items()}
+    if any(limit < 1 or limit > 5 for limit in limits.values()):
+        parser.error('max_streams_per_channel values must be between 1 and 5')
     for key, candidates in groups.items():
-        chosen = None
-        for status in ('video_decoded', 'reachable', 'geo_skipped'):
-            chosen = next((entry for entry in candidates if results[probe_key(entry)]['status'] == status), None)
-            if chosen:
-                break
-        state = 'dropped'
-        if chosen:
-            target = probe_key(chosen)[:2]
-            if target in used_targets:
-                state = 'duplicate_stream'
-            else:
-                used_targets.add(target)
-                selected.append(chosen)
-                state = results[probe_key(chosen)]['status']
+        choices, had_usable = select_streams(candidates, results, limits.get(key, 1), used_targets)
+        chosen = choices[0] if choices else None
+        state = results[probe_key(chosen)]['status'] if chosen else ('duplicate_stream' if had_usable else 'dropped')
+        for number, entry in enumerate(choices, 1):
+            if number > 1:
+                label = entry.name + f' (Backup {number})'
+                entry = replace(entry, name=label, info=entry.info.rsplit(',', 1)[0] + ',' + label)
+            selected.append(entry)
         channel_reports.append({'channel': key, 'name': candidates[0].name, 'status': state,
                                 'selected_url': chosen.url if chosen else None,
                                 'selected_source': chosen.source if chosen else None,
+                                'selected_streams': [{'url': e.url, 'source': e.source} for e in choices],
                                 'candidates': [{'source': e.source, 'url': e.url, **results[probe_key(e)]} for e in candidates]})
     geo_count = sum(e.geo for e in selected)
     selected_ids = {channel_id(e) for e in selected}
@@ -448,6 +531,8 @@ def main():
     for entry in selected:
         output.extend([entry.info, *entry.options, entry.url])
     playlist_text = '\n'.join(output) + '\n'
+    from youtube_live import publish_selected
+    publish_selected(selected)
     atomic_write(args.output, playlist_text)
     print(json.dumps(summary, indent=2))
     print(f'Wrote {args.output}\nReport: {args.report}', flush=True)

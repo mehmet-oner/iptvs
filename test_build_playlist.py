@@ -142,6 +142,85 @@ https://example.org/geo.m3u8
         with patch('build_playlist.fetch', return_value=(b'#EXTM3U\n#EXTINF:10,\none.ts\n', url, '')):
             self.assertEqual(build_playlist.inspect_hls_freshness(url, {}, 1)['status'], 'unknown')
 
+    def test_live_progress_rejects_frozen_ended_and_token_only_changes(self):
+        url = 'https://example.org/live.m3u8'
+        frozen = b'#EXTM3U\n#EXT-X-TARGETDURATION:5\n#EXT-X-MEDIA-SEQUENCE:10\n#EXTINF:5,\nseg.ts?token=old\n'
+        token = frozen.replace(b'token=old', b'token=new')
+        for followup in (frozen, token):
+            with patch('build_playlist.fetch', side_effect=[(frozen, url, ''), (followup, url, ''), (followup, url, '')]):
+                with patch('build_playlist.time.sleep'):
+                    with self.assertRaisesRegex(ValueError, 'Frozen HLS'):
+                        build_playlist.inspect_hls_progress(url, {}, 1)
+        with patch('build_playlist.fetch', return_value=(frozen + b'#EXT-X-ENDLIST\n', url, '')):
+            with self.assertRaisesRegex(ValueError, 'ended HLS'):
+                build_playlist.inspect_hls_progress(url, {}, 1)
+
+    def test_live_progress_accepts_new_media_sequence(self):
+        url = 'https://example.org/live.m3u8'
+        before = b'#EXTM3U\n#EXT-X-TARGETDURATION:5\n#EXT-X-MEDIA-SEQUENCE:10\n#EXTINF:5,\n10.ts\n'
+        after = before.replace(b'SEQUENCE:10', b'SEQUENCE:11').replace(b'10.ts', b'11.ts')
+        with patch('build_playlist.fetch', side_effect=[(before, url, ''), (after, url, '')]):
+            with patch('build_playlist.time.sleep'):
+                self.assertEqual(build_playlist.inspect_hls_progress(url, {}, 1)['status'], 'advancing')
+
+    def test_intentional_backups_are_distinct_validated_streams(self):
+        entries, _ = parse_playlist('#EXTM3U\n#EXTINF:-1,A\nhttps://example.org/a\n#EXTINF:-1,B\nhttps://example.org/a\n#EXTINF:-1,C\nhttps://example.org/c\n#EXTINF:-1,D\nhttps://example.org/d\n', 'fixture', 'https://example.org/')
+        results = {build_playlist.probe_key(e): {'status': 'video_decoded'} for e in entries}
+        results[build_playlist.probe_key(entries[-1])] = {'status': 'unreachable'}
+        chosen, _ = build_playlist.select_streams(entries, results, 2, set())
+        self.assertEqual([e.url for e in chosen], ['https://example.org/a', 'https://example.org/c'])
+
+    def test_youtube_master_keeps_audio_and_requested_h264_rendition(self):
+        from youtube_live import filter_master
+        master = '#EXTM3U\n#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="234",URI="https://example.org/audio.m3u8"\n#EXT-X-STREAM-INF:RESOLUTION=1280x720,CODECS="avc1.4D401F,mp4a.40.2",AUDIO="234"\nhttps://example.org/720.m3u8\n#EXT-X-STREAM-INF:RESOLUTION=1920x1080,CODECS="avc1.640028,mp4a.40.2",AUDIO="234"\nhttps://example.org/1080.m3u8\n'
+        selected = filter_master(master, 720)
+        self.assertIn('audio.m3u8', selected)
+        self.assertIn('720.m3u8', selected)
+        self.assertNotIn('1080.m3u8', selected)
+        with self.assertRaises(ValueError):
+            filter_master(master.replace('TYPE=AUDIO', 'TYPE=SUBTITLES'), 720)
+
+    def test_full_builder_retains_configured_two_streams_for_group_id(self):
+        entries, _ = parse_playlist('#EXTM3U\n#EXTINF:-1 tvg-id="SozcuTV.tr",Sözcü TV (1080p)\nhttps://example.org/1080.m3u8\n#EXTINF:-1 tvg-id="SozcuTV.tr",Sözcü TV (720p)\nhttps://example.org/720.m3u8\n', 'fixture', 'https://example.org/')
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = root / 'sources.json'
+            config.write_text(json.dumps({'sources': [{'name': 'fixture', 'type': 'stream', 'url': 'https://example.org/'}],
+                                         'max_streams_per_channel': {'SozcuTV.tr': 2},
+                                         'required_channels': ['SozcuTV.tr']}))
+            argv = ['builder', '--sources', str(config), '--output', str(root / 'output.m3u8'), '--report', str(root / 'report.json')]
+            with patch.object(sys, 'argv', argv), patch('build_playlist.find_ffmpeg', return_value='/fixture/ffmpeg'), patch('build_playlist.load_source', return_value=(entries, [], 0)), patch('build_playlist.validate', return_value={'status': 'video_decoded'}), patch('youtube_live.publish_selected'), patch('builtins.print'):
+                self.assertEqual(build_playlist.main(), 0)
+            self.assertEqual((root / 'output.m3u8').read_text().count('#EXTINF:'), 2)
+            report = json.loads((root / 'report.json').read_text())
+            self.assertEqual(len(report['channels'][0]['selected_streams']), 2)
+
+    def test_scoped_refresh_replaces_report_group_and_preserves_other_evidence(self):
+        import refresh_sozcu
+        new, _ = parse_playlist('#EXTM3U\n#EXTINF:-1 tvg-id="SozcuTV.tr",Sözcü TV (1080p)\nhttps://example.org/1080.m3u8\n#EXTINF:-1 tvg-id="SozcuTV.tr",Sözcü TV (720p)\nhttps://example.org/720.m3u8\n', 'Official', 'https://example.org/')
+        original = '#EXTM3U\n#EXTINF:-1 tvg-id="SozcuTV.tr",Sözcü TV\nhttps://example.org/old\n#EXTINF:-1 tvg-id="CNNTurk.tr",CNN Türk\nhttps://example.org/cnn\n'
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'sources.json').write_text(json.dumps({'sources': [{'name': 'Official', 'type': 'youtube', 'tvg_id': 'SozcuTV.tr'}]}))
+            playlist = root / 'playlist.m3u8'
+            report_path = root / 'validation-report.json'
+            for status in ('unreachable', 'video_decoded'):
+                playlist.write_text(original)
+                report_path.write_text(json.dumps({'checked_at': 'old-full-build-date', 'summary': {'output_channels': 2, 'video_decoded': 2}, 'channels': [{'channel': 'id:sozcutv.tr', 'status': 'video_decoded'}, {'channel': 'id:cnnturk.tr', 'status': 'video_decoded', 'checked_at': 'old-cnn-date'}]}))
+                before = report_path.read_bytes()
+                with patch('build_playlist.BASE', root), patch.object(sys, 'argv', ['refresh']), patch('build_playlist.find_ffmpeg', return_value='/fixture/ffmpeg'), patch('build_playlist.load_source', return_value=(new, [], 0)), patch('build_playlist.validate', return_value={'status': status}), patch('refresh_sozcu.publish_selected'), patch('builtins.print'):
+                    self.assertEqual(refresh_sozcu.main(), 0 if status == 'video_decoded' else 1)
+                if status == 'unreachable':
+                    self.assertEqual(playlist.read_text(), original)
+                    self.assertEqual(report_path.read_bytes(), before)
+                else:
+                    report = json.loads(report_path.read_text())
+                    self.assertEqual(len([c for c in report['channels'] if c['channel'] == 'id:sozcutv.tr']), 1)
+                    self.assertEqual(report['checked_at'], 'old-full-build-date')
+                    self.assertEqual(report['channels'][0]['checked_at'], 'old-cnn-date')
+                    self.assertEqual(report['summary']['output_channels'], 3)
+                    self.assertEqual(report['summary']['video_decoded'], 3)
+
     def test_source_filters_and_explicit_id_aliases(self):
         body = b'''#EXTM3U
 #EXTINF:-1 tvg-id="sozcu.tr" group-title="Ulusal",Sozcu TV

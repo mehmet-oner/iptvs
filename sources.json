@@ -1,6 +1,20 @@
 {
   "sources": [
     {
+      "name": "Sözcü TV — official YouTube live",
+      "type": "youtube",
+      "url": "https://www.szctv.com.tr/canli-yayin-izle",
+      "channel_name": "Sözcü TV",
+      "tvg_id": "SozcuTV.tr",
+      "group": "News",
+      "heights": [
+        1080,
+        720
+      ],
+      "publish_base": "https://mehmet-oner.github.io/iptvs/streams",
+      "notes": "Read current video ID from broadcaster page on each refresh. Generate audio-inclusive H.264 1080p and 720p HLS masters; signed URLs expire after roughly six hours. Hourly refresh is required. Both qualities share the same official broadcast, not independent providers."
+    },
+    {
       "name": "Number1 Dance — broadcaster CDN",
       "type": "stream",
       "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8",
@@ -272,7 +286,7 @@
       "tvg_id": "SozcuTV.tr",
       "group": "News",
       "website": "https://www.szctv.com.tr/canli-yayin-izle",
-      "notes": "Community-maintained pointer to the official public YouTube broadcast. szcytbe had current live timestamps on 2026-09-17; sozcutelevizyonu was five hours stale despite decoding. Check timestamps and video each rebuild; availability depends on upstream renewal."
+      "notes": "Community pointer to the official YouTube broadcast. Frozen at 05:02 UTC on 2026-09-18 despite decodable media; require both recent timestamps and an advancing HLS window. Do not exempt this failure as geo-restricted."
     },
     {
       "name": "discevisita Turkish national and Cyprus channels",
@@ -337,5 +351,11 @@
       "TRTSpor2.tr": "TRTSporYildiz.tr"
     }
   },
-  "reviewed_at": "2026-09-17"
+  "reviewed_at": "2026-09-17",
+  "require_live_progress": [
+    "SozcuTV.tr"
+  ],
+  "max_streams_per_channel": {
+    "SozcuTV.tr": 2
+  }
 }
