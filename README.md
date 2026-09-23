@@ -61,7 +61,7 @@ fresh URLs; neither proves that every channel works.
 
 | Source | Evidence checked | How it is used |
 | --- | --- | --- |
-| Broadcaster live pages/CDNs | Player URLs from Number1, Kanal D, Show TV, Star, NTV, Halk TV, Habertürk, CBS, Sky and Bloomberg | Preferred direct entry points, tested again on every rebuild |
+| Broadcaster live pages/CDNs | Player URLs from Number1, Kanal D, Show TV, Star, NTV, TV8, Halk TV, Habertürk, CBS, Sky and Bloomberg | Preferred direct entry points, tested again on every rebuild |
 | [iptv-org](https://github.com/iptv-org/iptv) | Country playlists dated September 17; [update workflow](https://github.com/iptv-org/iptv/blob/master/.github/workflows/update.yml) schedules daily updates | Broad Turkish discovery; explicit international channel allowlists |
 | [Free-TV](https://github.com/Free-TV/IPTV) | Active September 17; [fast checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_fast.yml) every six hours and [deep checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_deep.yml) every two days | Selected country lists with additional exclusions and our own decoding |
 | [IPTV-TR](https://github.com/ilyswch/IPTV-TR) and [discevisita](https://github.com/discevisita/iptv) | Last repository pushes September 1 and September 6 | Additional Turkish/Cyprus candidates with corrected channel IDs |
@@ -86,6 +86,9 @@ stable URL that IPTV Smarters can reuse.
   [official live page](https://www.numberone.com.tr/2017/10/03/number1-dance-ty-canli-yayin-izle/)
   is delivering decodable video again. Earlier failed checks do not establish a
   permanent shutdown.
+- **TV8:** on September 23 its [official live page](https://www.tv8.com.tr/canli-yayin)
+  exposed a broadcaster CDN URL that decoded H.264 1080p video and AAC audio.
+  It is now preferred over the catalog entry, with both grouped under `TV8.tr`.
 - **Sözcü TV:** on September 18 the community `szcytbe` pointer froze at
   05:02 UTC. Its segment sequence and media bytes stopped changing. The official
   [live page](https://www.szctv.com.tr/canli-yayin-izle) embeds a current YouTube

@@ -65,6 +65,16 @@
       "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
     },
     {
+      "name": "TV8 — official live page",
+      "type": "stream",
+      "url": "https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3",
+      "channel_name": "TV8",
+      "tvg_id": "TV8.tr",
+      "group": "Turkey",
+      "website": "https://www.tv8.com.tr/canli-yayin",
+      "notes": "Read from official live page and decoded H.264 1080p video with AAC audio on 2026-09-23; validate on every rebuild."
+    },
+    {
       "name": "Halk TV official",
       "type": "stream",
       "url": "https://halktv.daioncdn.net/halktv/halktv.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609&ce=3",
@@ -348,6 +358,7 @@
     ],
     "id_aliases": {
       "Haberturk.tr": "HaberturkTV.tr",
+      "TV8.tr@SD": "TV8.tr",
       "TRTSpor2.tr": "TRTSporYildiz.tr"
     }
   },
