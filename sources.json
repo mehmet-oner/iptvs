@@ -25,6 +25,16 @@
       "notes": "Broadcaster player/CDN endpoint inspected 2026-09-17; validate video each rebuild."
     },
     {
+      "name": "PowerTürk TV — official PowerApp live page",
+      "type": "stream",
+      "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlists.m3u8",
+      "channel_name": "PowerTürk TV",
+      "tvg_id": "PowerTurkTV.tr",
+      "group": "Turkey",
+      "website": "https://www.powerapp.com.tr/tvs/power-tvs/powerturktv/",
+      "notes": "Read from the official PowerApp TV catalog on 2026-09-26; advancing HLS sequence and four seconds of H.264 1080p video with AAC audio verified. No program timestamps exposed; live progression is required on every rebuild."
+    },
+    {
       "name": "Kanal D — broadcaster CDN",
       "type": "stream",
       "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
@@ -364,7 +374,8 @@
   },
   "reviewed_at": "2026-09-17",
   "require_live_progress": [
-    "SozcuTV.tr"
+    "SozcuTV.tr",
+    "PowerTurkTV.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2

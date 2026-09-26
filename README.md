@@ -82,6 +82,12 @@ stable URL that IPTV Smarters can reuse.
 
 ### Channels specifically requested
 
+- **PowerTürk TV:** on September 26 the [official PowerApp TV catalog](https://www.powerapp.com.tr/tvs/power-tvs)
+  supplied a direct broadcaster HLS endpoint that decoded four seconds of H.264
+  1080p video and AAC audio. Its media sequence advanced; it exposes no program
+  timestamps. Rebuilds require live progression for this channel. This provides
+  an alternative to the failing community relay.
+
 - **Number1 Dance:** the MediaTriple endpoint associated with its
   [official live page](https://www.numberone.com.tr/2017/10/03/number1-dance-ty-canli-yayin-izle/)
   is delivering decodable video again. Earlier failed checks do not establish a
