@@ -82,6 +82,11 @@ stable URL that IPTV Smarters can reuse.
 
 ### Channels specifically requested
 
+- **NTV:** its [official live page](https://www.ntv.com.tr/canli-yayin/ntv)
+  embedded YouTube on September 28. The existing broadcaster CDN URL remains
+  a validated candidate, but it can fail; no short-lived YouTube URL is stored
+  as a static source.
+
 - **PowerTürk TV:** on September 26 the [official PowerApp TV catalog](https://www.powerapp.com.tr/tvs/power-tvs)
   supplied a direct broadcaster HLS endpoint that decoded four seconds of H.264
   1080p video and AAC audio. Its media sequence advanced; it exposes no program
