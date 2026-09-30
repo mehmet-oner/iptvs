@@ -82,6 +82,11 @@ stable URL that IPTV Smarters can reuse.
 
 ### Channels specifically requested
 
+- **TVNET:** its [official live page](https://www.tvnet.com.tr/canli-yayin)
+  supplied an updated HLS path on September 30 after the catalog path returned
+  404. The new endpoint decoded H.264 1080p video and AAC audio with an advancing
+  sequence. It exposes no program timestamps; rebuilds require live progression.
+
 - **NTV:** its [official live page](https://www.ntv.com.tr/canli-yayin/ntv)
   embedded YouTube on September 28. The existing broadcaster CDN URL remains
   a validated candidate, but it can fail; no short-lived YouTube URL is stored

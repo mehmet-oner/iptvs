@@ -35,6 +35,16 @@
       "notes": "Read from the official PowerApp TV catalog on 2026-09-26; advancing HLS sequence and four seconds of H.264 1080p video with AAC audio verified. No program timestamps exposed; live progression is required on every rebuild."
     },
     {
+      "name": "TVNET — official live page",
+      "type": "stream",
+      "url": "https://tvnet-live.lg.mncdn.com/tvnet-live/tvnet/playlist.m3u8",
+      "channel_name": "TVNET",
+      "tvg_id": "TVNET.tr",
+      "group": "News",
+      "website": "https://www.tvnet.com.tr/canli-yayin",
+      "notes": "Official live-page URL inspected 2026-09-30; updated path includes tvnet-live/tvnet rather than catalog tvnet/tvnet. Decoded H.264 1080p with AAC audio and advancing sequence. No program timestamps exposed; require live progression on each rebuild."
+    },
+    {
       "name": "Kanal D — broadcaster CDN",
       "type": "stream",
       "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
@@ -375,7 +385,8 @@
   "reviewed_at": "2026-09-17",
   "require_live_progress": [
     "SozcuTV.tr",
-    "PowerTurkTV.tr"
+    "PowerTurkTV.tr",
+    "TVNET.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2
