@@ -33,12 +33,12 @@ That mode reports `reachability_only`, not `video_decoded`, and can include
 responses that have not been proved playable. Do not use it for a verified release.
 
 GitHub Pages publishes the root of `main`. Rebuild and push to refresh the URL.
-A Codex hourly automation refreshes Sözcü from this local checkout and pushes
-validated changes. This computer and Codex must be available; sleep, network
+A Codex automation gathers sources and runs a full validated rebuild from this
+local checkout. If publication guards fail, it can renew only Sözcü while
+preserving other channels and their validation dates. This computer and Codex must be available; sleep, network
 failures or YouTube changes can prevent refreshes. A playback session that
 keeps an old signed URL for six hours may need the channel reopened. Signed URLs expire after
-roughly six hours. The refresh is not hosted by GitHub Pages. Other channels
-are refreshed by a full manual rebuild.
+roughly six hours. The refresh is not hosted by GitHub Pages.
 
 To refresh only Sözcü manually:
 
@@ -82,6 +82,16 @@ stable URL that IPTV Smarters can reuse.
 
 ### Channels specifically requested
 
+- **Regional CDN repair, October 2:** twelve previously selected channels failed
+  because `edge1.socialsmart.tv` served a certificate for `*.taksimbilisim.com`.
+  Current Bir TV and Fortuna catalog entries already used
+  `edge.taksimbilisim.com`. Keeping the existing channel paths on that canonical
+  host restored all twelve candidates, including Çay TV, Kanal 32/33 and TV 1/52.
+  This host migration was inferred from the catalog and certificate, then
+  verified with normal TLS checks, recent HLS timestamps, advancing windows and
+  decoded video/audio. The repaired provider URLs and their provenance are
+  recorded in `sources.json`; each requires live progression on every rebuild.
+
 - **TVNET:** its [official live page](https://www.tvnet.com.tr/canli-yayin)
   supplied an updated HLS path on September 30 after the catalog path returned
   404. The new endpoint decoded H.264 1080p video and AAC audio with an advancing
@@ -114,8 +124,18 @@ stable URL that IPTV Smarters can reuse.
   community pointer remains a tested fallback candidate, not a geo exemption.
 - **CNN Türk:** the official duhnet URL returns 403 from this network. The former
   manual geo exemption was removed: 403 alone does not prove a geo restriction.
-  A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) decoded
-  successfully and its picture was checked for CNN Türk identity. It is an
+  On October 2, the [Canlitv player](https://canlitv.com/cnn-turk-izle-1)
+  supplied a relay that decoded H.264 1080p video and AAC audio without special
+  player headers. Its channel hash was identical to the link checked October 1
+  and remained playable more than 24 hours later. No explicit expiry is exposed;
+  this does not guarantee the key will never change. An advancing HLS window
+  and a CNN Türk picture with the current on-screen clock were verified. This
+  community relay is now a fallback; it is not broadcaster-owned and exposes no
+  program timestamps. All CNN Türk candidates require live progression and
+  decoding on each rebuild.
+  A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) previously
+  decoded successfully and its picture was checked for CNN Türk identity, but
+  timed out during the October 2 checks. It is an
   explicit exception to bulk anonymous-IP filtering; the operator and long-term
   uptime are unverified. The issue was rejected by iptv-org because the channel
   is on its blocklist, so it must not be presented as an approved iptv-org entry.

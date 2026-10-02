@@ -156,6 +156,16 @@
       "notes": "Official live-page URL returns 403 here; no automatic geo exemption. Try validated alternatives. Reviewed 2026-09-17."
     },
     {
+      "name": "CNN Türk — Canlitv player relay",
+      "type": "stream",
+      "url": "https://yayin2.canlitv.fun/live/cnnturk.stream/playlist.m3u8?hash=d64ebf2e8a872d8393f8d8ab87777ed4",
+      "channel_name": "CNN Türk",
+      "tvg_id": "CNNTurk.tr",
+      "group": "News",
+      "website": "https://canlitv.com/cnn-turk-izle-1",
+      "notes": "Read from Canlitv player iframe on 2026-10-01 and 2026-10-02; identical channel hash remained usable across more than 24 hours. No explicit expiry is exposed; future key changes remain possible. Decoded H.264 1080p and AAC audio without special headers; advancing HLS window and CNN Türk on-screen identity/current clock verified on October 2. Community relay, not broadcaster-owned; no program timestamps exposed. Require live progression and actual video decoding every rebuild; never a geo exemption."
+    },
+    {
       "name": "CNN Türk — public relay fallback",
       "type": "stream",
       "url": "http://46.32.176.50/cnnturk/playlist.m3u8",
@@ -164,6 +174,114 @@
       "group": "Turkey",
       "website": "https://github.com/iptv-org/iptv/issues/41007",
       "notes": "Publicly listed relay; operator and long-term uptime unverified. Explicit reviewed exception to anonymous-IP catalog filtering. Require actual video decode on every run, never a geo exemption."
+    },
+    {
+      "name": "Altas TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/altastv/bant1/playlist.m3u8",
+      "channel_name": "Altas TV",
+      "tvg_id": "AltasTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Cay TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/caytv/bant1/playlist.m3u8",
+      "channel_name": "Cay TV",
+      "tvg_id": "CayTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "ETV Manisa — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/manisaetv/bant1/playlist.m3u8",
+      "channel_name": "ETV Manisa",
+      "tvg_id": "ETVManisa.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Guneydogu TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/gtv/bant1/playlist.m3u8",
+      "channel_name": "Guneydogu TV",
+      "tvg_id": "GuneydoguTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Icel TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/iceltv/bant1/playlist.m3u8",
+      "channel_name": "Icel TV",
+      "tvg_id": "IcelTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Kanal 32 — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/kanal32/bant1/playlist.m3u8",
+      "channel_name": "Kanal 32",
+      "tvg_id": "Kanal32.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Kanal 33 — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/kanal33/bant1/playlist.m3u8",
+      "channel_name": "Kanal 33",
+      "tvg_id": "Kanal33.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "Line TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/linetv/bant1/playlist.m3u8",
+      "channel_name": "Line TV",
+      "tvg_id": "LineTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "MTurk TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/muglaturk/bant1/playlist.m3u8",
+      "channel_name": "MTurk TV",
+      "tvg_id": "MTurkTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "TurkHaber TV — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/turkhaber/bant1/playlist.m3u8",
+      "channel_name": "TurkHaber TV",
+      "tvg_id": "TurkHaberTV.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "TV 1 — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/tv1/bant1/playlist.m3u8",
+      "channel_name": "TV 1",
+      "tvg_id": "TV1.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
+    },
+    {
+      "name": "TV 52 — Taksim provider CDN",
+      "type": "stream",
+      "url": "https://edge.taksimbilisim.com/tv52/bant1/playlist.m3u8",
+      "channel_name": "TV 52",
+      "tvg_id": "TV52.tr",
+      "group": "Turkey",
+      "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
     },
     {
       "name": "iptv-org Turkey",
@@ -386,7 +504,20 @@
   "require_live_progress": [
     "SozcuTV.tr",
     "PowerTurkTV.tr",
-    "TVNET.tr"
+    "TVNET.tr",
+    "CNNTurk.tr",
+    "AltasTV.tr",
+    "CayTV.tr",
+    "ETVManisa.tr",
+    "GuneydoguTV.tr",
+    "IcelTV.tr",
+    "Kanal32.tr",
+    "Kanal33.tr",
+    "LineTV.tr",
+    "MTurkTV.tr",
+    "TurkHaberTV.tr",
+    "TV1.tr",
+    "TV52.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2
