@@ -115,6 +115,11 @@ stable URL that IPTV Smarters can reuse.
 - **TV8:** on September 23 its [official live page](https://www.tv8.com.tr/canli-yayin)
   exposed a broadcaster CDN URL that decoded H.264 1080p video and AAC audio.
   It is now preferred over the catalog entry, with both grouped under `TV8.tr`.
+- **TV42:** on October 4 the [official website](https://www.tv42.com.tr/)
+  published a working HLS endpoint while the older catalog URL timed out. It
+  decoded H.264 480p video and AAC audio, with recent program timestamps and an
+  advancing media window. The broadcaster endpoint is now preferred and must
+  pass live progression and decoding checks on every rebuild.
 - **Sözcü TV:** on September 18 the community `szcytbe` pointer froze at
   05:02 UTC. Its segment sequence and media bytes stopped changing. The official
   [live page](https://www.szctv.com.tr/canli-yayin-izle) embeds a current YouTube

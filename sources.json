@@ -45,6 +45,16 @@
       "notes": "Official live-page URL inspected 2026-09-30; updated path includes tvnet-live/tvnet rather than catalog tvnet/tvnet. Decoded H.264 1080p with AAC audio and advancing sequence. No program timestamps exposed; require live progression on each rebuild."
     },
     {
+      "name": "TV42 — official live page",
+      "type": "stream",
+      "url": "https://canliyayin.tv42.com.tr/memfs/0c8c4bc7-550a-4239-8e3d-6f4d768391bb.m3u8",
+      "channel_name": "TV42",
+      "tvg_id": "TV42.tr",
+      "group": "Turkey",
+      "website": "https://www.tv42.com.tr/",
+      "notes": "Read from the official website player on 2026-10-04. Recent program timestamps, an advancing HLS window, and four seconds of H.264 480p video with AAC audio verified. No explicit expiry is exposed. Require live progression and video decoding every rebuild; older catalog URL timed out."
+    },
+    {
       "name": "Kanal D — broadcaster CDN",
       "type": "stream",
       "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3",
@@ -517,7 +527,8 @@
     "MTurkTV.tr",
     "TurkHaberTV.tr",
     "TV1.tr",
-    "TV52.tr"
+    "TV52.tr",
+    "TV42.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2
