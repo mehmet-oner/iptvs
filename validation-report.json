@@ -385,87 +385,6 @@
   ],
   "channels": [
     {
-      "channel": "id:sozcutv.tr",
-      "name": "Sözcü TV (1080p)",
-      "status": "video_decoded",
-      "selected_url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-      "selected_source": "Sözcü TV — official YouTube live",
-      "selected_streams": [
-        {
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-          "source": "Sözcü TV — official YouTube live"
-        },
-        {
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
-          "source": "Sözcü TV — official YouTube live"
-        }
-      ],
-      "candidates": [
-        {
-          "source": "Sözcü TV — official YouTube live",
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 120,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-10-05T17:33:45.268000+00:00",
-            "age_seconds": 4.3,
-            "progress": {
-              "status": "advancing",
-              "observation_seconds": 7.5,
-              "initial_sequence": 3610219,
-              "final_sequence": 3610221
-            }
-          }
-        },
-        {
-          "source": "Sözcü TV — official YouTube live",
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 120,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-10-05T17:33:45.268000+00:00",
-            "age_seconds": 4.3,
-            "progress": {
-              "status": "advancing",
-              "observation_seconds": 7.5,
-              "initial_sequence": 3610219,
-              "final_sequence": 3610221
-            }
-          }
-        },
-        {
-          "source": "Sözcü TV — pinkisso",
-          "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/szcytbe.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 2907 seconds old (limit 900)"
-        },
-        {
-          "source": "discevisita Turkish national and Cyprus channels",
-          "url": "https://yt.tecostream.xyz/live/sozcutelevizyonu?m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 502: Bad Gateway"
-        }
-      ]
-    },
-    {
       "channel": "id:number1dance.tr",
       "name": "Number1 Dance",
       "status": "video_decoded",
@@ -15404,7 +15323,79 @@
           }
         }
       ]
+    },
+    {
+      "channel": "id:sozcutv.tr",
+      "name": "Sözcü TV",
+      "status": "video_decoded",
+      "checked_at": "2026-10-06T05:32:02.876115+00:00",
+      "selected_url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+      "selected_source": "Sözcü TV — official YouTube live",
+      "selected_streams": [
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        },
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        }
+      ],
+      "candidates": [
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 120,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-10-06T05:31:38.624000+00:00",
+            "age_seconds": 7.7,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 3618834,
+              "final_sequence": 3618836
+            }
+          }
+        },
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 119,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-10-06T05:31:48.624000+00:00",
+            "age_seconds": 6.0,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 3618836,
+              "final_sequence": 3618838
+            }
+          }
+        }
+      ]
     }
   ],
-  "missing_required_channels": []
+  "missing_required_channels": [],
+  "last_channel_refresh_at": "2026-10-06T05:32:02.876115+00:00",
+  "refresh_note": "Only Sözcü was checked at last_channel_refresh_at. Other evidence dates remain checked_at or the per-channel checked_at."
 }
