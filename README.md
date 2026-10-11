@@ -74,6 +74,10 @@ news, weather, free ad-supported entertainment and Dutch regional/music TV.
 Free-TV's apparent CNN US entry was a `cnn_slate` endpoint and was excluded.
 Radio, obvious subscription-channel entries, and anonymous-IP entries from bulk
 catalogs are filtered.
+On 2026-10-11, Eurosport 1/2 and their Turkish editions were added to the shared
+exclusions after catalogs introduced third-party relay URLs. These subscription
+sports feeds appear in [TV+ packages](https://tvplus.com.tr/paketler); the relay
+listings do not establish free broadcaster-authorized sources.
 
 The research also examined live-TV aggregator pages, including
 [Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
