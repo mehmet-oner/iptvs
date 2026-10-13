@@ -294,6 +294,16 @@
       "notes": "Provider host repair inspected 2026-10-02. Retained channel path from catalog edge1.socialsmart.tv URL; canonical edge.taksimbilisim.com host inferred from current Bir TV/Fortuna catalog URLs and provider certificate. Verified TLS, recent HLS timestamps, advancing media window, decoded H.264 video and available audio. Revalidate progression and video on every rebuild; no geo exemption."
     },
     {
+      "name": "Aras TV — official website player",
+      "type": "stream",
+      "url": "https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8",
+      "channel_name": "Aras TV",
+      "tvg_id": "ArasTV.tr",
+      "group": "Turkey",
+      "website": "https://aras.tv/",
+      "notes": "Read from the official website player on 2026-10-13 after the catalog 1.rtmp.org endpoint returned 404. Verified an advancing HLS sequence and four seconds of H.264 720p video with AAC audio. No program timestamps or explicit expiry are exposed; require live progression and video decoding on every rebuild."
+    },
+    {
       "name": "iptv-org Turkey",
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"
     },
@@ -533,7 +543,8 @@
     "TurkHaberTV.tr",
     "TV1.tr",
     "TV52.tr",
-    "TV42.tr"
+    "TV42.tr",
+    "ArasTV.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2

@@ -96,6 +96,13 @@ stable URL that IPTV Smarters can reuse.
   decoded video/audio. The repaired provider URLs and their provenance are
   recorded in `sources.json`; each requires live progression on every rebuild.
 
+- **Aras TV, October 13:** the [official website](https://aras.tv/) player
+  uses `https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8`; the catalog
+  `1.rtmp.org` URL returned 404. The official entry point decoded four seconds
+  of H.264 720p video with AAC audio and an advancing HLS sequence. It exposes
+  no program timestamps or explicit expiry; every rebuild requires progression
+  and actual video decoding.
+
 - **TVNET:** its [official live page](https://www.tvnet.com.tr/canli-yayin)
   supplied an updated HLS path on September 30 after the catalog path returned
   404. The new endpoint decoded H.264 1080p video and AAC audio with an advancing
