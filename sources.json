@@ -304,6 +304,16 @@
       "notes": "Read from the official website player on 2026-10-13 after the catalog 1.rtmp.org endpoint returned 404. Verified an advancing HLS sequence and four seconds of H.264 720p video with AAC audio. No program timestamps or explicit expiry are exposed; require live progression and video decoding on every rebuild."
     },
     {
+      "name": "360 — official live page",
+      "type": "stream",
+      "url": "https://turkmedya-live.ercdn.net/tv360/tv360_720p.m3u8",
+      "channel_name": "360",
+      "tvg_id": "360.tr",
+      "group": "Turkey",
+      "website": "https://www.tv360.com.tr/canli-yayin",
+      "notes": "Read from the official live-page video source on 2026-10-15 after the catalog master timed out. Decoded four seconds of H.264 720p video with AAC audio and an advancing HLS window. No program timestamps or explicit expiry exposed; require live progression and video decoding on each rebuild."
+    },
+    {
       "name": "iptv-org Turkey",
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"
     },
@@ -544,7 +554,8 @@
     "TV1.tr",
     "TV52.tr",
     "TV42.tr",
-    "ArasTV.tr"
+    "ArasTV.tr",
+    "360.tr"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2

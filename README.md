@@ -96,6 +96,12 @@ stable URL that IPTV Smarters can reuse.
   decoded video/audio. The repaired provider URLs and their provenance are
   recorded in `sources.json`; each requires live progression on every rebuild.
 
+- **360, October 15:** the [official live page](https://www.tv360.com.tr/canli-yayin)
+  publishes `https://turkmedya-live.ercdn.net/tv360/tv360_720p.m3u8`.
+  This direct variant decoded four seconds of H.264 720p video with AAC audio
+  and an advancing HLS window after the catalog master timed out. No program
+  timestamps or explicit expiry are exposed; require progression and decoding
+  on every rebuild.
 - **Aras TV, October 13:** the [official website](https://aras.tv/) player
   uses `https://2.rtmp.org/tv217/yayin.stream/playlist.m3u8`; the catalog
   `1.rtmp.org` URL returned 404. The official entry point decoded four seconds
