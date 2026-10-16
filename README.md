@@ -96,6 +96,11 @@ stable URL that IPTV Smarters can reuse.
   decoded video/audio. The repaired provider URLs and their provenance are
   recorded in `sources.json`; each requires live progression on every rebuild.
 
+- **Haber61 TV, October 16:** both catalog URLs (`cdn-haber61tv.yayin.com.tr`
+  and `win8.yayin.com.tr`) exposed a frozen HLS window during source research.
+  Require live progression as well as decoded video on every rebuild so cached
+  segments cannot qualify the channel for publication. No replacement URL or
+  geo exemption was added.
 - **360, October 15:** the [official live page](https://www.tv360.com.tr/canli-yayin)
   publishes `https://turkmedya-live.ercdn.net/tv360/tv360_720p.m3u8`.
   This direct variant decoded four seconds of H.264 720p video with AAC audio
