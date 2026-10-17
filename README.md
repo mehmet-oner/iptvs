@@ -79,6 +79,11 @@ exclusions after catalogs introduced third-party relay URLs. These subscription
 sports feeds appear in [TV+ packages](https://tvplus.com.tr/paketler); the relay
 listings do not establish free broadcaster-authorized sources.
 
+On 2026-10-17, beIN Sports 1–5 relays newly listed by IPTV Nexus were added
+to the shared exclusions before probing. The [broadcaster package FAQ](https://www.bein.com/en/ufaq-category/stream-support-package/)
+confirms subscription access. Catalog IDs and names are both filtered so
+regional metadata changes cannot admit these subscription sports feeds.
+
 The research also examined live-TV aggregator pages, including
 [Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
 An embedded YouTube player or a short-lived signed URL is not automatically a

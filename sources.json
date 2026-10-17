@@ -517,7 +517,12 @@
       "Eurosport1.fr",
       "Eurosport1.fr@Turkiye",
       "Eurosport2.fr",
-      "Eurosport2.fr@Turkiye"
+      "Eurosport2.fr@Turkiye",
+      "beINSports1.qa",
+      "beINSports2.qa",
+      "beINSports3.qa",
+      "beINSports4.qa",
+      "beINSports5.qa"
     ],
     "exclude_url_patterns": [
       "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/",
@@ -526,14 +531,15 @@
     ],
     "exclude_name_patterns": [
       "\\bradio\\b",
-      "^TRT Spor 2(?:\\s|$)"
+      "^TRT Spor 2(?:\\s|$)",
+      "^beIN Sports [1-5](?:\\s|$)"
     ],
     "id_aliases": {
       "Haberturk.tr": "HaberturkTV.tr",
       "TV8.tr@SD": "TV8.tr",
       "TRTSpor2.tr": "TRTSporYildiz.tr"
     },
-    "notes": "2026-10-11: Exclude Eurosport 1/2 subscription sports feeds, including Turkish editions, after public catalogs added third-party relays. TV+ lists Eurosport in its subscription packages (https://tvplus.com.tr/paketler); relay listings do not establish free broadcaster-authorized entry points."
+    "notes": "2026-10-11: Exclude Eurosport 1/2 subscription sports feeds, including Turkish editions, after public catalogs added third-party relays. TV+ lists Eurosport in its subscription packages (https://tvplus.com.tr/paketler); relay listings do not establish free broadcaster-authorized entry points. 2026-10-17: Exclude beIN Sports 1-5 after IPTV Nexus added third-party relays with beINSports1.qa through beINSports5.qa IDs. Broadcaster package FAQ confirms subscription access (https://www.bein.com/en/ufaq-category/stream-support-package/); these relays are not free broadcaster entry points."
   },
   "reviewed_at": "2026-09-17",
   "require_live_progress": [
