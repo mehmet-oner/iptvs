@@ -101,6 +101,11 @@ stable URL that IPTV Smarters can reuse.
   decoded video/audio. The repaired provider URLs and their provenance are
   recorded in `sources.json`; each requires live progression on every rebuild.
 
+- **Tele1, October 18:** the catalog URL
+  `https://tele1-live.ercdn.net/tele1/tele1.m3u8` exposed a frozen HLS window.
+  Require live progression and decoded video on every rebuild. The
+  [official live page](https://www.tele1.com.tr/canli-yayin/) embeds YouTube;
+  a temporary signed YouTube URL was not added as a stable source.
 - **Haber61 TV, October 16:** both catalog URLs (`cdn-haber61tv.yayin.com.tr`
   and `win8.yayin.com.tr`) exposed a frozen HLS window during source research.
   Require live progression as well as decoded video on every rebuild so cached
