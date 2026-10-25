@@ -84,6 +84,13 @@ to the shared exclusions before probing. The [broadcaster package FAQ](https://w
 confirms subscription access. Catalog IDs and names are both filtered so
 regional metadata changes cannot admit these subscription sports feeds.
 
+On 2026-10-25, FX Türkiye newly introduced by iptv-org and IPTV Nexus was
+added to the shared exclusions by canonical ID and name. The [TV+ channel list](https://tvplus.com.tr/destek/sss/tvplus-kanallari)
+includes FX, its [subscription FAQ](https://tvplus.com.tr/destek/sss?title=ip-tv)
+requires a subscription for channel viewing, and [Tivibu packages](https://www.tivibu.com.tr/paketler)
+promote FX as subscription content. A public catalog or geo label does not
+establish a free broadcaster stream. Source-labelled geo entries were not probed.
+
 The research also examined live-TV aggregator pages, including
 [Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
 An embedded YouTube player or a short-lived signed URL is not automatically a

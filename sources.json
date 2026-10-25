@@ -522,7 +522,8 @@
       "beINSports2.qa",
       "beINSports3.qa",
       "beINSports4.qa",
-      "beINSports5.qa"
+      "beINSports5.qa",
+      "FX.tr"
     ],
     "exclude_url_patterns": [
       "^https?://(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?/",
@@ -532,14 +533,15 @@
     "exclude_name_patterns": [
       "\\bradio\\b",
       "^TRT Spor 2(?:\\s|$)",
-      "^beIN Sports [1-5](?:\\s|$)"
+      "^beIN Sports [1-5](?:\\s|$)",
+      "^FX(?:\\s|$)"
     ],
     "id_aliases": {
       "Haberturk.tr": "HaberturkTV.tr",
       "TV8.tr@SD": "TV8.tr",
       "TRTSpor2.tr": "TRTSporYildiz.tr"
     },
-    "notes": "2026-10-11: Exclude Eurosport 1/2 subscription sports feeds, including Turkish editions, after public catalogs added third-party relays. TV+ lists Eurosport in its subscription packages (https://tvplus.com.tr/paketler); relay listings do not establish free broadcaster-authorized entry points. 2026-10-17: Exclude beIN Sports 1-5 after IPTV Nexus added third-party relays with beINSports1.qa through beINSports5.qa IDs. Broadcaster package FAQ confirms subscription access (https://www.bein.com/en/ufaq-category/stream-support-package/); these relays are not free broadcaster entry points."
+    "notes": "2026-10-11: Exclude Eurosport 1/2 subscription sports feeds, including Turkish editions, after public catalogs added third-party relays. TV+ lists Eurosport in its subscription packages (https://tvplus.com.tr/paketler); relay listings do not establish free broadcaster-authorized entry points. 2026-10-17: Exclude beIN Sports 1-5 after IPTV Nexus added third-party relays with beINSports1.qa through beINSports5.qa IDs. Broadcaster package FAQ confirms subscription access (https://www.bein.com/en/ufaq-category/stream-support-package/); these relays are not free broadcaster entry points. 2026-10-25: Exclude FX Türkiye newly introduced by iptv-org and IPTV Nexus. TV+ lists FX at channel 3 (https://tvplus.com.tr/destek/sss/tvplus-kanallari) and its subscription FAQ requires a TV+ subscription to watch channels (https://tvplus.com.tr/destek/sss?title=ip-tv); Tivibu also promotes FX in its paid packages (https://www.tivibu.com.tr/paketler). Public catalog or geo labels do not establish a free broadcaster entry point."
   },
   "reviewed_at": "2026-09-17",
   "require_live_progress": [
