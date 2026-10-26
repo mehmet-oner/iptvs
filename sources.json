@@ -314,6 +314,46 @@
       "notes": "Read from the official live-page video source on 2026-10-15 after the catalog master timed out. Decoded four seconds of H.264 720p video with AAC audio and an advancing HLS window. No program timestamps or explicit expiry exposed; require live progression and video decoding on each rebuild."
     },
     {
+      "name": "QVC UK — broadcaster HLS master",
+      "type": "stream",
+      "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qvc/master.m3u8",
+      "channel_name": "QVC UK",
+      "tvg_id": "QVCUK.uk",
+      "group": "UK",
+      "website": "https://www.qvcuk.com/content/shop-live-tv.qvc.html",
+      "notes": "2026-10-26: Stable broadcaster-CDN master from the maintained iptv-org UK catalog (https://iptv-org.github.io/iptv/countries/uk.m3u). QVC confirms free website/app live viewing on its official live page. Replaces the fixed /3/3.m3u8 rendition returning 404. Recent timestamps, advancing HLS sequence and four seconds of H.264 360p video with AAC audio verified; no explicit expiry. Require live progression each rebuild."
+    },
+    {
+      "name": "QVC Beauty — broadcaster HLS master",
+      "type": "stream",
+      "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qby/master.m3u8",
+      "channel_name": "QVC Beauty",
+      "tvg_id": "QVCBeautyUK.uk",
+      "group": "UK",
+      "website": "https://www.qvcuk.com/content/shop-live-tv.qvc.html",
+      "notes": "2026-10-26: Stable broadcaster-CDN master from the maintained iptv-org UK catalog (https://iptv-org.github.io/iptv/countries/uk.m3u). QVC confirms free website/app live viewing on its official live page. Replaces the fixed /3/3.m3u8 rendition returning 404. Recent timestamps, advancing HLS sequence and four seconds of H.264 360p video with AAC audio verified; no explicit expiry. Require live progression each rebuild."
+    },
+    {
+      "name": "QVC Extra — broadcaster HLS master",
+      "type": "stream",
+      "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qex/master.m3u8",
+      "channel_name": "QVC Extra",
+      "tvg_id": "QVCExtraUK.uk",
+      "group": "UK",
+      "website": "https://www.qvcuk.com/content/shop-live-tv.qvc.html",
+      "notes": "2026-10-26: Stable broadcaster-CDN master from the maintained iptv-org UK catalog (https://iptv-org.github.io/iptv/countries/uk.m3u). QVC confirms free website/app live viewing on its official live page. Replaces the fixed /3/3.m3u8 rendition returning 404. Recent timestamps, advancing HLS sequence and four seconds of H.264 360p video with AAC audio verified; no explicit expiry. Require live progression each rebuild."
+    },
+    {
+      "name": "QVC Style — broadcaster HLS master",
+      "type": "stream",
+      "url": "https://qvcuk-live.akamaized.net/hls/live/2097112/qst/master.m3u8",
+      "channel_name": "QVC Style",
+      "tvg_id": "QVCStyleUK.uk",
+      "group": "UK",
+      "website": "https://www.qvcuk.com/content/shop-live-tv.qvc.html",
+      "notes": "2026-10-26: Stable broadcaster-CDN master from the maintained iptv-org UK catalog (https://iptv-org.github.io/iptv/countries/uk.m3u). QVC confirms free website/app live viewing on its official live page. Replaces the fixed /3/3.m3u8 rendition returning 404. Recent timestamps, advancing HLS sequence and four seconds of H.264 360p video with AAC audio verified; no explicit expiry. Require live progression each rebuild."
+    },
+    {
       "name": "iptv-org Turkey",
       "url": "https://iptv-org.github.io/iptv/countries/tr.m3u"
     },
@@ -453,7 +493,7 @@
       "exclude_name_patterns": [
         "^NOW TV$"
       ],
-      "notes": "2026-10-26: Exclude the older identifier-less NOW TV row when present. Catalog review introduced NOW.tr with a direct 720p variant of the same Turknet CDN path; later source metadata identifies the channel as NOWTV.tr. Both variants decoded H.264/AAC during review. Keep identified rows grouped by channel ID to avoid duplicate channel rows. Catalog provenance: https://iptv-org.github.io/iptv/countries/tr.m3u and the enabled IPTV Nexus Turkish playlist."
+      "notes": "2026-10-26: Exclude the older identifier-less NOW TV row when present. Shared alias NOW.tr -> NOWTV.tr merges identified rows across iptv-org, IPTV Nexus and discevisita; otherwise the master and direct 720p variant of the same Turknet CDN feed can appear as duplicate channels. Both variants decoded H.264/AAC during review. Catalog provenance: https://iptv-org.github.io/iptv/countries/tr.m3u and enabled IPTV Nexus/discevisita playlists."
     },
     {
       "name": "IPTV Nexus Turkish",
@@ -543,7 +583,8 @@
     "id_aliases": {
       "Haberturk.tr": "HaberturkTV.tr",
       "TV8.tr@SD": "TV8.tr",
-      "TRTSpor2.tr": "TRTSporYildiz.tr"
+      "TRTSpor2.tr": "TRTSporYildiz.tr",
+      "NOW.tr": "NOWTV.tr"
     },
     "notes": "2026-10-11: Exclude Eurosport 1/2 subscription sports feeds, including Turkish editions, after public catalogs added third-party relays. TV+ lists Eurosport in its subscription packages (https://tvplus.com.tr/paketler); relay listings do not establish free broadcaster-authorized entry points. 2026-10-17: Exclude beIN Sports 1-5 after IPTV Nexus added third-party relays with beINSports1.qa through beINSports5.qa IDs. Broadcaster package FAQ confirms subscription access (https://www.bein.com/en/ufaq-category/stream-support-package/); these relays are not free broadcaster entry points. 2026-10-25: Exclude FX Türkiye newly introduced by iptv-org and IPTV Nexus. TV+ lists FX at channel 3 (https://tvplus.com.tr/destek/sss/tvplus-kanallari) and its subscription FAQ requires a TV+ subscription to watch channels (https://tvplus.com.tr/destek/sss?title=ip-tv); Tivibu also promotes FX in its paid packages (https://www.tivibu.com.tr/paketler). Public catalog or geo labels do not establish a free broadcaster entry point."
   },
@@ -569,7 +610,11 @@
     "ArasTV.tr",
     "360.tr",
     "Haber61TV.tr",
-    "Tele1.tr"
+    "Tele1.tr",
+    "QVCUK.uk",
+    "QVCBeautyUK.uk",
+    "QVCExtraUK.uk",
+    "QVCStyleUK.uk"
   ],
   "max_streams_per_channel": {
     "SozcuTV.tr": 2

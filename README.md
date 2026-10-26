@@ -91,11 +91,18 @@ requires a subscription for channel viewing, and [Tivibu packages](https://www.t
 promote FX as subscription content. A public catalog or geo label does not
 establish a free broadcaster stream. Source-labelled geo entries were not probed.
 
-On 2026-10-26, the identifier-less `NOW TV` row from IPTV-TR was excluded
-after iptv-org and IPTV Nexus introduced `NOW.tr` with the 720p variant of
-the same Turknet CDN feed. Both variants decoded H.264/AAC during review;
-later source metadata uses `NOWTV.tr`. Identified rows group into one
-channel, while the older identifier-less row remains excluded.
+On 2026-10-26, the identifier-less `NOW TV` row from IPTV-TR was excluded.
+The shared `NOW.tr` → `NOWTV.tr` alias merges identified rows across
+iptv-org, IPTV Nexus and discevisita. Their master and direct 720p variant
+use the same Turknet CDN feed and both decoded H.264/AAC during review;
+the alias keeps NOW in one channel group when catalog metadata differs.
+
+On 2026-10-26, QVC UK, Beauty, Extra and Style were given stable broadcaster
+HLS masters after Free-TV’s fixed `/3/3.m3u8` renditions returned 404.
+The masters are listed by [iptv-org UK](https://iptv-org.github.io/iptv/countries/uk.m3u);
+[QVC’s official live page](https://www.qvcuk.com/content/shop-live-tv.qvc.html)
+confirms free live viewing. All four decoded H.264 360p with AAC audio, recent
+timestamps and advancing media sequences. Each rebuild must verify progression.
 
 The research also examined live-TV aggregator pages, including
 [Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
