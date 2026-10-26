@@ -91,6 +91,12 @@ requires a subscription for channel viewing, and [Tivibu packages](https://www.t
 promote FX as subscription content. A public catalog or geo label does not
 establish a free broadcaster stream. Source-labelled geo entries were not probed.
 
+On 2026-10-26, the identifier-less `NOW TV` row from IPTV-TR was excluded
+after iptv-org and IPTV Nexus introduced `NOW.tr` with the 720p variant of
+the same Turknet CDN feed. Both variants decoded H.264/AAC during review;
+later source metadata uses `NOWTV.tr`. Identified rows group into one
+channel, while the older identifier-less row remains excluded.
+
 The research also examined live-TV aggregator pages, including
 [Canlitv.com](https://canlitv.com/cnn-turk-izle-1), Canlitv.me and Canlitv.watch.
 An embedded YouTube player or a short-lived signed URL is not automatically a

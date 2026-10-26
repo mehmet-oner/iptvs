@@ -449,7 +449,11 @@
     },
     {
       "name": "IPTV-TR",
-      "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u"
+      "url": "https://raw.githubusercontent.com/ilyswch/IPTV-TR/refs/heads/main/box.m3u",
+      "exclude_name_patterns": [
+        "^NOW TV$"
+      ],
+      "notes": "2026-10-26: Exclude the older identifier-less NOW TV row when present. Catalog review introduced NOW.tr with a direct 720p variant of the same Turknet CDN path; later source metadata identifies the channel as NOWTV.tr. Both variants decoded H.264/AAC during review. Keep identified rows grouped by channel ID to avoid duplicate channel rows. Catalog provenance: https://iptv-org.github.io/iptv/countries/tr.m3u and the enabled IPTV Nexus Turkish playlist."
     },
     {
       "name": "IPTV Nexus Turkish",
