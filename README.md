@@ -190,6 +190,12 @@ stable URL that IPTV Smarters can reuse.
   community relay is now a fallback; it is not broadcaster-owned and exposes no
   program timestamps. All CNN Türk candidates require live progression and
   decoding on each rebuild.
+  On October 31, the old relay key returned 403. The same
+  [public player iframe](https://canlitv.com/player/index.php?id=11222&mobile=0)
+  published a replacement key that matched across repeated requests and decoded
+  H.264 1080p video with AAC audio and an advancing HLS window. No explicit expiry
+  is exposed in its URL or master; provider key changes remain possible. The
+  relay URL was updated and retains the progression and decoding requirements.
   A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) previously
   decoded successfully and its picture was checked for CNN Türk identity, but
   timed out during the October 2 checks. It is an
