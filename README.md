@@ -196,6 +196,10 @@ stable URL that IPTV Smarters can reuse.
   H.264 1080p video with AAC audio and an advancing HLS window. No explicit expiry
   is exposed in its URL or master; provider key changes remain possible. The
   relay URL was updated and retains the progression and decoding requirements.
+  On November 1, the player switched back to its earlier key while the October 31
+  key returned 403. The current player URL passed H.264/AAC decoding and live
+  progression again. Provider keys can change between maintenance runs; the
+  configured relay was updated to match repeated current-player requests.
   A [publicly submitted relay](https://github.com/iptv-org/iptv/issues/41007) previously
   decoded successfully and its picture was checked for CNN Türk identity, but
   timed out during the October 2 checks. It is an
