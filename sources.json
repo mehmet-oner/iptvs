@@ -493,7 +493,8 @@
       "exclude_name_patterns": [
         "^NOW TV$"
       ],
-      "notes": "2026-10-26: Exclude the older identifier-less NOW TV row when present. Shared alias NOW.tr -> NOWTV.tr merges identified rows across iptv-org, IPTV Nexus and discevisita; otherwise the master and direct 720p variant of the same Turknet CDN feed can appear as duplicate channels. Both variants decoded H.264/AAC during review. Catalog provenance: https://iptv-org.github.io/iptv/countries/tr.m3u and enabled IPTV Nexus/discevisita playlists."
+      "notes": "2026-10-26: Exclude the older identifier-less NOW TV row when present. Shared alias NOW.tr -> NOWTV.tr merges identified rows across iptv-org, IPTV Nexus and discevisita; otherwise the master and direct 720p variant of the same Turknet CDN feed can appear as duplicate channels. Both variants decoded H.264/AAC during review. Catalog provenance: https://iptv-org.github.io/iptv/countries/tr.m3u and enabled IPTV Nexus/discevisita playlists. 2026-11-02: Disabled after box.m3u returned HTTP 404. The current main branch contains only .gitignore at commit 5a9cbd716df1d0d1dabc2b8cfab30fecf2cb703b (2026-11-01T23:53:23Z); no maintained replacement playlist is present. Repository contents: https://api.github.com/repos/ilyswch/IPTV-TR/contents . Retain this record for provenance; remaining enabled catalogs continue discovery and full stream validation.",
+      "enabled": false
     },
     {
       "name": "IPTV Nexus Turkish",

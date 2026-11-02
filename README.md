@@ -64,9 +64,14 @@ fresh URLs; neither proves that every channel works.
 | Broadcaster live pages/CDNs | Player URLs from Number1, Kanal D, Show TV, Star, NTV, TV8, Halk TV, Habertürk, CBS, Sky and Bloomberg | Preferred direct entry points, tested again on every rebuild |
 | [iptv-org](https://github.com/iptv-org/iptv) | Country playlists dated September 17; [update workflow](https://github.com/iptv-org/iptv/blob/master/.github/workflows/update.yml) schedules daily updates | Broad Turkish discovery; explicit international channel allowlists |
 | [Free-TV](https://github.com/Free-TV/IPTV) | Active September 17; [fast checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_fast.yml) every six hours and [deep checks](https://github.com/Free-TV/IPTV/blob/master/.github/workflows/check_channels_deep.yml) every two days | Selected country lists with additional exclusions and our own decoding |
-| [IPTV-TR](https://github.com/ilyswch/IPTV-TR) and [discevisita](https://github.com/discevisita/iptv) | Last repository pushes September 1 and September 6 | Additional Turkish/Cyprus candidates with corrected channel IDs |
+| [discevisita](https://github.com/discevisita/iptv) | Additional maintained Turkish/Cyprus playlist | Additional candidates with corrected channel IDs |
 | [IPTV Nexus](https://github.com/dearbulut/iptv) | Updated September 17; derives from iptv-org | Alternative URLs, not independent evidence of reliability |
 | [pinkisso](https://github.com/pinkisso/mored) | Updated September 17 | Maintained pointer for Sözcü's YouTube broadcast; depends on upstream renewal |
+
+On 2026-11-02, IPTV-TR was disabled because `box.m3u` returned HTTP 404.
+Its [current main commit](https://github.com/ilyswch/IPTV-TR/commit/5a9cbd716df1d0d1dabc2b8cfab30fecf2cb703b)
+contains only `.gitignore`; no replacement playlist is present. The disabled
+source record is retained for provenance. Other catalogs remain enabled.
 
 Removed the broad World IPTV Checker source because it contributed no selected
 channels in the preceding report. Expanded international allowlists with public
