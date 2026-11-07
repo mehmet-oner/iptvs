@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T14:27:21.846953+00:00",
+  "checked_at": "2026-11-07T12:36:31.673566+00:00",
   "validation": {
     "mode": "decode",
     "decode_seconds": 4.0,
@@ -8,11 +8,11 @@
   "summary": {
     "source_entries": 684,
     "channel_groups": 286,
-    "distinct_checks": 356,
+    "distinct_checks": 358,
     "output_channels": 239,
-    "video_decoded": 223,
+    "video_decoded": 222,
     "reachability_only": 0,
-    "geo_retained": 16,
+    "geo_retained": 17,
     "dropped_groups": 46,
     "duplicate_stream_groups": 2,
     "failed_sources": 0
@@ -359,7 +359,7 @@
       "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
       "status": "loaded",
       "entries": 16,
-      "filtered_out": 1480,
+      "filtered_out": 1486,
       "warnings": []
     },
     {
@@ -367,7 +367,7 @@
       "url": "https://iptv-org.github.io/iptv/countries/uk.m3u",
       "status": "loaded",
       "entries": 9,
-      "filtered_out": 295,
+      "filtered_out": 296,
       "warnings": []
     },
     {
@@ -375,7 +375,7 @@
       "url": "https://iptv-org.github.io/iptv/countries/nl.m3u",
       "status": "loaded",
       "entries": 24,
-      "filtered_out": 152,
+      "filtered_out": 153,
       "warnings": []
     },
     {
@@ -401,41 +401,116 @@
       "entries": 31,
       "filtered_out": 57,
       "warnings": [
-        "Line 41: previous entry has no URL",
-        "Line 47: previous entry has no URL",
-        "Line 80: previous entry has no URL",
-        "Line 82: previous entry has no URL",
-        "Line 84: previous entry has no URL",
-        "Line 86: previous entry has no URL",
-        "Line 88: previous entry has no URL",
-        "Line 92: previous entry has no URL",
-        "Line 96: previous entry has no URL",
-        "Line 104: previous entry has no URL",
-        "Line 106: previous entry has no URL",
-        "Line 114: previous entry has no URL",
-        "Line 120: previous entry has no URL",
-        "Line 122: previous entry has no URL",
-        "Line 130: previous entry has no URL",
-        "Line 147: previous entry has no URL",
-        "Line 147: EXTINF has no display-name separator",
-        "Line 159: previous entry has no URL",
-        "Line 161: previous entry has no URL",
-        "Line 165: previous entry has no URL",
-        "Line 167: previous entry has no URL",
-        "Line 172: previous entry has no URL",
-        "Line 201: previous entry has no URL",
-        "Line 203: previous entry has no URL",
-        "Line 205: previous entry has no URL",
-        "Line 207: previous entry has no URL",
-        "Line 209: previous entry has no URL",
-        "Line 211: previous entry has no URL",
-        "Line 213: previous entry has no URL",
-        "Line 215: previous entry has no URL",
-        "Line 218: previous entry has no URL"
+        "Line 39: previous entry has no URL",
+        "Line 45: previous entry has no URL",
+        "Line 79: previous entry has no URL",
+        "Line 81: previous entry has no URL",
+        "Line 83: previous entry has no URL",
+        "Line 85: previous entry has no URL",
+        "Line 87: previous entry has no URL",
+        "Line 91: previous entry has no URL",
+        "Line 95: previous entry has no URL",
+        "Line 103: previous entry has no URL",
+        "Line 105: previous entry has no URL",
+        "Line 113: previous entry has no URL",
+        "Line 119: previous entry has no URL",
+        "Line 121: previous entry has no URL",
+        "Line 129: previous entry has no URL",
+        "Line 146: previous entry has no URL",
+        "Line 146: EXTINF has no display-name separator",
+        "Line 158: previous entry has no URL",
+        "Line 160: previous entry has no URL",
+        "Line 164: previous entry has no URL",
+        "Line 166: previous entry has no URL",
+        "Line 171: previous entry has no URL",
+        "Line 200: previous entry has no URL",
+        "Line 202: previous entry has no URL",
+        "Line 204: previous entry has no URL",
+        "Line 206: previous entry has no URL",
+        "Line 208: previous entry has no URL",
+        "Line 210: previous entry has no URL",
+        "Line 212: previous entry has no URL",
+        "Line 214: previous entry has no URL",
+        "Line 217: previous entry has no URL"
       ]
     }
   ],
   "channels": [
+    {
+      "channel": "id:sozcutv.tr",
+      "name": "Sözcü TV (1080p)",
+      "status": "video_decoded",
+      "selected_url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+      "selected_source": "Sözcü TV — official YouTube live",
+      "selected_streams": [
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        },
+        {
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "source": "Sözcü TV — official YouTube live"
+        }
+      ],
+      "candidates": [
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 120,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-11-07T12:33:05.053000+00:00",
+            "age_seconds": 3.0,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 4176839,
+              "final_sequence": 4176840
+            }
+          }
+        },
+        {
+          "source": "Sözcü TV — official YouTube live",
+          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 120,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-11-07T12:33:05.053000+00:00",
+            "age_seconds": 3.0,
+            "progress": {
+              "status": "advancing",
+              "observation_seconds": 7.5,
+              "initial_sequence": 4176839,
+              "final_sequence": 4176840
+            }
+          }
+        },
+        {
+          "source": "Sözcü TV — pinkisso",
+          "url": "https://raw.githubusercontent.com/pinkisso/mored/main/res/ytbe/szcytbe.m3u8",
+          "status": "unreachable",
+          "reason": "ValueError: Stale HLS: latest dated media is 10128 seconds old (limit 900)"
+        }
+      ]
+    },
     {
       "channel": "id:number1dance.tr",
       "name": "Number1 Dance",
@@ -542,7 +617,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -555,8 +630,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 18.0,
-              "initial_sequence": 777,
-              "final_sequence": 779
+              "initial_sequence": 8747,
+              "final_sequence": 8749
             }
           }
         },
@@ -566,7 +641,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -579,8 +654,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 12.0,
-              "initial_sequence": 664,
-              "final_sequence": 666
+              "initial_sequence": 9278,
+              "final_sequence": 9280
             }
           }
         },
@@ -590,7 +665,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -603,8 +678,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 12.0,
-              "initial_sequence": 664,
-              "final_sequence": 666
+              "initial_sequence": 9278,
+              "final_sequence": 9280
             }
           }
         },
@@ -614,7 +689,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -627,8 +702,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 12.0,
-              "initial_sequence": 664,
-              "final_sequence": 666
+              "initial_sequence": 9278,
+              "final_sequence": 9280
             }
           }
         }
@@ -666,8 +741,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 16.5,
-              "initial_sequence": 32183,
-              "final_sequence": 32185
+              "initial_sequence": 40161,
+              "final_sequence": 40162
             }
           }
         },
@@ -719,13 +794,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:39.388000+00:00",
-            "age_seconds": -3.2,
+            "latest_segment_end": "2026-11-07T12:33:10.650000+00:00",
+            "age_seconds": -2.5,
             "progress": {
               "status": "advancing",
               "observation_seconds": 3,
-              "initial_sequence": 128316,
-              "final_sequence": 128318
+              "initial_sequence": 38480,
+              "final_sequence": 38481
             }
           }
         },
@@ -777,7 +852,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:36.532000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:08.444000+00:00",
             "age_seconds": 0.1
           }
         },
@@ -796,7 +871,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:36.532000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:08.444000+00:00",
             "age_seconds": 0.1
           }
         },
@@ -815,7 +890,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:36.532000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:08.444000+00:00",
             "age_seconds": 0.1
           }
         },
@@ -834,7 +909,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:36.532000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:08.444000+00:00",
             "age_seconds": 0.1
           }
         },
@@ -853,8 +928,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:53.672000+00:00",
-            "age_seconds": 0.1
+            "latest_segment_end": "2026-11-07T12:36:01.716000+00:00",
+            "age_seconds": 0.0
           }
         }
       ]
@@ -878,7 +953,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -887,8 +962,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:02.440000+00:00",
-            "age_seconds": 34.1
+            "latest_segment_end": "2026-11-07T12:33:08.463000+00:00",
+            "age_seconds": 0.1
           }
         },
         {
@@ -897,7 +972,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -906,8 +981,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:02.440000+00:00",
-            "age_seconds": 34.1
+            "latest_segment_end": "2026-11-07T12:33:08.463000+00:00",
+            "age_seconds": 0.1
           }
         }
       ]
@@ -940,8 +1015,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:22:51.333000+00:00",
-            "age_seconds": 46.0
+            "latest_segment_end": "2026-11-07T12:32:43.062000+00:00",
+            "age_seconds": 26.0
           }
         },
         {
@@ -959,8 +1034,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:14:48.666000+00:00",
-            "age_seconds": 626.3
+            "latest_segment_end": "2026-11-07T12:24:43.784000+00:00",
+            "age_seconds": 597.1
           }
         },
         {
@@ -978,8 +1053,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:14:48.666000+00:00",
-            "age_seconds": 626.3
+            "latest_segment_end": "2026-11-07T12:24:43.784000+00:00",
+            "age_seconds": 597.1
           }
         },
         {
@@ -997,8 +1072,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:14:48.666000+00:00",
-            "age_seconds": 626.3
+            "latest_segment_end": "2026-11-07T12:24:43.784000+00:00",
+            "age_seconds": 597.1
           }
         },
         {
@@ -1041,7 +1116,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 100,
-            "decoded_seconds": 3.992,
+            "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -1049,8 +1124,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:19.034000+00:00",
-            "age_seconds": 20.0
+            "latest_segment_end": "2026-11-07T12:32:10.257000+00:00",
+            "age_seconds": 60.0
           }
         },
         {
@@ -1060,7 +1135,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 100,
-            "decoded_seconds": 3.992,
+            "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -1068,8 +1143,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:19.034000+00:00",
-            "age_seconds": 20.0
+            "latest_segment_end": "2026-11-07T12:32:10.257000+00:00",
+            "age_seconds": 60.0
           }
         },
         {
@@ -1079,7 +1154,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 100,
-            "decoded_seconds": 3.992,
+            "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -1087,8 +1162,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:19.034000+00:00",
-            "age_seconds": 20.0
+            "latest_segment_end": "2026-11-07T12:32:10.257000+00:00",
+            "age_seconds": 60.0
           }
         },
         {
@@ -1098,7 +1173,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 100,
-            "decoded_seconds": 3.992,
+            "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -1106,8 +1181,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:19.034000+00:00",
-            "age_seconds": 20.0
+            "latest_segment_end": "2026-11-07T12:32:10.257000+00:00",
+            "age_seconds": 60.0
           }
         },
         {
@@ -1117,7 +1192,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 100,
-            "decoded_seconds": 3.992,
+            "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -1125,8 +1200,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:19.034000+00:00",
-            "age_seconds": 20.0
+            "latest_segment_end": "2026-11-07T12:32:10.257000+00:00",
+            "age_seconds": 60.0
           }
         }
       ]
@@ -1207,7 +1282,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1216,7 +1291,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:39.403000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:10.518000+00:00",
             "age_seconds": 0.0
           }
         },
@@ -1226,7 +1301,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1244,7 +1319,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1262,7 +1337,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1304,8 +1379,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:32.432000+00:00",
-            "age_seconds": 8.0
+            "latest_segment_end": "2026-11-07T12:32:53.815000+00:00",
+            "age_seconds": 18.0
           }
         },
         {
@@ -1314,7 +1389,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1332,7 +1407,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1350,7 +1425,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1410,8 +1485,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:34.832000+00:00",
-            "age_seconds": 7.2
+            "latest_segment_end": "2026-11-07T12:33:02.520000+00:00",
+            "age_seconds": 9.8
           }
         },
         {
@@ -1435,8 +1510,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:35+00:00",
-            "age_seconds": -21.9
+            "latest_segment_end": "2026-11-07T12:36:00+00:00",
+            "age_seconds": -22.1
           }
         }
       ]
@@ -1469,8 +1544,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:32.670000+00:00",
-            "age_seconds": 10.3
+            "latest_segment_end": "2026-11-07T12:33:08.750000+00:00",
+            "age_seconds": 3.6
           }
         },
         {
@@ -1509,8 +1584,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:39.189150+00:00",
-            "age_seconds": 3.7
+            "latest_segment_end": "2026-11-07T12:33:09.229253+00:00",
+            "age_seconds": 4.7
           }
         },
         {
@@ -1528,8 +1603,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:39.189150+00:00",
-            "age_seconds": 3.7
+            "latest_segment_end": "2026-11-07T12:33:09.229253+00:00",
+            "age_seconds": 4.7
           }
         }
       ]
@@ -1559,7 +1634,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1572,8 +1647,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 16.5,
-              "initial_sequence": 10462,
-              "final_sequence": 10464
+              "initial_sequence": 18439,
+              "final_sequence": 18441
             }
           }
         },
@@ -1613,13 +1688,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:49.929000+00:00",
-            "age_seconds": -4.1,
+            "latest_segment_end": "2026-11-07T12:33:16.755000+00:00",
+            "age_seconds": -0.2,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 15.0,
-              "initial_sequence": 2315,
-              "final_sequence": 2317
+              "observation_seconds": 12.0,
+              "initial_sequence": 15608,
+              "final_sequence": 15610
             }
           }
         },
@@ -1662,7 +1737,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -1671,13 +1746,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:43.989000+00:00",
-            "age_seconds": 2.9,
+            "latest_segment_end": "2026-11-07T12:33:10.035000+00:00",
+            "age_seconds": 6.9,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 2324,
-              "final_sequence": 2326
+              "initial_sequence": 15612,
+              "final_sequence": 15614
             }
           }
         },
@@ -1720,7 +1795,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 97,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1729,13 +1804,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:48.732000+00:00",
-            "age_seconds": 1.7,
+            "latest_segment_end": "2026-11-07T12:33:12.732000+00:00",
+            "age_seconds": 4.4,
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 2294,
-              "final_sequence": 2295
+              "initial_sequence": 15588,
+              "final_sequence": 15589
             }
           }
         },
@@ -1778,7 +1853,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -1787,13 +1862,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:55.076000+00:00",
-            "age_seconds": 3.1,
+            "latest_segment_end": "2026-11-07T12:33:23.812000+00:00",
+            "age_seconds": 3.6,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 12.0,
-              "initial_sequence": 2314,
-              "final_sequence": 2316
+              "observation_seconds": 10.5,
+              "initial_sequence": 15609,
+              "final_sequence": 15611
             }
           }
         },
@@ -1836,7 +1911,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1845,13 +1920,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:53.851000+00:00",
-            "age_seconds": 5.3,
+            "latest_segment_end": "2026-11-07T12:33:25.331000+00:00",
+            "age_seconds": 3.2,
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 2315,
-              "final_sequence": 2317
+              "initial_sequence": 15610,
+              "final_sequence": 15612
             }
           }
         },
@@ -1894,7 +1969,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -1903,13 +1978,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:59.986000+00:00",
-            "age_seconds": 0.4,
+            "latest_segment_end": "2026-11-07T12:33:27.005000+00:00",
+            "age_seconds": 2.7,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 9.0,
-              "initial_sequence": 2311,
-              "final_sequence": 2312
+              "observation_seconds": 10.5,
+              "initial_sequence": 11975,
+              "final_sequence": 11977
             }
           }
         },
@@ -1952,7 +2027,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -1961,13 +2036,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:01.724000+00:00",
-            "age_seconds": -0.5,
+            "latest_segment_end": "2026-11-07T12:33:31.089000+00:00",
+            "age_seconds": 0.7,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 2315,
-              "final_sequence": 2316
+              "initial_sequence": 10296,
+              "final_sequence": 10297
             }
           }
         },
@@ -2010,7 +2085,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -2019,13 +2094,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:01.766000+00:00",
-            "age_seconds": 0.6,
+            "latest_segment_end": "2026-11-07T12:33:35.814000+00:00",
+            "age_seconds": -1.6,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 10.5,
-              "initial_sequence": 2318,
-              "final_sequence": 2319
+              "observation_seconds": 9.0,
+              "initial_sequence": 6749,
+              "final_sequence": 6750
             }
           }
         },
@@ -2068,7 +2143,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -2077,13 +2152,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:23:59.950000+00:00",
-            "age_seconds": 3.0,
+            "latest_segment_end": "2026-11-07T12:33:30.659000+00:00",
+            "age_seconds": 5.1,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 9.0,
-              "initial_sequence": 2315,
-              "final_sequence": 2317
+              "observation_seconds": 12.0,
+              "initial_sequence": 1933,
+              "final_sequence": 1935
             }
           }
         },
@@ -2126,7 +2201,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -2135,13 +2210,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:05.333000+00:00",
-            "age_seconds": 3.7,
+            "latest_segment_end": "2026-11-07T12:33:33.856000+00:00",
+            "age_seconds": 4.9,
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 2317,
-              "final_sequence": 2319
+              "initial_sequence": 15611,
+              "final_sequence": 15613
             }
           }
         },
@@ -2193,13 +2268,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:07.285000+00:00",
-            "age_seconds": 2.7,
+            "latest_segment_end": "2026-11-07T12:33:37.125000+00:00",
+            "age_seconds": 1.9,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 9.0,
-              "initial_sequence": 2318,
-              "final_sequence": 2319
+              "observation_seconds": 12.0,
+              "initial_sequence": 15634,
+              "final_sequence": 15636
             }
           }
         },
@@ -2242,7 +2317,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -2251,13 +2326,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:06.305000+00:00",
-            "age_seconds": 4.7,
+            "latest_segment_end": "2026-11-07T12:33:41.865000+00:00",
+            "age_seconds": -1.4,
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 2316,
-              "final_sequence": 2318
+              "initial_sequence": 15612,
+              "final_sequence": 15613
             }
           }
         },
@@ -2313,8 +2388,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 28.5,
-              "initial_sequence": 8421,
-              "final_sequence": 8424
+              "initial_sequence": 16398,
+              "final_sequence": 16401
             }
           }
         },
@@ -2324,7 +2399,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1080,
@@ -2337,8 +2412,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 28.5,
-              "initial_sequence": 8423,
-              "final_sequence": 8426
+              "initial_sequence": 16400,
+              "final_sequence": 16403
             }
           }
         },
@@ -2348,7 +2423,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1080,
@@ -2361,8 +2436,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 28.5,
-              "initial_sequence": 8423,
-              "final_sequence": 8426
+              "initial_sequence": 16400,
+              "final_sequence": 16403
             }
           }
         },
@@ -2372,7 +2447,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1080,
@@ -2385,8 +2460,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 28.5,
-              "initial_sequence": 8423,
-              "final_sequence": 8426
+              "initial_sequence": 16400,
+              "final_sequence": 16403
             }
           }
         }
@@ -2424,8 +2499,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 377454,
-              "final_sequence": 377455
+              "initial_sequence": 390749,
+              "final_sequence": 390750
             }
           }
         },
@@ -2448,8 +2523,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 377456,
-              "final_sequence": 377458
+              "initial_sequence": 390751,
+              "final_sequence": 390753
             }
           }
         },
@@ -2472,8 +2547,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 377456,
-              "final_sequence": 377458
+              "initial_sequence": 390751,
+              "final_sequence": 390753
             }
           }
         },
@@ -2496,8 +2571,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 377456,
-              "final_sequence": 377458
+              "initial_sequence": 390751,
+              "final_sequence": 390753
             }
           }
         },
@@ -2520,8 +2595,8 @@
             "progress": {
               "status": "advancing",
               "observation_seconds": 9.0,
-              "initial_sequence": 377454,
-              "final_sequence": 377455
+              "initial_sequence": 390749,
+              "final_sequence": 390750
             }
           }
         }
@@ -2555,13 +2630,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:12.671000+00:00",
+            "latest_segment_end": "2026-11-07T12:33:42.671000+00:00",
             "age_seconds": 0.8,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 82506223,
-              "final_sequence": 82506224
+              "initial_sequence": 82519518,
+              "final_sequence": 82519519
             }
           }
         },
@@ -2601,13 +2676,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:07.911000+00:00",
-            "age_seconds": 5.6,
+            "latest_segment_end": "2026-11-07T12:33:37.911000+00:00",
+            "age_seconds": 6.5,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 82506222,
-              "final_sequence": 82506224
+              "initial_sequence": 82519517,
+              "final_sequence": 82519519
             }
           }
         },
@@ -2647,13 +2722,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:13.711000+00:00",
-            "age_seconds": 0.8,
+            "latest_segment_end": "2026-11-07T12:33:43.711000+00:00",
+            "age_seconds": 5.2,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 82506223,
-              "final_sequence": 82506224
+              "initial_sequence": 82519518,
+              "final_sequence": 82519520
             }
           }
         },
@@ -2693,13 +2768,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:12.791000+00:00",
-            "age_seconds": 6.8,
+            "latest_segment_end": "2026-11-07T12:33:42.791000+00:00",
+            "age_seconds": 6.2,
             "progress": {
               "status": "advancing",
               "observation_seconds": 10.5,
-              "initial_sequence": 82506223,
-              "final_sequence": 82506225
+              "initial_sequence": 82519518,
+              "final_sequence": 82519520
             }
           }
         },
@@ -2766,8 +2841,8 @@
             "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
+            "width": null,
+            "height": null,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -2784,8 +2859,8 @@
             "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
+            "width": null,
+            "height": null,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -2841,8 +2916,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:30+00:00",
-            "age_seconds": 6.9
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 4.3
           }
         },
         {
@@ -2860,8 +2935,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:30+00:00",
-            "age_seconds": 6.9
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 4.3
           }
         },
         {
@@ -2879,8 +2954,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:30+00:00",
-            "age_seconds": 6.9
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 4.3
           }
         }
       ]
@@ -2913,8 +2988,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:20+00:00",
-            "age_seconds": 3.5
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 3.7
           }
         },
         {
@@ -2932,8 +3007,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:20+00:00",
-            "age_seconds": 3.5
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 3.7
           }
         },
         {
@@ -2951,8 +3026,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:20+00:00",
-            "age_seconds": 3.5
+            "latest_segment_end": "2026-11-07T12:33:50+00:00",
+            "age_seconds": 3.7
           }
         }
       ]
@@ -3045,7 +3120,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3063,7 +3138,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3081,7 +3156,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3139,8 +3214,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:22.547000+00:00",
-            "age_seconds": 5.9
+            "latest_segment_end": "2026-11-07T12:33:57.827000+00:00",
+            "age_seconds": 1.4
           }
         },
         {
@@ -3158,8 +3233,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:22.547000+00:00",
-            "age_seconds": 5.9
+            "latest_segment_end": "2026-11-07T12:33:57.827000+00:00",
+            "age_seconds": 1.4
           }
         },
         {
@@ -3177,8 +3252,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:22.547000+00:00",
-            "age_seconds": 5.9
+            "latest_segment_end": "2026-11-07T12:33:57.827000+00:00",
+            "age_seconds": 1.4
           }
         }
       ]
@@ -3304,11 +3379,11 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
-            "decoded_seconds": 4.0,
+            "frames": 120,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
+            "width": 1920,
+            "height": 1080,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -3322,11 +3397,11 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
-            "decoded_seconds": 4.0,
+            "frames": 120,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
+            "width": 1920,
+            "height": 1080,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -3340,11 +3415,11 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
-            "decoded_seconds": 4.0,
+            "frames": 120,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
+            "width": 1920,
+            "height": 1080,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -3373,7 +3448,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 199,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -3391,7 +3466,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 199,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -3409,7 +3484,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 199,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -3440,13 +3515,13 @@
           "source": "iptv-org Turkey",
           "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: decoder error (exit 251, 0 frames, 0.00s)"
+          "reason": "TimeoutError: The read operation timed out"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: decoder error (exit 251, 0 frames, 0.00s)"
+          "reason": "TimeoutError: The read operation timed out"
         },
         {
           "source": "IPTV Nexus Turkish",
@@ -3463,8 +3538,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:40+00:00",
-            "age_seconds": 0.8
+            "latest_segment_end": "2026-11-07T12:35:50+00:00",
+            "age_seconds": 5.0
           }
         },
         {
@@ -3482,8 +3557,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:50+00:00",
-            "age_seconds": 6.8
+            "latest_segment_end": "2026-11-07T12:36:00+00:00",
+            "age_seconds": 3.2
           }
         }
       ]
@@ -3638,7 +3713,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -3671,7 +3746,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 199,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3680,8 +3755,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:29.388000+00:00",
-            "age_seconds": 5.2
+            "latest_segment_end": "2026-11-07T12:34:04.034000+00:00",
+            "age_seconds": 0.8
           }
         },
         {
@@ -3690,7 +3765,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 199,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3699,8 +3774,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:29.388000+00:00",
-            "age_seconds": 5.2
+            "latest_segment_end": "2026-11-07T12:34:04.034000+00:00",
+            "age_seconds": 0.8
           }
         },
         {
@@ -3709,7 +3784,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 199,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3718,8 +3793,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:29.388000+00:00",
-            "age_seconds": 5.2
+            "latest_segment_end": "2026-11-07T12:34:04.034000+00:00",
+            "age_seconds": 0.8
           }
         },
         {
@@ -3728,7 +3803,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 199,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -3737,8 +3812,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:29.388000+00:00",
-            "age_seconds": 5.2
+            "latest_segment_end": "2026-11-07T12:34:04.034000+00:00",
+            "age_seconds": 0.8
           }
         }
       ]
@@ -3771,8 +3846,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:40.838000+00:00",
-            "age_seconds": -5.3
+            "latest_segment_end": "2026-11-07T12:34:10.053000+00:00",
+            "age_seconds": -4.0
           }
         },
         {
@@ -3790,8 +3865,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:40.838000+00:00",
-            "age_seconds": -5.3
+            "latest_segment_end": "2026-11-07T12:34:10.053000+00:00",
+            "age_seconds": -4.0
           }
         },
         {
@@ -3809,8 +3884,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:40.838000+00:00",
-            "age_seconds": -5.3
+            "latest_segment_end": "2026-11-07T12:34:10.053000+00:00",
+            "age_seconds": -4.0
           }
         },
         {
@@ -4247,7 +4322,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -4265,7 +4340,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -4283,7 +4358,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -4316,7 +4391,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 200,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4334,7 +4409,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 200,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4352,7 +4427,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 200,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4388,7 +4463,7 @@
             "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 720,
+            "width": 480,
             "height": 576,
             "audio_codec": "aac"
           },
@@ -4406,7 +4481,7 @@
             "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 720,
+            "width": 480,
             "height": 576,
             "audio_codec": "aac"
           },
@@ -4424,7 +4499,7 @@
             "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 720,
+            "width": 480,
             "height": 576,
             "audio_codec": "aac"
           },
@@ -4447,19 +4522,19 @@
           "source": "iptv-org Turkey",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1052 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1049 seconds old (limit 900)"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1052 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1049 seconds old (limit 900)"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1052 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1049 seconds old (limit 900)"
         }
       ]
     },
@@ -4491,8 +4566,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:39.383000+00:00",
-            "age_seconds": 3.4
+            "latest_segment_end": "2026-11-07T12:34:05.383000+00:00",
+            "age_seconds": 4.4
           }
         },
         {
@@ -4510,8 +4585,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:39.383000+00:00",
-            "age_seconds": 3.4
+            "latest_segment_end": "2026-11-07T12:34:05.383000+00:00",
+            "age_seconds": 4.4
           }
         },
         {
@@ -4529,8 +4604,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:39.383000+00:00",
-            "age_seconds": 3.4
+            "latest_segment_end": "2026-11-07T12:34:05.383000+00:00",
+            "age_seconds": 4.4
           }
         }
       ]
@@ -4701,7 +4776,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4719,7 +4794,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4737,7 +4812,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -4901,19 +4976,19 @@
           "source": "iptv-org Turkey",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1047 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1046 seconds old (limit 900)"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1047 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1046 seconds old (limit 900)"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 1047 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 1046 seconds old (limit 900)"
         }
       ]
     },
@@ -5005,7 +5080,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5023,7 +5098,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5041,7 +5116,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5074,7 +5149,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 73,
+            "frames": 71,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5092,7 +5167,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 73,
+            "frames": 71,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5110,7 +5185,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 73,
+            "frames": 71,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5164,8 +5239,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:35.657000+00:00",
-            "age_seconds": 5.5
+            "latest_segment_end": "2026-11-07T12:35:59.314000+00:00",
+            "age_seconds": -2.7
           }
         }
       ]
@@ -5226,13 +5301,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:48.243000+00:00",
-            "age_seconds": -0.6,
+            "latest_segment_end": "2026-11-07T12:34:11.447000+00:00",
+            "age_seconds": 2.3,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 10.5,
-              "initial_sequence": 130420,
-              "final_sequence": 130421
+              "observation_seconds": 9.0,
+              "initial_sequence": 143778,
+              "final_sequence": 143779
             }
           }
         },
@@ -5251,19 +5326,19 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:48.243000+00:00",
-            "age_seconds": -0.6,
+            "latest_segment_end": "2026-11-07T12:34:11.447000+00:00",
+            "age_seconds": 2.3,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 10.5,
-              "initial_sequence": 130420,
-              "final_sequence": 130421
+              "observation_seconds": 9.0,
+              "initial_sequence": 143778,
+              "final_sequence": 143779
             }
           }
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8",
+          "url": "https://win8.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8",
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
@@ -5276,13 +5351,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:48.243000+00:00",
-            "age_seconds": -0.6,
+            "latest_segment_end": "2026-11-07T12:35:53.447000+00:00",
+            "age_seconds": 3.2,
             "progress": {
               "status": "advancing",
-              "observation_seconds": 10.5,
-              "initial_sequence": 130420,
-              "final_sequence": 130421
+              "observation_seconds": 9.0,
+              "initial_sequence": 143795,
+              "final_sequence": 143797
             }
           }
         }
@@ -5378,28 +5453,72 @@
     {
       "channel": "id:htsportv.tr",
       "name": "HTSpor TV (1080p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
-      "selected_streams": [],
+      "status": "video_decoded",
+      "selected_url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+      "selected_source": "iptv-org Turkey",
+      "selected_streams": [
+        {
+          "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
+          "source": "iptv-org Turkey"
+        }
+      ],
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: insufficient decoded video frames/duration (exit 0, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-11-07T12:34:14.989000+00:00",
+            "age_seconds": 0.0
+          }
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: insufficient decoded video frames/duration (exit 0, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-11-07T12:34:14.989000+00:00",
+            "age_seconds": 0.0
+          }
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web",
-          "status": "unreachable",
-          "reason": "ValueError: insufficient decoded video frames/duration (exit 0, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "recent",
+            "latest_segment_end": "2026-11-07T12:34:14.989000+00:00",
+            "age_seconds": 0.0
+          }
         }
       ]
     },
@@ -5434,7 +5553,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5644,8 +5763,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:40+00:00",
-            "age_seconds": 1.8
+            "latest_segment_end": "2026-11-07T12:35:50+00:00",
+            "age_seconds": 7.0
           }
         }
       ]
@@ -5669,7 +5788,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5687,7 +5806,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5705,7 +5824,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -5738,7 +5857,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5756,7 +5875,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5774,7 +5893,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5885,8 +6004,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:58.400000+00:00",
-            "age_seconds": -4.0
+            "latest_segment_end": "2026-11-07T12:34:25.960000+00:00",
+            "age_seconds": -7.4
           }
         },
         {
@@ -5904,8 +6023,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:58.400000+00:00",
-            "age_seconds": -4.0
+            "latest_segment_end": "2026-11-07T12:34:25.960000+00:00",
+            "age_seconds": -7.4
           }
         },
         {
@@ -5923,8 +6042,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:58.400000+00:00",
-            "age_seconds": -4.0
+            "latest_segment_end": "2026-11-07T12:34:25.960000+00:00",
+            "age_seconds": -7.4
           }
         }
       ]
@@ -5948,7 +6067,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5966,7 +6085,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -5984,7 +6103,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6045,7 +6164,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 3.96,
             "video_codec": "h264",
             "width": 1280,
@@ -6063,7 +6182,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 3.96,
             "video_codec": "h264",
             "width": 1280,
@@ -6081,7 +6200,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 3.96,
             "video_codec": "h264",
             "width": 1280,
@@ -6114,7 +6233,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6132,7 +6251,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6150,7 +6269,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6211,7 +6330,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 197,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6229,7 +6348,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 197,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6247,7 +6366,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 197,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -6403,8 +6522,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:53.501000+00:00",
-            "age_seconds": 5.6
+            "latest_segment_end": "2026-11-07T12:34:19.088000+00:00",
+            "age_seconds": 3.3
           }
         }
       ]
@@ -6428,7 +6547,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6437,8 +6556,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:53.488000+00:00",
-            "age_seconds": 5.7
+            "latest_segment_end": "2026-11-07T12:34:18.448000+00:00",
+            "age_seconds": 4.1
           }
         },
         {
@@ -6447,7 +6566,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6456,8 +6575,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:53.488000+00:00",
-            "age_seconds": 5.7
+            "latest_segment_end": "2026-11-07T12:34:18.448000+00:00",
+            "age_seconds": 4.1
           }
         },
         {
@@ -6466,7 +6585,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6475,8 +6594,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:53.488000+00:00",
-            "age_seconds": 5.7
+            "latest_segment_end": "2026-11-07T12:34:18.448000+00:00",
+            "age_seconds": 4.1
           }
         }
       ]
@@ -6666,7 +6785,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6684,7 +6803,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6702,7 +6821,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -6891,7 +7010,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 718,
@@ -6900,8 +7019,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:56.265000+00:00",
-            "age_seconds": 5.2
+            "latest_segment_end": "2026-11-07T12:34:18.806000+00:00",
+            "age_seconds": 6.0
           }
         }
       ]
@@ -7012,7 +7131,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 720,
@@ -7030,7 +7149,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 720,
@@ -7048,7 +7167,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 720,
@@ -7081,7 +7200,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7099,7 +7218,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7117,7 +7236,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7248,32 +7367,68 @@
       "channel": "id:nowtv.tr",
       "name": "NOW (720p)",
       "status": "video_decoded",
-      "selected_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
-      "selected_source": "discevisita Turkish national and Cyprus channels",
+      "selected_url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
+      "selected_source": "iptv-org Turkey",
       "selected_streams": [
         {
-          "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8",
-          "source": "discevisita Turkish national and Cyprus channels"
+          "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
+          "source": "iptv-org Turkey"
         }
       ],
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: decoder error (exit 251, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: decoder error (exit 251, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv_720p.m3u8",
-          "status": "unreachable",
-          "reason": "ValueError: decoder error (exit 251, 0 frames, 0.00s)"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "discevisita Turkish national and Cyprus channels",
@@ -7314,7 +7469,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7332,7 +7487,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7350,7 +7505,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -7533,7 +7688,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 199,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7663,7 +7818,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7681,7 +7836,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7699,7 +7854,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7801,7 +7956,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7819,7 +7974,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -7833,11 +7988,11 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
+          "url": "https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8",
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8008,7 +8163,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8026,7 +8181,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8044,7 +8199,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 117,
+            "frames": 118,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8093,7 +8248,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8111,7 +8266,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8125,7 +8280,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist.m3u8",
+          "url": "https://svs.itworkscdn.net/sat7turklive/sat7turk.smil/playlist_dvr.m3u8",
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
@@ -8138,8 +8293,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:44.147000+00:00",
-            "age_seconds": 2.4
+            "latest_segment_end": "2026-11-07T12:35:50.732000+00:00",
+            "age_seconds": 8.2
           }
         }
       ]
@@ -8232,7 +8387,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8241,8 +8396,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:19.817000+00:00",
-            "age_seconds": -5.9
+            "latest_segment_end": "2026-11-07T12:34:49.897000+00:00",
+            "age_seconds": -10.1
           }
         },
         {
@@ -8251,7 +8406,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8260,8 +8415,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:19.817000+00:00",
-            "age_seconds": -5.9
+            "latest_segment_end": "2026-11-07T12:34:49.897000+00:00",
+            "age_seconds": -10.1
           }
         },
         {
@@ -8270,7 +8425,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 97,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8279,8 +8434,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:19.817000+00:00",
-            "age_seconds": -5.9
+            "latest_segment_end": "2026-11-07T12:34:49.897000+00:00",
+            "age_seconds": -10.1
           }
         }
       ]
@@ -8341,8 +8496,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:10.479000+00:00",
-            "age_seconds": 4.7
+            "latest_segment_end": "2026-11-07T12:34:38.879000+00:00",
+            "age_seconds": 2.2
           }
         },
         {
@@ -8360,8 +8515,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:10.479000+00:00",
-            "age_seconds": 4.7
+            "latest_segment_end": "2026-11-07T12:34:38.879000+00:00",
+            "age_seconds": 2.2
           }
         },
         {
@@ -8379,8 +8534,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:10.479000+00:00",
-            "age_seconds": 4.7
+            "latest_segment_end": "2026-11-07T12:34:38.879000+00:00",
+            "age_seconds": 2.2
           }
         }
       ]
@@ -8404,7 +8559,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8422,7 +8577,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8440,7 +8595,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8570,7 +8725,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8588,7 +8743,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8606,7 +8761,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8651,69 +8806,28 @@
     {
       "channel": "id:tgrthaber.tr",
       "name": "TGRT Haber (720p)",
-      "status": "video_decoded",
-      "selected_url": "https://canli.tgrthaber.com/tgrt.m3u8",
-      "selected_source": "iptv-org Turkey",
-      "selected_streams": [
-        {
-          "url": "https://canli.tgrthaber.com/tgrt.m3u8",
-          "source": "iptv-org Turkey"
-        }
-      ],
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "selected_streams": [],
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://canli.tgrthaber.com/tgrt.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 95,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "unknown",
-            "reason": "No HLS program timestamps"
-          }
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://canli.tgrthaber.com/tgrt.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 95,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "unknown",
-            "reason": "No HLS program timestamps"
-          }
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://canli.tgrthaber.com/tgrt.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 95,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "unknown",
-            "reason": "No HLS program timestamps"
-          }
+          "status": "unreachable",
+          "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
         }
       ]
     },
@@ -8736,7 +8850,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8754,7 +8868,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8772,7 +8886,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8790,7 +8904,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -8920,7 +9034,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8938,7 +9052,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -8956,7 +9070,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -9078,13 +9192,13 @@
     {
       "channel": "id:trt2.tr",
       "name": "TRT 2 (1440p) [Geo-blocked]",
-      "status": "video_decoded",
+      "status": "geo_skipped",
       "selected_url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-      "selected_source": "IPTV Nexus Turkish",
+      "selected_source": "iptv-org Turkey",
       "selected_streams": [
         {
           "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-          "source": "IPTV Nexus Turkish"
+          "source": "iptv-org Turkey"
         }
       ],
       "candidates": [
@@ -9109,38 +9223,14 @@
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 100,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "unknown",
-            "reason": "No HLS program timestamps"
-          }
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
         },
         {
           "source": "discevisita Turkish national and Cyprus channels",
           "url": "https://tv-trt2.medya.trt.com.tr/master.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 100,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "unknown",
-            "reason": "No HLS program timestamps"
-          }
+          "status": "unreachable",
+          "reason": "HTTPError: HTTP Error 403: Forbidden"
         }
       ]
     },
@@ -9184,31 +9274,31 @@
           "source": "iptv-org Turkey",
           "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 60858 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 60859 seconds old (limit 900)"
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 60858 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 60859 seconds old (limit 900)"
         },
         {
           "source": "Free-TV Turkey",
           "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 60858 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 60859 seconds old (limit 900)"
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 60858 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 60859 seconds old (limit 900)"
         },
         {
           "source": "discevisita Turkish national and Cyprus channels",
           "url": "https://tv-trtavaz.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 60858 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 60859 seconds old (limit 900)"
         }
       ]
     },
@@ -9236,7 +9326,7 @@
           "source": "Free-TV Turkey",
           "url": "https://tv-trtbelgesel-dai.medya.trt.com.tr/master.m3u8",
           "status": "unreachable",
-          "reason": "ValueError: Stale HLS: latest dated media is 20532894 seconds old (limit 900)"
+          "reason": "ValueError: Stale HLS: latest dated media is 20612663 seconds old (limit 900)"
         },
         {
           "source": "IPTV Nexus Turkish",
@@ -9249,34 +9339,87 @@
     {
       "channel": "id:trtcocuk.tr",
       "name": "TRT Cocuk (1440p)",
-      "status": "dropped",
-      "selected_url": null,
-      "selected_source": null,
-      "selected_streams": [],
+      "status": "video_decoded",
+      "selected_url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+      "selected_source": "iptv-org Turkey",
+      "selected_streams": [
+        {
+          "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
+          "source": "iptv-org Turkey"
+        }
+      ],
       "candidates": [
         {
           "source": "iptv-org Turkey",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "iptv-org Turkish language",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "Free-TV Turkey",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         },
         {
           "source": "IPTV Nexus Turkish",
           "url": "https://tv-trtcocuk.medya.trt.com.tr/master.m3u8",
-          "status": "unreachable",
-          "reason": "HTTPError: HTTP Error 403: Forbidden"
+          "status": "video_decoded",
+          "reason": "Decoded video and available audio",
+          "media": {
+            "frames": 100,
+            "decoded_seconds": 4.0,
+            "video_codec": "h264",
+            "width": 1280,
+            "height": 720,
+            "audio_codec": "aac"
+          },
+          "freshness": {
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
+          }
         }
       ]
     },
@@ -9559,8 +9702,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.120000+00:00",
-            "age_seconds": 17.5
+            "latest_segment_end": "2026-11-07T12:34:31.120000+00:00",
+            "age_seconds": 17.2
           }
         },
         {
@@ -9578,8 +9721,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.120000+00:00",
-            "age_seconds": 17.5
+            "latest_segment_end": "2026-11-07T12:34:31.120000+00:00",
+            "age_seconds": 17.2
           }
         },
         {
@@ -9597,8 +9740,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.120000+00:00",
-            "age_seconds": 17.5
+            "latest_segment_end": "2026-11-07T12:34:31.120000+00:00",
+            "age_seconds": 17.2
           }
         },
         {
@@ -9616,8 +9759,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.120000+00:00",
-            "age_seconds": 17.5
+            "latest_segment_end": "2026-11-07T12:34:31.120000+00:00",
+            "age_seconds": 17.2
           }
         },
         {
@@ -9635,8 +9778,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.120000+00:00",
-            "age_seconds": 17.5
+            "latest_segment_end": "2026-11-07T12:34:31.120000+00:00",
+            "age_seconds": 17.2
           }
         }
       ]
@@ -9669,8 +9812,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.440000+00:00",
-            "age_seconds": 16.6
+            "latest_segment_end": "2026-11-07T12:34:37.440000+00:00",
+            "age_seconds": 12.3
           }
         },
         {
@@ -9688,8 +9831,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:07.440000+00:00",
-            "age_seconds": 16.6
+            "latest_segment_end": "2026-11-07T12:34:37.440000+00:00",
+            "age_seconds": 12.3
           }
         }
       ]
@@ -9722,8 +9865,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:13.400000+00:00",
-            "age_seconds": 13.7
+            "latest_segment_end": "2026-11-07T12:34:37.400000+00:00",
+            "age_seconds": 13.9
           }
         },
         {
@@ -9741,8 +9884,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:13.400000+00:00",
-            "age_seconds": 13.7
+            "latest_segment_end": "2026-11-07T12:34:37.400000+00:00",
+            "age_seconds": 13.9
           }
         },
         {
@@ -9760,8 +9903,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:13.400000+00:00",
-            "age_seconds": 13.7
+            "latest_segment_end": "2026-11-07T12:34:37.400000+00:00",
+            "age_seconds": 13.9
           }
         },
         {
@@ -9779,8 +9922,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:13.400000+00:00",
-            "age_seconds": 13.7
+            "latest_segment_end": "2026-11-07T12:34:37.400000+00:00",
+            "age_seconds": 13.9
           }
         }
       ]
@@ -9981,7 +10124,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -9999,7 +10142,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10017,7 +10160,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10080,7 +10223,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -10113,7 +10256,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 85,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10131,7 +10274,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 85,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10149,7 +10292,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 85,
+            "frames": 73,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10182,7 +10325,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 832,
@@ -10200,7 +10343,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 832,
@@ -10218,7 +10361,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 832,
@@ -10398,8 +10541,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:47.907000+00:00",
-            "age_seconds": -14.4
+            "latest_segment_end": "2026-11-07T12:35:18.107000+00:00",
+            "age_seconds": -13.4
           }
         },
         {
@@ -10417,8 +10560,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:47.907000+00:00",
-            "age_seconds": -14.4
+            "latest_segment_end": "2026-11-07T12:35:18.107000+00:00",
+            "age_seconds": -13.4
           }
         },
         {
@@ -10436,8 +10579,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:47.907000+00:00",
-            "age_seconds": -14.4
+            "latest_segment_end": "2026-11-07T12:35:18.107000+00:00",
+            "age_seconds": -13.4
           }
         }
       ]
@@ -10498,8 +10641,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:37.633000+00:00",
-            "age_seconds": -2.1
+            "latest_segment_end": "2026-11-07T12:35:07.144000+00:00",
+            "age_seconds": -2.0
           }
         },
         {
@@ -10517,8 +10660,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:37.633000+00:00",
-            "age_seconds": -2.1
+            "latest_segment_end": "2026-11-07T12:35:07.144000+00:00",
+            "age_seconds": -2.0
           }
         },
         {
@@ -10536,8 +10679,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:37.633000+00:00",
-            "age_seconds": -2.1
+            "latest_segment_end": "2026-11-07T12:35:07.144000+00:00",
+            "age_seconds": -2.0
           }
         }
       ]
@@ -10561,7 +10704,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 96,
+            "frames": 97,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -10570,8 +10713,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:36.506000+00:00",
-            "age_seconds": -1.0
+            "latest_segment_end": "2026-11-07T12:35:05.529000+00:00",
+            "age_seconds": -0.3
           }
         }
       ]
@@ -10626,8 +10769,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:27.734000+00:00",
-            "age_seconds": 8.5
+            "latest_segment_end": "2026-11-07T12:34:57.400000+00:00",
+            "age_seconds": 8.7
           }
         }
       ]
@@ -10651,7 +10794,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 62,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 360,
@@ -10669,7 +10812,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 62,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 360,
@@ -10702,7 +10845,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -10711,8 +10854,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:34.547000+00:00",
-            "age_seconds": 2.3
+            "latest_segment_end": "2026-11-07T12:35:03.827000+00:00",
+            "age_seconds": 2.6
           }
         }
       ]
@@ -10796,8 +10939,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:36.014266+00:00",
-            "age_seconds": 1.8
+            "latest_segment_end": "2026-11-07T12:35:06.004266+00:00",
+            "age_seconds": 2.1
           }
         },
         {
@@ -10815,8 +10958,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:02.582000+00:00",
-            "age_seconds": -23.1
+            "latest_segment_end": "2026-11-07T12:35:26.567000+00:00",
+            "age_seconds": -17.8
           }
         },
         {
@@ -10834,8 +10977,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:02.582000+00:00",
-            "age_seconds": -23.1
+            "latest_segment_end": "2026-11-07T12:35:26.567000+00:00",
+            "age_seconds": -17.8
           }
         }
       ]
@@ -10859,7 +11002,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -10868,8 +11011,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:37.420000+00:00",
-            "age_seconds": 1.1
+            "latest_segment_end": "2026-11-07T12:35:07.780000+00:00",
+            "age_seconds": 0.6
           }
         },
         {
@@ -10878,7 +11021,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -10887,8 +11030,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:37.420000+00:00",
-            "age_seconds": 1.1
+            "latest_segment_end": "2026-11-07T12:35:07.780000+00:00",
+            "age_seconds": 0.6
           }
         },
         {
@@ -10906,8 +11049,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:57.420000+00:00",
-            "age_seconds": 1.5
+            "latest_segment_end": "2026-11-07T12:36:04.140000+00:00",
+            "age_seconds": 3.2
           }
         }
       ]
@@ -10928,7 +11071,7 @@
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-samsungen-samsungit/playlist.m3u8",
+          "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8",
           "status": "unreachable",
           "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
         }
@@ -10953,7 +11096,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 116,
+            "frames": 117,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 640,
@@ -10962,13 +11105,13 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:42.825000+00:00",
-            "age_seconds": -62.8
+            "latest_segment_end": "2026-11-07T12:36:10.747000+00:00",
+            "age_seconds": -61.5
           }
         },
         {
           "source": "IPTV Nexus Turkish",
-          "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
+          "url": "https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/master.m3u8?ads.xumo_channelId=88883056",
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
@@ -10980,9 +11123,8 @@
             "audio_codec": "aac"
           },
           "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:42.825000+00:00",
-            "age_seconds": -62.8
+            "status": "unknown",
+            "reason": "No HLS program timestamps"
           }
         }
       ]
@@ -11209,7 +11351,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 120,
-            "decoded_seconds": 4.0,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
             "width": 1920,
             "height": 1080,
@@ -11217,8 +11359,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:36:34.018000+00:00",
-            "age_seconds": -650.2
+            "latest_segment_end": "2026-11-07T12:46:05.614000+00:00",
+            "age_seconds": -653.0
           }
         }
       ]
@@ -11315,8 +11457,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:42.725000+00:00",
-            "age_seconds": 3.7
+            "latest_segment_end": "2026-11-07T12:35:12.725000+00:00",
+            "age_seconds": 2.0
           }
         },
         {
@@ -11334,8 +11476,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:12.725000+00:00",
-            "age_seconds": 1.8
+            "latest_segment_end": "2026-11-07T12:35:36.725000+00:00",
+            "age_seconds": 4.8
           }
         }
       ]
@@ -11496,7 +11638,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
+            "frames": 117,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 640,
@@ -11505,8 +11647,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:49.771840+00:00",
-            "age_seconds": -59.0
+            "latest_segment_end": "2026-11-07T12:36:12.340840+00:00",
+            "age_seconds": -54.8
           }
         }
       ]
@@ -11605,8 +11747,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:41.167000+00:00",
-            "age_seconds": 11.8
+            "latest_segment_end": "2026-11-07T12:35:05.167000+00:00",
+            "age_seconds": 13.8
           }
         },
         {
@@ -11624,8 +11766,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:41.167000+00:00",
-            "age_seconds": 11.8
+            "latest_segment_end": "2026-11-07T12:35:05.167000+00:00",
+            "age_seconds": 13.8
           }
         }
       ]
@@ -11658,8 +11800,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:50.801000+00:00",
-            "age_seconds": 2.9
+            "latest_segment_end": "2026-11-07T12:35:17.646000+00:00",
+            "age_seconds": 2.1
           }
         }
       ]
@@ -11683,17 +11825,17 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
+            "width": 960,
+            "height": 540,
             "audio_codec": "aac"
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:27.656000+00:00",
-            "age_seconds": 26.0
+            "latest_segment_end": "2026-11-07T12:34:52.563000+00:00",
+            "age_seconds": 27.3
           }
         },
         {
@@ -11744,8 +11886,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T09:25:49.726000-05:00",
-            "age_seconds": 5.0
+            "latest_segment_end": "2026-11-07T07:35:19.313000-05:00",
+            "age_seconds": 1.3
           }
         },
         {
@@ -11763,8 +11905,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T09:25:49.726000-05:00",
-            "age_seconds": 5.0
+            "latest_segment_end": "2026-11-07T07:35:19.313000-05:00",
+            "age_seconds": 1.3
           }
         }
       ]
@@ -11797,8 +11939,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T09:25:58.021000-05:00",
-            "age_seconds": -3.2
+            "latest_segment_end": "2026-11-07T07:35:22.584000-05:00",
+            "age_seconds": -1.1
           }
         }
       ]
@@ -11831,8 +11973,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:57.908000+00:00",
-            "age_seconds": -3.3
+            "latest_segment_end": "2026-11-07T12:35:23.127000+00:00",
+            "age_seconds": -2.2
           }
         }
       ]
@@ -11856,7 +11998,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 120,
+            "frames": 119,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -11865,8 +12007,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:27:23.060000+00:00",
-            "age_seconds": -87.6
+            "latest_segment_end": "2026-11-07T12:36:52.060000+00:00",
+            "age_seconds": -90.7
           }
         }
       ]
@@ -11899,8 +12041,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:51.328000+00:00",
-            "age_seconds": 3.9
+            "latest_segment_end": "2026-11-07T12:35:20.117000+00:00",
+            "age_seconds": 1.2
           }
         }
       ]
@@ -11933,8 +12075,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:50.941000+00:00",
-            "age_seconds": 4.4
+            "latest_segment_end": "2026-11-07T12:35:17.619000+00:00",
+            "age_seconds": 4.0
           }
         }
       ]
@@ -12114,8 +12256,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:56.821000+00:00",
-            "age_seconds": 0.6
+            "latest_segment_end": "2026-11-07T12:35:20.821000+00:00",
+            "age_seconds": 3.4
           }
         }
       ]
@@ -12255,8 +12397,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:45.680000+00:00",
-            "age_seconds": 11.5
+            "latest_segment_end": "2026-11-07T12:35:15.680000+00:00",
+            "age_seconds": 7.6
           }
         }
       ]
@@ -12281,7 +12423,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 120,
-            "decoded_seconds": 4.004,
+            "decoded_seconds": 4.003,
             "video_codec": "h264",
             "width": 384,
             "height": 216,
@@ -12289,8 +12431,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:55.712000+00:00",
-            "age_seconds": 2.8
+            "latest_segment_end": "2026-11-07T12:35:15.392400+00:00",
+            "age_seconds": 8.5
           }
         },
         {
@@ -12300,7 +12442,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 120,
-            "decoded_seconds": 4.004,
+            "decoded_seconds": 4.003,
             "video_codec": "h264",
             "width": 384,
             "height": 216,
@@ -12308,8 +12450,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:55.712000+00:00",
-            "age_seconds": 2.8
+            "latest_segment_end": "2026-11-07T12:35:15.392400+00:00",
+            "age_seconds": 8.5
           }
         }
       ]
@@ -12333,7 +12475,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -12366,11 +12508,11 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 101,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
-            "width": null,
-            "height": null,
+            "width": 1280,
+            "height": 720,
             "audio_codec": "aac"
           },
           "freshness": {
@@ -12483,8 +12625,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:39.840000+00:00",
-            "age_seconds": 20.2
+            "latest_segment_end": "2026-11-07T12:35:04.320000+00:00",
+            "age_seconds": 21.6
           }
         }
       ]
@@ -12538,8 +12680,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:57.640000+00:00",
-            "age_seconds": 3.4
+            "latest_segment_end": "2026-11-07T12:35:21.640000+00:00",
+            "age_seconds": 5.1
           }
         }
       ]
@@ -12572,8 +12714,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:44.113000+00:00",
-            "age_seconds": 17.9
+            "latest_segment_end": "2026-11-07T12:35:03.193000+00:00",
+            "age_seconds": 24.9
           }
         }
       ]
@@ -12613,7 +12755,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 96,
+            "frames": 95,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -12622,8 +12764,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:51.906977+00:00",
-            "age_seconds": 11.5
+            "latest_segment_end": "2026-11-07T12:35:21.985052+00:00",
+            "age_seconds": 7.9
           }
         }
       ]
@@ -12663,8 +12805,8 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
-            "decoded_seconds": 4.0,
+            "frames": 120,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
             "width": 1280,
             "height": 720,
@@ -12705,8 +12847,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:01.240000+00:00",
-            "age_seconds": 4.9
+            "latest_segment_end": "2026-11-07T12:35:25.240000+00:00",
+            "age_seconds": 6.5
           }
         }
       ]
@@ -12739,8 +12881,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:24:40.120000+00:00",
-            "age_seconds": 86.0
+            "latest_segment_end": "2026-11-07T12:34:10.120000+00:00",
+            "age_seconds": 81.8
           }
         }
       ]
@@ -12773,8 +12915,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:02.120000+00:00",
-            "age_seconds": 4.2
+            "latest_segment_end": "2026-11-07T12:35:26.120000+00:00",
+            "age_seconds": 5.1
           }
         },
         {
@@ -12792,8 +12934,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:02.120000+00:00",
-            "age_seconds": 4.2
+            "latest_segment_end": "2026-11-07T12:35:26.120000+00:00",
+            "age_seconds": 5.1
           }
         }
       ]
@@ -12858,8 +13000,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:01.885000+00:00",
-            "age_seconds": 3.7
+            "latest_segment_end": "2026-11-07T12:35:27.885000+00:00",
+            "age_seconds": 3.6
           }
         },
         {
@@ -12877,8 +13019,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:23.885000+00:00",
-            "age_seconds": 6.6
+            "latest_segment_end": "2026-11-07T12:35:47.885000+00:00",
+            "age_seconds": 4.2
           }
         }
       ]
@@ -12911,8 +13053,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:01.234000+00:00",
-            "age_seconds": 4.4
+            "latest_segment_end": "2026-11-07T12:35:27.234000+00:00",
+            "age_seconds": 4.6
           }
         },
         {
@@ -12921,7 +13063,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 100,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -12930,8 +13072,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:31.234000+00:00",
-            "age_seconds": 3.7
+            "latest_segment_end": "2026-11-07T12:35:49.234000+00:00",
+            "age_seconds": 3.9
           }
         }
       ]
@@ -12955,7 +13097,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -12964,8 +13106,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:08.958000+00:00",
-            "age_seconds": -2.3
+            "latest_segment_end": "2026-11-07T12:35:30.915000+00:00",
+            "age_seconds": 1.4
           }
         },
         {
@@ -12974,7 +13116,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 100,
+            "frames": 99,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -12983,8 +13125,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:08.958000+00:00",
-            "age_seconds": -2.3
+            "latest_segment_end": "2026-11-07T12:35:30.915000+00:00",
+            "age_seconds": 1.4
           }
         }
       ]
@@ -13017,8 +13159,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:25:28+01:00",
-            "age_seconds": 39.6
+            "latest_segment_end": "2026-11-07T13:34:56+01:00",
+            "age_seconds": 36.3
           }
         },
         {
@@ -13036,8 +13178,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:25:28+01:00",
-            "age_seconds": 39.6
+            "latest_segment_end": "2026-11-07T13:34:56+01:00",
+            "age_seconds": 36.3
           }
         }
       ]
@@ -13070,8 +13212,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:01+01:00",
-            "age_seconds": 6.7
+            "latest_segment_end": "2026-11-07T13:35:26+01:00",
+            "age_seconds": 6.6
           }
         },
         {
@@ -13089,8 +13231,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:01+01:00",
-            "age_seconds": 6.7
+            "latest_segment_end": "2026-11-07T13:35:26+01:00",
+            "age_seconds": 6.6
           }
         }
       ]
@@ -13123,7 +13265,7 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:01+01:00",
+            "latest_segment_end": "2026-11-07T13:35:29+01:00",
             "age_seconds": 7.1
           }
         },
@@ -13142,8 +13284,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:29+01:00",
-            "age_seconds": 6.7
+            "latest_segment_end": "2026-11-07T13:35:49+01:00",
+            "age_seconds": 4.3
           }
         }
       ]
@@ -13167,7 +13309,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 88,
+            "frames": 87,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 640,
@@ -13176,8 +13318,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:19:53.783000+00:00",
-            "age_seconds": 375.4
+            "latest_segment_end": "2026-11-07T12:29:03.783000+00:00",
+            "age_seconds": 390.4
           }
         },
         {
@@ -13186,7 +13328,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 88,
+            "frames": 87,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 640,
@@ -13195,8 +13337,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:19:53.783000+00:00",
-            "age_seconds": 375.4
+            "latest_segment_end": "2026-11-07T12:29:03.783000+00:00",
+            "age_seconds": 390.4
           }
         }
       ]
@@ -13229,8 +13371,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:06.042000+00:00",
-            "age_seconds": 3.3
+            "latest_segment_end": "2026-11-07T12:35:33.063000+00:00",
+            "age_seconds": 2.0
           }
         },
         {
@@ -13239,7 +13381,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 199,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1920,
@@ -13248,8 +13390,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:30.041000+00:00",
-            "age_seconds": 0.1
+            "latest_segment_end": "2026-11-07T12:35:49.063000+00:00",
+            "age_seconds": 1.9
           }
         }
       ]
@@ -13282,8 +13424,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:06+01:00",
-            "age_seconds": 3.8
+            "latest_segment_end": "2026-11-07T13:35:28+01:00",
+            "age_seconds": 6.9
           }
         },
         {
@@ -13301,8 +13443,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:06+01:00",
-            "age_seconds": 3.8
+            "latest_segment_end": "2026-11-07T13:35:28+01:00",
+            "age_seconds": 6.9
           }
         }
       ]
@@ -13335,8 +13477,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:07.558000+00:00",
-            "age_seconds": 2.5
+            "latest_segment_end": "2026-11-07T12:35:30.318000+00:00",
+            "age_seconds": 4.6
           }
         },
         {
@@ -13354,8 +13496,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:07.558000+00:00",
-            "age_seconds": 2.5
+            "latest_segment_end": "2026-11-07T12:35:30.318000+00:00",
+            "age_seconds": 4.6
           }
         }
       ]
@@ -13388,8 +13530,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:04+01:00",
-            "age_seconds": 6.7
+            "latest_segment_end": "2026-11-07T13:35:30+01:00",
+            "age_seconds": 5.6
           }
         },
         {
@@ -13407,8 +13549,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:28+01:00",
-            "age_seconds": 2.9
+            "latest_segment_end": "2026-11-07T13:35:46+01:00",
+            "age_seconds": 5.8
           }
         }
       ]
@@ -13441,8 +13583,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:04+01:00",
-            "age_seconds": 7.5
+            "latest_segment_end": "2026-11-07T13:35:28+01:00",
+            "age_seconds": 7.6
           }
         },
         {
@@ -13460,8 +13602,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:24+01:00",
-            "age_seconds": 6.1
+            "latest_segment_end": "2026-11-07T13:35:44+01:00",
+            "age_seconds": 7.6
           }
         }
       ]
@@ -13494,8 +13636,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:06+01:00",
-            "age_seconds": 4.8
+            "latest_segment_end": "2026-11-07T13:35:30+01:00",
+            "age_seconds": 6.1
           }
         },
         {
@@ -13513,8 +13655,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T15:26:26+01:00",
-            "age_seconds": 4.9
+            "latest_segment_end": "2026-11-07T13:35:46+01:00",
+            "age_seconds": 5.0
           }
         }
       ]
@@ -13538,7 +13680,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
+            "frames": 120,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 426,
@@ -13571,7 +13713,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 113,
+            "frames": 114,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -13580,8 +13722,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:11.160437+00:00",
-            "age_seconds": 1.4
+            "latest_segment_end": "2026-11-07T12:35:29.187999+00:00",
+            "age_seconds": 8.4
           }
         }
       ]
@@ -13614,8 +13756,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:11.956000+00:00",
-            "age_seconds": 1.2
+            "latest_segment_end": "2026-11-07T12:35:35.956000+00:00",
+            "age_seconds": 2.2
           }
         }
       ]
@@ -13706,7 +13848,7 @@
           "reason": "Decoded video and available audio",
           "media": {
             "frames": 120,
-            "decoded_seconds": 4.003,
+            "decoded_seconds": 4.004,
             "video_codec": "h264",
             "width": 426,
             "height": 240,
@@ -13714,8 +13856,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:12.012266+00:00",
-            "age_seconds": 5.1
+            "latest_segment_end": "2026-11-07T12:35:35.997266+00:00",
+            "age_seconds": 5.7
           }
         }
       ]
@@ -13748,8 +13890,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:12.321000+00:00",
-            "age_seconds": 5.6
+            "latest_segment_end": "2026-11-07T12:35:38.007000+00:00",
+            "age_seconds": 3.8
           }
         }
       ]
@@ -13782,8 +13924,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:25:55.274000+00:00",
-            "age_seconds": 24.1
+            "latest_segment_end": "2026-11-07T12:35:14.954000+00:00",
+            "age_seconds": 28.8
           }
         }
       ]
@@ -13807,7 +13949,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 119,
+            "frames": 120,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 426,
@@ -13873,7 +14015,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 448,
@@ -14063,8 +14205,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:23.984000+00:00",
-            "age_seconds": 3.6
+            "latest_segment_end": "2026-11-07T12:35:41.984000+00:00",
+            "age_seconds": 6.9
           }
         }
       ]
@@ -14072,34 +14214,16 @@
     {
       "channel": "id:at5.nl",
       "name": "AT5",
-      "status": "video_decoded",
-      "selected_url": "https://takeoff.jetstre.am/?account=atvijf&file=live&output=playlist.m3u8&protocol=https&service=wowza&type=live",
-      "selected_source": "iptv-org selected Netherlands",
-      "selected_streams": [
-        {
-          "url": "https://takeoff.jetstre.am/?account=atvijf&file=live&output=playlist.m3u8&protocol=https&service=wowza&type=live",
-          "source": "iptv-org selected Netherlands"
-        }
-      ],
+      "status": "dropped",
+      "selected_url": null,
+      "selected_source": null,
+      "selected_streams": [],
       "candidates": [
         {
           "source": "iptv-org selected Netherlands",
           "url": "https://takeoff.jetstre.am/?account=atvijf&file=live&output=playlist.m3u8&protocol=https&service=wowza&type=live",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 200,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:26.649000+00:00",
-            "age_seconds": 1.1
-          }
+          "status": "unreachable",
+          "reason": "ValueError: insufficient decoded video frames/duration (exit 0, 200 frames, 0.00s)"
         }
       ]
     },
@@ -14201,8 +14325,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:27:59.538300+00:00",
-            "age_seconds": -87.7
+            "latest_segment_end": "2026-11-07T12:37:18.258300+00:00",
+            "age_seconds": -86.1
           }
         }
       ]
@@ -14226,7 +14350,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 200,
+            "frames": 198,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -14268,8 +14392,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:30.082000+00:00",
-            "age_seconds": 5.8
+            "latest_segment_end": "2026-11-07T12:35:46.967000+00:00",
+            "age_seconds": 6.4
           }
         }
       ]
@@ -14323,8 +14447,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:29:00.594299+00:00",
-            "age_seconds": -144.0
+            "latest_segment_end": "2026-11-07T12:38:19.314299+00:00",
+            "age_seconds": -145.7
           }
         }
       ]
@@ -14357,8 +14481,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:32.940000+00:00",
-            "age_seconds": 5.1
+            "latest_segment_end": "2026-11-07T12:35:48.060000+00:00",
+            "age_seconds": 5.9
           }
         }
       ]
@@ -14391,8 +14515,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:32.308000+00:00",
-            "age_seconds": 5.9
+            "latest_segment_end": "2026-11-07T12:35:47.268000+00:00",
+            "age_seconds": 7.1
           }
         }
       ]
@@ -14434,7 +14558,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 98,
+            "frames": 97,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -14476,8 +14600,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:43.363000+00:00",
-            "age_seconds": 2.7
+            "latest_segment_end": "2026-11-07T12:35:53.363000+00:00",
+            "age_seconds": 5.4
           }
         }
       ]
@@ -14534,7 +14658,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 99,
+            "frames": 98,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -14576,8 +14700,8 @@
           },
           "freshness": {
             "status": "recent",
-            "latest_segment_end": "2026-11-06T14:26:51.918666+00:00",
-            "age_seconds": 6.0
+            "latest_segment_end": "2026-11-07T12:36:01.918666+00:00",
+            "age_seconds": 4.7
           }
         }
       ]
@@ -14596,7 +14720,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 95,
+            "frames": 96,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 832,
@@ -14629,7 +14753,7 @@
           "status": "video_decoded",
           "reason": "Decoded video and available audio",
           "media": {
-            "frames": 198,
+            "frames": 200,
             "decoded_seconds": 4.0,
             "video_codec": "h264",
             "width": 1280,
@@ -14642,79 +14766,7 @@
           }
         }
       ]
-    },
-    {
-      "channel": "id:sozcutv.tr",
-      "name": "Sözcü TV",
-      "status": "video_decoded",
-      "checked_at": "2026-11-06T18:35:54.505762+00:00",
-      "selected_url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-      "selected_source": "Sözcü TV — official YouTube live",
-      "selected_streams": [
-        {
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-          "source": "Sözcü TV — official YouTube live"
-        },
-        {
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
-          "source": "Sözcü TV — official YouTube live"
-        }
-      ],
-      "candidates": [
-        {
-          "source": "Sözcü TV — official YouTube live",
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-1080.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 119,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1920,
-            "height": 1080,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-11-06T18:35:35.093000+00:00",
-            "age_seconds": 2.0,
-            "progress": {
-              "status": "advancing",
-              "observation_seconds": 7.5,
-              "initial_sequence": 4163909,
-              "final_sequence": 4163910
-            }
-          }
-        },
-        {
-          "source": "Sözcü TV — official YouTube live",
-          "url": "https://mehmet-oner.github.io/iptvs/streams/sozcu-720.m3u8",
-          "status": "video_decoded",
-          "reason": "Decoded video and available audio",
-          "media": {
-            "frames": 120,
-            "decoded_seconds": 4.0,
-            "video_codec": "h264",
-            "width": 1280,
-            "height": 720,
-            "audio_codec": "aac"
-          },
-          "freshness": {
-            "status": "recent",
-            "latest_segment_end": "2026-11-06T18:35:40.093000+00:00",
-            "age_seconds": 5.4,
-            "progress": {
-              "status": "advancing",
-              "observation_seconds": 7.5,
-              "initial_sequence": 4163910,
-              "final_sequence": 4163912
-            }
-          }
-        }
-      ]
     }
   ],
-  "missing_required_channels": [],
-  "last_channel_refresh_at": "2026-11-06T18:35:54.505762+00:00",
-  "refresh_note": "Only Sözcü was checked at last_channel_refresh_at. Other evidence dates remain checked_at or the per-channel checked_at."
+  "missing_required_channels": []
 }
